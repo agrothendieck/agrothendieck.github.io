@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+<title>Algèbre topologique</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <meta name="description" content="A. Grothendieck.">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta name="keywords" content="TopologicalAlgebra, Topos, stacks, Grothendieck, Giraud, Anabelian, Topology, Diagrams, Basechange">
+ <style type="text/css">
+ 
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #474e5d;
+  font-family: Helvetica, sans-serif;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: #3d523e;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: white;
+  border: 4px solid #3d523e;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+  left: 0;
+}
+
+/* Place the container to the right */
+.right {
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -16px;
+}
+
+/* The actual content */
+.content {
+  padding: 20px 30px;
+  background-color: #3d523e;
+  position: relative;
+  border-radius: 6px;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+  /* Place the timelime to the left */
+  .timeline::after {
+  left: 31px;
+  }
+  
+  /* Full-width containers */
+  .container {
+  width: 100%;
+  padding-left: 70px;
+  padding-right: 25px;
+  }
+  
+  /* Make sure that all arrows are pointing leftwards */
+  .container::before {
+  left: 60px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+  }
+
+  /* Make sure all circles are at the same spot */
+  .left::after, .right::after {
+  left: 15px;
+  }
+  
+  /* Make all right containers behave like the left ones */
+  .right {
+  left: 0%;
+  }
+} 
+ 
+  a{text-decoration:none;}
+a {
+  position: relative;
+  color: #3d523e;
+  text-decoration: none;
+}
+a:hover {
+  color: #000;
+}
+a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1); 
+}
+
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+  a{text-decoration:none;}
+a {
+  position: relative;
+  color: #3d523e;
+  text-decoration: none;
+}
+a:hover {
+  color: #000;
+}
+a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1); 
+}  
+a:link {
+  color: white;
+}  
+/* visited link */
+a:visited {
+  color: white;
+}
+
+ </style>
+</head> 
+
+<!-- div {
+  background-color: #eee;
+  width: 700px;
+  height: 150px;
+  overflow: scroll;
+} -->
+
+<BODY BGCOLOR="#3d523e" text="000000" link="#3d523e" alink="#3d523e" vlink="#3d523e">  
+ <table width="100%" height="100%" cellspacing="0" cellpadding="10">
+  <tr valign="top" width="100%" bgcolor="#3d523e">
+   <td width="10%" align="center">
+    <br>
+    <!-- <a href="https://carmonamateo.github.io/"><font size="+2" color="FFB300">M.&nbsp;CARMONA</font></a> -->
+    <a href="https://agrothendieck.github.io/"><font size="+2" color="ffffff">A.&nbsp;GROTHENDIECK</font></a>
+    <br>
+    <font color="ffffff">28 March 1928 - 13 Nov 2014</font>
+    <!-- <a href="http://www.math.ucla.edu"><font color="FFB300">Mathematics</font></a>
+    
+    <br>
+    <a href="http://www.ucla.edu"><font color="FFB300">UCLA&nbsp;</font></a><br> -->
+    <table width="70%">
+     <tr>
+      <td align="center">
+       <!-- <a href="/index.html"><font color="ffffff">Home</font></a>
+       <br><br>      
+       <a href="/themes.html"><font color="ffffff">Thèmes pour une harmonie</font></a>
+       <br><br>
+       <a href="/coup.html"><font color="ffffff">Dans le coup</font></a> -->              
+       <br>
+       <a href="https://carmonamateo.github.io/"><font color="ffffff">By <i>M. Carmona</i></font></a>
+       <br><br><br><br><br><br><br><br><br>
+       <font color="ffffff"><a
+href="/algtop.html">[Algèbre topologique]</a></font>
+       <br><br>
+       <font color="ffffff"><a
+href="/galoispoincaregrothendieck.html">[Galois-Poincaré-Grothendieck]</a></font>
+       <br><br>
+       <font color="ffffff"><a
+href="/cristaux.html">[Analyse]</a></font>
+       <br><br>
+       <font color="ffffff"><a
+href="/intersections.html">[Théorie des intersections et K-théorie]</a></font>
+       <br><br>
+       <font color="ffffff"><a
+href="/picardbrauer.html">[Picard-Brauer]</a></font>
+       <br><br>      
+       <font color="ffffff"><a
+href="/lefschetz.html">[Lefschetz]</a></font>       
+       <br><br>
+       <font color="ffffff"><a
+href="/groupesalgebriques.html">[Groupoïdes algébriques]</a></font>
+       <br><br>
+       <font color="ffffff"><a
+href="/analysealgebrique.html">[Champs algébriques]</a></font>
+       <br><br>
+       <font color="ffffff"><a
+href="/espaces.html">[Topologie des espaces]</a></font>
+
+<!-- <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+       <h5>&copy; Mateo Carmona</h5>  -->    
+     </td>
+     </tr>
+    </table>
+   </td>
+   <td width="80%" valign="top" bgcolor="FFFFFF">
+    <!-- -------------------------------------------------------------------- -->
+    <!-- -------------------------------------------------------------------- -->
+ 
+<!-- <div style="text-align: center">
+<link rel="stylesheet" href="/path/to/folder/css/academicons.min.css"/> 
+<link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css"> 
+ <p>MATEO CARMONA <a href="https://orcid.org/0000-0001-6193-8674"><i class="ai ai-orcid ai-1x"></i></a></p>
+</div>    -->
+
+<table width="90%" border="0" cellpadding="5" align="center">
+
+<!-- 
+<center><a href="https://raw.githubusercontent.com/mateocarmonamat/mateocarmonamat.github.io/master/img/arrow.PNG"><img width="400" src="https://raw.githubusercontent.com/mateocarmonamat/mateocarmonamat.github.io/master/img/arrow.PNG" alt="Carmona" border="0"></a></center>   
+-->
+
+
+
+<br><br>
+
+<h2><p align="center">Algèbre topologique</p></h2>
+
+<p align="center">
+&infin;-champs, dérivateurs; formalisme cohomologique des topos, comme inspiration pour une nouvelle algèbre homotopique
+ </p></h3>
+<p align="center">Dualité "continue" et "discrète" (catégories dérivées, "six opérations")</p>
+<p align="center">Champs de topos, Gerbes</p>
+ 
+
+<hr WIDTH="33%">
+
+<br><br>
+
+<center>
+<img src="https://raw.githubusercontent.com/agrothendieck/agrothendieck.github.io/master/img/groth10.png" width="400" height="380">
+</center>
+
+<br><br> 
+
+<font color="white">
+<div class="timeline">
+  <div class="container left">
+    <div class="content">
+      <h3>Les Dérivateurs <br> 1990-(1991)</h3>
+      <p>
+Dérivateurs (chapitres I à IV, dont sommaire général) <br>
+<a href="https://grothendieck.umontpellier.fr/archives-grothendieck/">[Cote n° 157-1]</a>
+       
+<br><br>
+
+Dérivateurs (chapitres V à VIII) <br>
+<a href="https://grothendieck.umontpellier.fr/archives-grothendieck/">[Cote n° 157-2]</a>
+
+<br><br>
+
+Dérivateurs (chapitres IX à XII, dont sommaire et appendices du chapitre XII) <br>
+<a href="https://grothendieck.umontpellier.fr/archives-grothendieck/">[Cote n° 157-3]</a>
+
+<br><br>
+
+Dérivateurs (chapitres XIII à XVI, dont sommaire du chapitre XVI) <br>
+<a href="https://grothendieck.umontpellier.fr/archives-grothendieck/">[Cote n° 157-4]</a>
+
+<br><br>
+
+Dérivateurs (chapitres XVII à XIX, dont sommaires de chacun des chapitres) <br>
+<a href="https://grothendieck.umontpellier.fr/archives-grothendieck/">[Cote n° 157-5]</a>
+
+<br><br><br>
+
+(Autour des Dérivateurs) <br>
+<a href="https://grothendieck.umontpellier.fr/archives-grothendieck/">[Cote n° 158]</a> <br>
+(vers 1990-1991)
+
+<br><br><br>
+      
+<a href="https://webusers.imj-prg.fr/~georges.maltsiniotis/groth/Derivateurs.html">[Les Dérivateurs]</a>, Édité par M. Künzer, J. Malgoire, G. Maltsiniotis
+
+<br><br>
+ 
+Letter to R Thomason <a href="https://webusers.imj-prg.fr/~georges.maltsiniotis/groth/ps/lettreder.pdf">[pdf]</a>, Éditée par M. Künzer      
+</p>
+</div>
+</div> 
+ 
+  <div class="container right">
+    <div class="content">
+      <h3>Le formalisme des six opérations de Grothendieck pour les DX-modules cohérents, Z Mebkhout</h3>
+      <p>(travaux en cours, Editions Hermann)</p>
+    </div>
+  </div>       
+       
+
+  <div class="container left">
+    <div class="content">
+      <h3>Pursuing stacks (À la poursuite des champs) <br> First episode : The Modelizing Story (Histoire de Modèles) <br> 1974-1984</h3>
+      <p>
+
+(Correspondance avec Larry Breen, Pierre Deligne et Daniel Quillen) <br>
+Cote n° 134-1 <br> 
+1974-1976, 1984
+
+<br><br>
+
+Chap I : Take off et table des matières provisoire <br>
+Lettres <br>
+Cote n° 134-2 <br>
+1975-(1983)
+
+<br><br>
+
+Chap II : Reflections on homotopical algebra et Notes for Chapter II <br>
+Cote n° 134-3 <br>
+1983
+
+<br><br>
+
+Chap III : Homotopy structures <br>
+Cote n° 134-4 <br>
+(1983)
+
+<br><br>
+
+Chap IV : Asphericity structures <br>
+Cote n° 134-5 <br>
+(1983)
+
+<br><br>
+
+Chap V : Homology and cohomology (abelianization of homotopy types) <br>
+Cote n° 134-6 <br>
+(1983)
+
+<br><br>
+
+Chap VI : Schematization <br>
+Cote n° 134-7 <br>
+(1983)
+
+<br><br>
+
+Chap VII : Linearization of homotopy types <br>
+Cote n° 134-8 <br>
+(1983)
+       
+<br><br><br>
+      
+<a href="https://thescrivener.github.io/PursuingStacks/">[Pursuing stacks]</a>, Edited by thescrivener
+
+<br><br><br>
+      
+Correspondance A. Grothendieck - R Brown <a href="https://webusers.imj-prg.fr/~georges.maltsiniotis/ps/agrb_web.pdf">[pdf]</a>,
+       Editée par M. Künzer(avec la collaboration de R. Brown et G. Maltsiniotis)
+      
+      </p>
+    </div>
+  </div>
+
+  <div class="container right">
+    <div class="content">
+      <h3>Autour de Pursuing stacks <br> 1968-1984</h3>
+      <p>
+
+Courrier (Correspondance sur la thèse de Sinh) <br>
+Cote n° 103 <br>
+1974
+
+<br><br>
+
+Champs (stacks) 1 <br>
+Cote n° 104 <br>
+1974
+
+<br><br>
+
+Champs (stacks) 2 <br>
+Cote n° 105 <br>
+(à partir de 1982)
+
+<br><br>
+
+Champs (stacks) 3 <br>
+Cote n° 106 <br>
+(à partir de 1982)
+
+<br><br>
+
+Closed models (notes postérieures à PS ?) <br>
+Cote n° 107 <br>
+(à partir de 1982)
+
+<br><br>
+
+Divers, liste questions <br>
+Cote n° 108 <br>
+(à partir de 1973)
+
+<br><br>
+
+Tables (Corrections et préparation à l'édition) <br>
+Cote n° 109 <br>
+1983-1984
+
+<br><br>
+
+Tapis de Quillen (notes du 10/09/1968) <br>
+Cote n° 111 <br>
+1968
+
+<br><br>
+
+Linéarisation <br>
+Cote n° 112 <br>
+1968
+
+<br><br>
+
+Abelianization <br>
+Cote n° 113 <br>
+(à partir de 1982)
+
+<br><br>
+
+Asphéricité <br>
+Cote n° 114 <br>
+(1983)
+
+<br><br>
+
+"Correspondances" fonctorielles. Dualité des topos <br>
+Cote n° 115 <br>
+(à partir de 1982)
+
+<br><br>
+
+Mapping-cône etc. <br>
+Cote n° 116 <br>
+(à partir de 1981)
+
+<br><br>
+
+Théories homotopiques <br>
+Cote n° 117 <br>
+1983
+
+<br><br>
+
+Cohomology properties of maps in (Cat) <br>
+Cote n° 118 <br>
+(à partir de 1983)
+      
+      </p>
+    </div>
+  </div>
+  
+  <div class="container left">
+    <div class="content">
+      <h3><a href="https://webusers.imj-prg.fr/~georges.maltsiniotis/jlv.html">[Des Catégories Dérivées des Catégories Abéliennes]</a>, J.-L Verdier</h3>
+      <p>
+      SMF Astérisque 239 (1996) 
+      <br>
+      <i>Université de Paris 1967</i>
+      </p>
+    </div>
+  </div>  
+  
+  <div class="container right">
+    <div class="content">
+      <h3>Cohomologie non Abélienne, J Giraud</h3>
+      <p>Grundlehren Math. Wissenshaften 179, Springer–Verlag (1972) 
+      <br>
+      <i>Université de Paris 1966 <br>
+      "In other words, there wasn’t too little in Giraud’s book, but rather, too much!" Pursuing stacks</i>
+</p>
+    </div>
+  </div>  
+
+  <div class="container left">
+    <div class="content">
+      <h3>Classifying topos, J Giraud</h3>
+      <p>
+       Toposes , algebraic geometry and logic , Lecture Notes in Maths., vol.274 , Springer , 1972.
+     </p>
+    </div>
+  </div>
+ 
+   <div class="container right">
+    <div class="content">
+      <h3>SGA 4. Théorie des topos et cohomologie étale des schémas<br>
+      1963–1964</h3>
+      <p> 
+      Lecture Notes in Mathematics, n° 270, Springer (1972) <br><br>
+       
+      SGA 4-I. <a href="https://wstein.org/sga/sga/pdf/sga4-1.pdf">[scan]</a>, <br>
+      SGA 4-II. <a href="https://wstein.org/sga/sga/pdf/sga4-2.pdf">[scan]</a>, <br>
+      SGA 4-III. <a href="https://wstein.org/sga/sga/pdf/sga4-3.pdf">[scan]</a>, <br>
+	      scans by A Chambert-Loir <br><br>
+       
+      <a href="http://fabrice.orgogozo.perso.math.cnrs.fr/SGA4/details/index.html">[SGA 4]</a>, Réédition par F Orgogozo <a href="http://www.normalesup.org/~forgogozo/SGA4/tomes/SGA4.pdf">[pdf]</a>	      
+      </p>
+    </div>
+  </div>
+ 
+   <div class="container left">
+    <div class="content">
+      <h3>On the non additivity of the trace in derived categories, D Ferrand</h3>
+      <p>
+       <a href="https://arxiv.org/abs/math/0506589">[arXiv, math/0506589]</a> (2005)
+     </p>
+    </div>
+  </div>
+ 
+  <div class="container right">
+    <div class="content">
+      <h3>Residues and Duality, R Hartshorne</h3>
+      <p>
+       Lecture Notes in Math., no. 20, Springer-Verlag, Heidelberg, 1966
+     </p>
+    </div>
+  </div> 
+ 
+  <div class="container left">
+    <div class="content">
+      <h3>Letter to L Breen <br> 5/2/1975</h3>
+      <p>
+      <a href="/divers/LGB5scanfr.pdf">[scan.fr]</a>
+       <br><br>
+       Some notes <a href="/divers/LGBscannotes.pdf">[scan]</a>
+       <br> <i>Appendix to Chapter I. Pursuing stacks</i>
+      </p>
+    </div>
+  </div> 
+  
+  <div class="container right">
+    <div class="content">
+      <h3>Letter to L Breen <br> 17/2/1975</h3>
+      <p>
+      <a href="/divers/LGB17.pdf">[pdf]</a>, <a href="/divers/LGB17scanfr.pdf">[scan.fr]</a>, <a href="/divers/LGB17scanen.pdf">[scan.en]</a>
+       <br> <i>Appendix to Chapter I. Pursuing stacks</i>
+      </p>
+    </div>
+  </div> 
+  
+  <div class="container left">
+    <div class="content">
+      <h3>Letter to L Breen <br> 17-19/7/1975</h3>
+      <p>
+      <a href="/divers/LGB1719scanfr.pdf">[scan.fr]</a>, <a href="/divers/LGB1719scanen.pdf">[scan.en]</a>, <a href="/divers/LGB1719scan.pdf">[scan]</a>
+      <br> Some notes <a href="/divers/LGB1719scanennotes.pdf">[scan]</a>
+       <br> <i>Appendix to Chapter I. Pursuing stacks</i>
+      </p>
+    </div>
+  </div> 
+  
+  <div class="container right">
+    <div class="content">
+      <h3>Letter to D Quillen</h3>
+      <p><a href="/divers/LGQ83scan.pdf">[scan]</a>
+       <br> <i>Pursuing stacks. Chapter I: Take off</i> </p>
+    </div>
+  </div>   
+  
+  <div class="container left">
+    <div class="content">
+      <h3>Letter to P Deligne <br> 1974</h3>
+      <p>
+      <a href="">[pdf]</a>, <a href="">[scan]</a>
+      <br><br>
+      <i>Archives Grothendieck cote 103 et 134-1</i>
+      <br><br>
+       Letter to M. Carmona, P. Deligne. 9.5.2018 <a href="https://carmonamateo.github.io/letters/Carmona9mai2018.pdf">[scan]</a> <br>
+       Letter to M. Carmona, P. Deligne. 6.5.2018 <a href="https://carmonamateo.github.io/letters/Carmona6mai2018.pdf">[pdf]</a>
+      </p>
+    </div>
+  </div>  
+  
+  <div class="container right">
+    <div class="content">
+      <h3>Catégories Dérivées, Quelques résultats (État 0), J.-L. Verdier <br> 1963</h3>
+      <p>In:[SGA 4 1/2] "Cohomologie étale". Séminaire de Géométrie Algébrique du Bois-Marie, SGA 4 1/2, par P. Deligne, Lecture Notes in Mathematics 569, Springer-Verlag (1977), 262-311</p>
+    </div>
+  </div>  
+  
+  <div class="container left">
+    <div class="content">
+      <h3><a href="https://doi.org/10.24033/bsmf.1583">[Des Catégories Abéliennes]</a>, P Gabriel</h3>
+      <p>Bull. Soc. Math. de France, Tome 90, pp. 323-448 (1962)</p>
+    </div>
+  </div>  
+  
+  <div class="container right">
+    <div class="content">
+      <h3>Catégories dérivées et dualité, travaux de J.-L. Verdier, L. Illusie</h3>
+      <p>L'Enseignement Mathématique, 36 (1990), 369-391. <i>(Exposé donné le 19 octobre 1989, lors de la cérémonie en hommage à Jean-Louis Verdier organisée par l'Université Paris VII.)</i></p>
+    </div>
+  </div>   
+  
+  <div class="container left">
+    <div class="content">
+      <h3>Sur Quelques Points d'Algèbre Homologique</h3>
+      <p>Tôhoku Math. Journ. 9 (1957), 119 – 221 <br> <i>This revolutionary paper was written in 1955 during Grothendieck’s visit in Kansas. Grothendieck needed two years to redact it, and published it in a (not very famous) Japanese journal, with a very modest title. It became widely known as “The Tôhoku Paper”. </i></p>
+    </div>
+  </div>
+  
+  <div class="container right">
+    <div class="content">
+      <h3>Algèbre Homologique</h3>
+      <p>Grothendieck Seminar (1957)</p>
+    </div>
+  </div>
+  
+  <div class="container left">
+    <div class="content">
+      <h3>Théorèmes de Finitude pour la Cohomologie des Faisceaux</h3>
+      <p>Bull. Soc. Math. France 84 (1956), 1 – 7 <br> <i>Grothendieck submitted this paper to Anaïls da Academia Brasileira de Ciencias in 1953, but for the delay in publication, he retired the manuscript. This paper is the first reflection of Grothendieck about a subject different by functional analysis</i> </p>
+    </div>
+  </div>  
+ 
+   <div class="container right">
+    <div class="content">
+      <h3><a href="http://savoirs.ens.fr/expose.php?id=3257">[Un topo sur les topos]</a>, A Connes</h3>
+      <p>Un topo sur les topos, <a href="https://www.alainconnes.org/docs/topotopos.pdf">[pdf]</a>
+       <br><br>
+       Alain Connes présente la démarche intellectuelle qui a mené Alexandre Grothendieck, 
+       à partir d'une "emmerdante" rédaction qu'il devait faire pour Bourbaki sur l'algèbre homologique, 
+       à découvrir et mettre au point la notion de topos et il essaie d'expliquer en quel sens cette notion 
+       a une portée considérable grâce en particulier aux nuances qu'elle introduit entre le vrai et le faux.</p>
+    </div>
+  </div> 
+ 
+  <!-- <div class="container right">
+    <div class="content">
+      <h3><a href="http://savoirs.ens.fr/expose.php?id=3429">[L'inspiration toposique de la théorie de l'homotopie de Grothendieck]</a>, G Maltsiniotis</h3>
+      <p></p>
+    </div>
+  </div> 
+ 
+  <div class="container left">
+    <div class="content">
+      <h3><a href="http://savoirs.ens.fr/expose.php?id=3414">[Grothendieck's 1973 topos lectures]</a>, C Mclarty</h3>
+      <p></p>
+    </div>
+  </div> 
+ 
+  <div class="container left">
+    <div class="content">
+     <h3><a href="https://papyrus.bib.umontreal.ca/xmlui/handle/1866/4759">[Grothendieck et les topos]</a> : 
+      rupture et continuité dans les modes d'analyse du concept d'espace topologique <br> M Bélanger</h3>
+      <p></p>
+    </div>
+  </div>  
+ 
+  <div class="container right">
+    <div class="content">
+     <h3>Langage fonctoriel</a></h3>
+      <p>
+      <a href="http://www.numdam.org/item/MSMF_1964__2__R3_0/">[Méthode de la descente]</a>, J Giraud <br>
+      Mémoires de la Société Mathématique de France, no. 2 (1964), 156 p. <br><br> 
+       
+      <a href="https://pnp.mathematik.uni-stuttgart.de/lexmath/kuenzer/sinh.html">[Gr-catégories]</a>, H X Sinh <br>
+       <i>Université Paris Diderot - Paris 1975</i> <br>
+       Summary, H X Sinh <a href="https://pnp.mathematik.uni-stuttgart.de/lexmath/kuenzer/thesis_sinh_summary_sinh.pdf">[pdf]</a> <br>
+       Esquisse d'une théorie des Gr-Catégories, A Grothendieck <a href="https://pnp.mathematik.uni-stuttgart.de/lexmath/kuenzer/thesis_sinh_summary_grothendieck.pdf">[pdf]</a> <br><br>
+     
+      Introduction aux Langage Fonctoriel <a href="http://www.math.jussieu.fr/~leila/grothendieckcircle/GrothAlgiers.pdf">[pdf]</a> <br>
+      Notes by M, Karoubi <br>
+      Course held in Alger (1965 - 1966) <br>
+      After the Algerian War (1954 – 1962), many French mathematicians like Grothendieck, 
+       Serre and Godement went often to Alger to held there some courses. In this way, 
+       they contributed to develop the mathematics department of Alger and to reestablish 
+       friendship links between France and Algeria.  <br><br>
+      
+     Catégories et Foncteurs <br>
+       It is a book with a very complex story. At the beginning, it was a collaboration between Grothendieck 
+       and Jean Dieudonné – as we read on page 5 of [30]: “Les principes de ce langage [fonctoriel] et les principaux 
+       résultats de la théorie générale des foncteurs seront exposés plus en détail dans un ouvrage en cours de 
+       préparation par les auteurs de ce Traité”. After, the project became a collaboration between Grothendieck 
+       and Claude Chevalley – as we read in [39], pag. 146: “Pour des détails, voir un livre en préparation par 
+       C. Chevalley et le conférencier”. In the same page, there is a note that reveals that, in the middle of 60s, 
+       the book had become a collaboration between Chevalley and Pierre Gabriel. The note is very sarcastic: “Les auteurs 
+       définitifs sont C. Chevalley et P. Gabriel. Le livre doit sortir en l’an 2000”. 
+      </p>
+    </div>
+  </div> -->
+ 
+</div>
+</font>
+ 
+<br><br> 
+
+<hr WIDTH="33%">
+ 
+<br>
+ 
+<p align="center">Le "paradis originel"</p> 
+ 
+<br> 
+  
+ 
+
+ 
+<!-- <div style="text-align: center">
+&#9993; <a href="mailto:mateocarmonamat@gmail.com">mateocarmonamat@gmail.com</a>
+</div> -->   
+    <!-- -------------------------------------------------------------------- 
+    <hr>
+    <table width="100%" valign="middle" align="center">
+     <tr>    
+      <td width="20%" align="center">
+       <a href="/index.html"><b><font color="#3d523e">HOME</font></b></a>
+      </td>                  
+     </tr>
+    </table>
+    <hr> -->
+    <!-- -------------------------------------------------------------------- -->
+   </td>
+  </tr>
+ </table>
+</body>
+</html>

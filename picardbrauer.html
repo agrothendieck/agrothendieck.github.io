@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+<title>Picard - Brauer</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <meta name="description" content="A. Grothendieck.">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta name="keywords" content="">
+ <style type="text/css">
+ 
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #474e5d;
+  font-family: Helvetica, sans-serif;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: #3d523e;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: white;
+  border: 4px solid #3d523e;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+  left: 0;
+}
+
+/* Place the container to the right */
+.right {
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -16px;
+}
+
+/* The actual content */
+.content {
+  padding: 20px 30px;
+  background-color: #3d523e;
+  position: relative;
+  border-radius: 6px;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+  /* Place the timelime to the left */
+  .timeline::after {
+  left: 31px;
+  }
+  
+  /* Full-width containers */
+  .container {
+  width: 100%;
+  padding-left: 70px;
+  padding-right: 25px;
+  }
+  
+  /* Make sure that all arrows are pointing leftwards */
+  .container::before {
+  left: 60px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+  }
+
+  /* Make sure all circles are at the same spot */
+  .left::after, .right::after {
+  left: 15px;
+  }
+  
+  /* Make all right containers behave like the left ones */
+  .right {
+  left: 0%;
+  }
+} 
+ 
+  a{text-decoration:none;}
+a {
+  position: relative;
+  color: #3d523e;
+  text-decoration: none;
+}
+a:hover {
+  color: #000;
+}
+a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1); 
+}
+
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+  a{text-decoration:none;}
+a {
+  position: relative;
+  color: #3d523e;
+  text-decoration: none;
+}
+a:hover {
+  color: #000;
+}
+a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1); 
+}  
+a:link {
+  color: white;
+}  
+/* visited link */
+a:visited {
+  color: white;
+}
+
+ </style>
+</head> 
+
+<!-- div {
+  background-color: #eee;
+  width: 700px;
+  height: 150px;
+  overflow: scroll;
+} -->
+
+<BODY BGCOLOR="#3d523e" text="000000" link="#3d523e" alink="#3d523e" vlink="#3d523e">  
+ <table width="100%" height="100%" cellspacing="0" cellpadding="10">
+  <tr valign="top" width="100%" bgcolor="#3d523e">
+   <td width="10%" align="center">
+    <br>
+    <!-- <a href="https://carmonamateo.github.io/"><font size="+2" color="FFB300">M.&nbsp;CARMONA</font></a> -->
+    <a href="https://agrothendieck.github.io/"><font size="+2" color="ffffff">A.&nbsp;GROTHENDIECK</font></a>
+    <br>
+    <font color="ffffff">28 March 1928 - 13 Nov 2014</font>
+    <!-- <a href="http://www.math.ucla.edu"><font color="FFB300">Mathematics</font></a>
+    
+    <br>
+    <a href="http://www.ucla.edu"><font color="FFB300">UCLA&nbsp;</font></a><br> -->
+    <table width="70%">
+     <tr>
+      <td align="center">
+       <!-- <a href="/index.html"><font color="ffffff">Home</font></a>
+       <br><br>      
+       <a href="/themes.html"><font color="ffffff">Thèmes pour une harmonie</font></a>
+       <br><br>
+       <a href="/coup.html"><font color="ffffff">Dans le coup</font></a> -->              
+       <br>
+       <a href="https://carmonamateo.github.io/"><font color="ffffff">By <i>M. Carmona</i></font></a>
+       <br><br><br><br><br><br><br><br><br>
+       <font color="ffffff"><a
+href="/algtop.html">[Algèbre topologique]</a></font>
+       <br><br>
+       <font color="ffffff"><a
+href="/galoispoincaregrothendieck.html">[Galois-Poincaré-Grothendieck]</a></font>
+       <br><br>
+       <font color="ffffff"><a
+href="/cristaux.html">[Analyse]</a></font>
+       <br><br>
+       <font color="ffffff"><a
+href="/intersections.html">[Théorie des intersections et K-théorie]</a></font>
+       <br><br>
+       <font color="ffffff"><a
+href="/picardbrauer.html">[Picard-Brauer]</a></font>
+       <br><br>      
+       <font color="ffffff"><a
+href="/lefschetz.html">[Lefschetz]</a></font>       
+       <br><br>
+       <font color="ffffff"><a
+href="/groupesalgebriques.html">[Groupoïdes algébriques]</a></font>
+       <br><br>
+       <font color="ffffff"><a
+href="/analysealgebrique.html">[Champs algébriques]</a></font>
+       <br><br>
+       <font color="ffffff"><a
+href="/espaces.html">[Topologie des espaces]</a></font>
+
+<!-- <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+       <h5>&copy; Mateo Carmona</h5>  -->    
+     </td>
+     </tr>
+    </table>
+   </td>
+   <td width="80%" valign="top" bgcolor="FFFFFF">
+    <!-- -------------------------------------------------------------------- -->
+    <!-- -------------------------------------------------------------------- -->
+ 
+<!-- <div style="text-align: center">
+<link rel="stylesheet" href="/path/to/folder/css/academicons.min.css"/> 
+<link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css"> 
+ <p>MATEO CARMONA <a href="https://orcid.org/0000-0001-6193-8674"><i class="ai ai-orcid ai-1x"></i></a></p>
+</div>    -->
+
+<table width="90%" border="0" cellpadding="5" align="center">
+
+<!-- 
+<center><a href="https://raw.githubusercontent.com/mateocarmonamat/mateocarmonamat.github.io/master/img/arrow.PNG"><img width="400" src="https://raw.githubusercontent.com/mateocarmonamat/mateocarmonamat.github.io/master/img/arrow.PNG" alt="Carmona" border="0"></a></center>   
+-->
+
+
+
+<br><br>
+
+<h2><p align="center">Picard-Brauer</p></h2>
+
+<hr WIDTH="33%">
+
+<br><br>
+
+<center>
+<img src="https://raw.githubusercontent.com/agrothendieck/agrothendieck.github.io/master/img/groth8.jpeg" width="400" height="280">
+</center>
+
+<br><br> 
+
+<font color="white">
+<div class="timeline">
+
+  <div class="container left">
+    <div class="content">
+      <h3>Letter to L Breen <br> 5/2/1975</h3>
+      <p>
+      <a href="/divers/LGB5scanfr.pdf">[scan.fr]</a>
+       <br><br>
+       Some notes <a href="/divers/LGBscannotes.pdf">[scan]</a>
+       <br> <i>Appendix to Chapter I. Pursuing stacks</i>
+      </p>
+    </div>
+  </div> 
+ 
+  <div class="container right">
+    <div class="content">
+      <h3>Letter to L Breen <br> 17/2/1975</h3>
+      <p>
+      <a href="/divers/LGB17.pdf">[pdf]</a>, <a href="/divers/LGB17scanfr.pdf">[scan.fr]</a>, <a href="/divers/LGB17scanen.pdf">[scan.en]</a>
+       <br> <i>Appendix to Chapter I. Pursuing stacks</i>
+      </p>
+    </div>
+  </div>  
+  
+  <div class="container left">
+    <div class="content">
+     <h3><a href="https://github.com/agrothendieck/Gr-categories">[Gr-catégories]</a>, H X Sinh 
+     <a href="/divers/Gr-cat.pdf">[pdf]</a></h3>
+      <p><i>Université Paris Diderot - Paris 1975</i> <br><br>
+       <a href="https://pnp.mathematik.uni-stuttgart.de/lexmath/kuenzer/sinh.html">[H X Sinh]</a>, by M Künzer
+     </p>
+    </div>
+  </div>  
+ 
+  <div class="container right">
+    <div class="content">
+     <h3>Gr-catégories strictes, H X Sinh</h3>
+      <p>
+       <a href="https://pnp.mathematik.uni-stuttgart.de/lexmath/kuenzer/Hoang_Xuan_Sinh_Gr_categories_strictes.pdf">[scan]</a> <br>
+       Acta Mathematica Vietnamica 3 (2), p. 47-59, 1978
+     </p>
+    </div>
+  </div>
+ 
+  <div class="container left">
+    <div class="content">
+     <h3>Catégories de Picard restreintes, H X Sinh</h3>
+      <p>
+       <a href="https://pnp.mathematik.uni-stuttgart.de/lexmath/kuenzer/Hoang_Xuan_Sinh_Categories_de_Picard_restreintes.pdf">[scan]</a> <br>
+       Acta Mathematica Vietnamica 7 (1), p. 117-122, 1982
+     </p>
+    </div>
+  </div> 
+ 
+  <div class="container right">
+    <div class="content">
+      <h3>Lettre à P Deligne <br> 7/8/1974</h3>
+      <p>
+      <a href="https://carmonamateo.github.io/letters/LGD74.pdf">[pdf]</a>, <a href="https://carmonamateo.github.io/letters/LGD74scan.pdf">[scan]</a>
+      <br><br>
+       Letter to M Carmona, P Deligne. 9/5/2018 <a href="https://carmonamateo.github.io/letters/Carmona9mai2018.pdf">[scan]</a>
+       <br>
+       Letter to M Carmona, P Deligne. 6/5/2018 <a href="https://carmonamateo.github.io/letters/Carmona6mai2018.pdf">[pdf]</a>
+     </p>
+    </div>
+  </div>
+ 
+  <div class="container left">
+    <div class="content">
+      <h3>Le groupe de Brauer </h3>
+      <p>
+      <a href="http://www.numdam.org/item/SB_1964-1966__9__199_0/">[Le groupe de Brauer I]</a>, Algèbres d'Azumaya et interprétations diverses <br>
+       Séminaire Bourbaki : années 1964/65 1965/66, exposés 277-312, Séminaire Bourbaki, no. 9 (1966), Talk no. 290, p. 199-219  <br><br>
+       
+      <a href="http://www.numdam.org/item/SB_1964-1966__9__287_0/">[Le groupe de Brauer II]</a> Théories cohomologiques <br>
+       Séminaire Bourbaki : années 1964/65 1965/66, exposés 277-312, Séminaire Bourbaki, no. 9 (1966), Talk no. 297, p. 287-307 <br><br>
+       
+      Le groupe de Brauer III, Exemples et complements <br>
+       "Dix exposés sur la cohomologie des schémas", Masson-North Holland, 1968.
+      </p>
+    </div>
+  </div> 
+ 
+   <div class="container right">
+    <div class="content">
+      <h3> SGA 6 Exp XII Un théorème de représentabilité relative sur le foncteur de Picard, par M Raynaud 
+       (régidé par S Kleiman) <br> SGA 6 Exp XIII Les théorèmes de finitude pour le foncteur de Picard, par S Kleiman </h3>
+      <p>
+      SGA 6. Théorie des Intersections et Théorème de Riemann-Roch, 1966-1967 <br>
+      Lecture Notes, n° 225, Springer-Verlag, Berlin, 1971 <br>
+      
+      SGA 6, <a href="https://wstein.org/sga/sga/pdf/sga6.pdf">[pdf]</a> scan by A Chambert-Loir <br>
+       
+      <a href="https://github.com/agrothendieck/SGA6">[SGA 6]</a>, 
+      <a href="/divers/SGA6.pdf">[pdf]</a>, Réédition par M Carmona
+      </p>
+    </div>
+  </div> 
+ 
+   <div class="container left">
+    <div class="content">
+      <h3> SGA 2 Exp XI Application au groupe de Picard </h3>
+      <p>
+      SGA 2. Cohomologie Locale et Théorèmes de Lefschetz Locaux et Globaux, 1962 <br>
+      North-Holland Publ. Co, Amsterdam, 1968. <br>
+      
+      SGA 2, <a href="https://wstein.org/sga/sga/pdf/sga2.pdf">[pdf]</a> scan by A Chambert-Loir <br>
+       
+      SGA 2, <a href="https://arxiv.org/abs/math/0511279">[SGA 2]</a>, Edited by Y Lazslo 
+      </p>
+    </div>
+  </div>  
+ 
+   <div class="container right">
+    <div class="content">
+      <h3><a href="http://www.numdam.org/item/SB_1962-1964__8__105_0/">[Groupe de Picard, anneaux factoriels], J Giraud</a></h3>
+      <p>
+       Séminaire Bourbaki : années 1962/63 - 1963/64, exposés 241-276, Séminaire Bourbaki, no. 8 (1964), Talk no. 248, p. 105-117 
+      </p>
+    </div>
+  </div>
+ 
+  <div class="container left">
+    <div class="content">
+      <h3> The Picard scheme, S Kleiman </h3>
+      <p>
+       arXiv <br>
+      <a href="https://arxiv.org/pdf/math/0504020.pdf">[pdf]</a>
+      </p>
+    </div>
+  </div>  
+ 
+</div>
+</font>
+ 
+<br><br> 
+
+<hr WIDTH="33%">
+ 
+<br>
+ 
+<p align="center">He said that his feeling was that “those people” made too strict assumptions and tried to prove too little.  
+ He intended to make less assumptions and to prove a more precise theorem.</p> 
+ 
+<br> 
+  
+ 
+
+ 
+<!-- <div style="text-align: center">
+&#9993; <a href="mailto:mateocarmonamat@gmail.com">mateocarmonamat@gmail.com</a>
+</div> -->   
+    <!-- -------------------------------------------------------------------- 
+    <hr>
+    <table width="100%" valign="middle" align="center">
+     <tr>    
+      <td width="20%" align="center">
+       <a href="/index.html"><b><font color="#3d523e">HOME</font></b></a>
+      </td>                  
+     </tr>
+    </table>
+    <hr> -->
+    <!-- -------------------------------------------------------------------- -->
+   </td>
+  </tr>
+ </table>
+</body>
+</html>
