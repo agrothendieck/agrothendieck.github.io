@@ -370,6 +370,103 @@ img {vertical-align: middle;}
 #slides{
   background-color: white;
 }
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
  </style>
 </head> 
 
@@ -420,7 +517,7 @@ a:visited {
        <a href="https://agrothendieck.github.io/"><font color="ffffff">Thèmes por une harmonie</font></a>, A Grothendieck   
        <br><br>
        <a href="https://agrothendieck.github.io/corr.html"><font color="ffffff">Some Letters</font></a>, A Grothendieck     
-      </td> 
+ 
      </tr>
      
     </table>
@@ -1801,91 +1898,130 @@ Quote
        Extraits du Séminaire BOURBAKI 1957 - 1962	      
       </p>
 
-
-<br><br><br><br><br><br><br><br>
-
-<div class="container">  
-  <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="15000" width="auto">
-    <!-- Indicators  -->
-    <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to=""></li>
-      <li data-target="#myCarousel" data-slide-to=""></li>
-      <li data-target="#myCarousel" data-slide-to=""></li>
-      <li data-target="#myCarousel" data-slide-to=""></li>
-      <li data-target="#myCarousel" data-slide-to=""></li>
-      <li data-target="#myCarousel" data-slide-to=""></li>
-      <li data-target="#myCarousel" data-slide-to=""></li>
-      <li data-target="#myCarousel" data-slide-to=""></li>
-      <li data-target="#myCarousel" data-slide-to=""></li>
-      <li data-target="#myCarousel" data-slide-to=""></li>
-    </ol>
-
-    <!-- Wrapper for slides -->
-    <div align="center">
-    <div class="carousel-inner">
-      <div class="item active">   
-	<img src="https://raw.githubusercontent.com/agrothendieck/agrothendieck.github.io/master/img/sga7.jpg" width="100%">
-      </div>       
-    
-      <div class="item">
-        <img src="https://raw.githubusercontent.com/agrothendieck/agrothendieck.github.io/master/img/groth8.jpeg" width="100%">
-      </div>
-
-      <div class="item">
-        <img src="https://raw.githubusercontent.com/agrothendieck/agrothendieck.github.io/master/img/sga1.jpeg" width="100%">
-      </div>
-    
-      <div class="item">
-        <img src="https://raw.githubusercontent.com/agrothendieck/agrothendieck.github.io/master/img/sga2.JPG" width="100%">
-      </div>
-    
-      <div class="item">
-        <img src="https://raw.githubusercontent.com/agrothendieck/agrothendieck.github.io/master/img/sga5.JPG" width="100%">
-      </div>
-	    
-      <div class="item">
-        <img src="https://raw.githubusercontent.com/agrothendieck/agrothendieck.github.io/master/img/sga6.JPG" width="100%">
-      </div>   
-      
-      <div class="item">
-        <img src="https://raw.githubusercontent.com/agrothendieck/agrothendieck.github.io/master/img/sga4.jpg" width="100%">
-      </div>      
-        
-        <div class="item">
-        <img src="https://raw.githubusercontent.com/agrothendieck/agrothendieck.github.io/master/img/groth2.jpeg" width="100%">
-      </div>
-      
-      <div class="item">
-        <img src="https://raw.githubusercontent.com/agrothendieck/agrothendieck.github.io/master/img/groth1.jpg" width="100%">
-      </div>      
-      
-      <div class="item">
-        <img src="https://raw.githubusercontent.com/agrothendieck/agrothendieck.github.io/master/img/sga3.png" width="100%">
-      </div>      
-      
-      <div class="item">
-        <img src="https://raw.githubusercontent.com/agrothendieck/agrothendieck.github.io/master/img/groth3.PNG" width="100%">
-      </div>      
-	    
-	    
-      
-    <!-- Left and right controls
-    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right"></span>
-      <span class="sr-only">Next</span>
-    </a>   -->
-       <!-- Carousel nav -->
-   <a class = "carousel-control left" href = "#myCarousel" data-slide = "prev"></a>
-   <a class = "carousel-control right" href = "#myCarousel" data-slide = "next"></a>
+<br><br><br><br><br><br><br>
 	
-  </div>
+<p><img class=" wp-image-4130 aligncenter" src="https://raw.githubusercontent.com/carmonamateo/carmonamateo.github.io/master/img/breakpage.png" alt="pagebreak dark green" width="392" height="56" srcset="https://raw.githubusercontent.com/carmonamateo/carmonamateo.github.io/master/img/breakpage.png 300w, https://raw.githubusercontent.com/carmonamateo/carmonamateo.github.io/master/img/breakpage.png 768w, https://raw.githubusercontent.com/carmonamateo/carmonamateo.github.io/master/img/breakpage.png 1024w, https://raw.githubusercontent.com/carmonamateo/carmonamateo.github.io/master/img/breakpage.png 1189w" sizes="(max-width: 192px) 100vw, 192px" /></p>
+
+<br><br><br><br>
+
+
+    
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="https://raw.githubusercontent.com/agrothendieck/agrothendieck.github.io/master/img/sga7.jpg" width="100%">
+  <div class="text"></div>
 </div>
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="https://raw.githubusercontent.com/agrothendieck/agrothendieck.github.io/master/img/groth8.jpeg" width="100%">
+  <div class="text"></div>
 </div>
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="https://raw.githubusercontent.com/agrothendieck/agrothendieck.github.io/master/img/sga1.jpeg" width="100%">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="https://raw.githubusercontent.com/agrothendieck/agrothendieck.github.io/master/img/sga2.JPG" width="100%">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="https://raw.githubusercontent.com/agrothendieck/agrothendieck.github.io/master/img/sga5.JPG" width="100%">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="https://raw.githubusercontent.com/agrothendieck/agrothendieck.github.io/master/img/sga6.JPG" width="100%">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="https://raw.githubusercontent.com/agrothendieck/agrothendieck.github.io/master/img/sga4.jpg" width="100%">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="https://raw.githubusercontent.com/agrothendieck/agrothendieck.github.io/master/img/groth2.jpeg" width="100%">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="https://raw.githubusercontent.com/agrothendieck/agrothendieck.github.io/master/img/groth1.jpg" width="100%">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="https://raw.githubusercontent.com/agrothendieck/agrothendieck.github.io/master/img/sga3.png" width="100%">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="https://raw.githubusercontent.com/agrothendieck/agrothendieck.github.io/master/img/groth3.PNG" width="100%">
+  <div class="text"></div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+  <span class="dot" onclick="currentSlide(4)"></span> 
+  <span class="dot" onclick="currentSlide(5)"></span> 
+  <span class="dot" onclick="currentSlide(6)"></span>
+  <span class="dot" onclick="currentSlide(7)"></span> 
+  <span class="dot" onclick="currentSlide(8)"></span> 
+  <span class="dot" onclick="currentSlide(9)"></span> 
+  <span class="dot" onclick="currentSlide(10)"></span> 
+  <span class="dot" onclick="currentSlide(11)"></span>  
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
 
 <br><br><br><br><br><br><br><br> 
 
@@ -1983,8 +2119,6 @@ Cohomologie étale et l-adique
     </div> 
  
 <!-- </div> -->
-</font> 
-
 	  					<!-- <script>
 	  						if ( undefined !== window.jQuery ) {
 	  							(function($) {
