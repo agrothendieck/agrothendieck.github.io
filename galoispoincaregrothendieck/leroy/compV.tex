@@ -1,1 +1,103 @@
+%Begin
 
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% V. --- COMPLÉMENTS
+
+{\bf 5.1. Groupe fondamental d'un topos localement connexe en un point}
+
+\vskip .3cm
+{\bf 5.1.1.} Soient $T$ un topos \emph{localement galoisien} et$p$ un point de $T$. Nous appellerons groupe fondamental de $T$ en $p$ le groupe $\Pi_1 = \Pi_1(T, p)$ des automorphismes du foncteur fibre $p^{-1}$. On a donc pour tout objet $X$ de $T$ une opération à gauche naturelle de $\Pi_1(T, p)$ sur la fibre $p^{-1}(X)$ ; c'est-à-dire un foncteur
+$$
+f: T \to \Ens_{\Pi_1}
+$$
+de $T$ dans la catégorie des $\Pi_1$-ensembles à gauche.
+
+\vskip .3cm
+{\bf 5.1.2.} Pour tout objet localement constant $L$ de $T$, soit $V_L$ l'ensemble des $\alpha \in \Pi_1$ qui laissent fixe chaque point de $p^{-1}(L)$. Les ensembles $V_L$ forment un système fondamental de voisinages de $1$ pour une topologie de groupe sur $\Pi_1$. Pour tout objet $X$ de $T$, l'opération de $\Pi_1$ sur $p^{-1}(X)$ est alors continue pour la topologie discrète de $p^{-1}(X)$ ; d'où un nouveau foncteur
+$$
+\overline{f}: T \to \Dis_{\Pi_1} 
+$$
+à valeurs dans la catégorie des $\Pi_1$-espaces discrètes. 
+
+\vskip .3cm
+{\bf 5.1.3.} Soit $I$ la catégorie des voisinages galoisiens de $p$ : les objets de $I$ sont les couples $(Y, y)$ formés d'un objet galoisien $Y$ de $T$ et d'un $y \in p^{-1}(Y)$ ; et les morphismes $(Y, y) \to (Z, z)$ sont les $Y \to Z$ qui transforment $y$ en $z$. $I$ est en fait un ensemble préordonné filtrant. Pour toute flèche $u: (Y, y) \to (Z, z)$ de $I$, on définit un morphisme de groupes surjectif $\Aut(Y) \to \Aut(Z)$ en associant à l'automorphisme $a$ de $Y$ l'automorpshime $b$ de $Z$ tel que $b(z) = u(a(y))$ ; d'où un système projectif de groupes discrets
+$$
+\Aut(Y)_{(Y, y) \in I}
+$$
+
+Le groupe topologique $\Pi_1$ s'identifie à la limite projective de ce système si on fait correspondre à chaque $\alpha \in \Pi_1$ la famille $(a_{(Y, y)})$ déterminée par les relations
+$$
+a_{(Y, y)}(\alpha y) = y
+$$
+
+\vskip .3cm
+{\bf 5.1.4.} Supposons maintenant le topos $T$ \emph{connexe}. Les propositions suivantes sont alors équivalentes :
+\begin{enumerate}
+    \item[(a)] Le foncteur $\overline{f}: T \to \Dis_{\Pi_1}$ est une \emph{équivalence de catégories} 
+    \item[(b)] Pour tout voisinage galoisien $(Y, y)$ de $p$, la projection
+    $$
+    pr_{(Y, y)}: \Pi_1 \to \Aut(Y)
+    $$
+    est \emph{surjective}.
+    \item[(b')] Pour tout objet connexe $M$ de $T$, $\Pi_1$ opère transitivement sur $p^{-1}(M)$.
+\end{enumerate}
+Ces propositions sont vérifiées dans les deux cas suivants :
+\begin{enumerate}
+    \item[(i)] Tout objet galoisien de $T$ est fini (cf. 5.2.)
+    \item[(ii)] $T$ admet une famille génératrice dénombrable.
+\end{enumerate}
+Notons qu'un topos localement galoisien qui remplit la condition (i) ou la condition (ii) admet toujours un point.
+
+\vskip .3cm
+{\bf 5.1.5.} Soit maintenant $E$ un topos localement connexe. A chaque point $p$ de $E$, le morphisme de topos $E \to \SLC(E)$ (2.4.1.) fait correspondre un point $\overline{p}$ de $\SLC(E)$.
+
+Le foncteur fibre $p^{-1}$ n'est autre que la restriction de $p^{-1}$ à la sous-catégorie $\SLC(E)$ de $E$. On peut appeler groupe fondamental de $E$ en $p$ le groupe fondamental en $\overline{p}$ du topos localement galoisien $\SLC(E)$.
+
+Les propriétés (i) et (ii) de 5.1.4., pour le topos $\SLC(E)$, reviennent aux propriétés suivantes de $E$ :
+\begin{enumerate}
+    \item[(i')] Tout objet galoisien de $E$ est fini.
+    \item[(ii')] Il existe une \emph{suite} $(R_n)$ de cribles couvrants $e_E$, telle que chaque objet localement constant de $E$ puisse être trivialisé par un $R_n$ (cf. 3.3.2. et 3.2.5.)
+\end{enumerate}
+
+{\bf 5.2. Groupoïde fondamental profini}
+
+\vskip .3cm
+{\bf 5.2.1.} Disons qu'un objet localement constant $L$ d'un topos $T$ est \emph{fini} s'il existe un recouvrement $(U_{\alpha})$ de $e_T$ par des objets de $T$ et des $U_{\alpha}$-isomorphismes
+$$
+U_{\alpha} \times L \isom I^{\alpha}_{U_{\alpha}}
+$$
+où les $I^{\alpha}$ sont des ensembles finis.
+
+On prouve sans peine les propositions suivantes : 
+\begin{enumerate}
+    \item[1)] Soient $L$ un objet l.c.f. de $T$ et $R$ une relation d'équivalence sur $L$. Si $R$ est un objet l.c.f., le quotient l'est aussi.
+    \item[2)] Toute limite projective finie d'objets l.c.f. est l.c.f.
+\end{enumerate} 
+Et, \emph{si $T$ est somme directe de topos connexes} :
+\begin{enumerate}
+    \item[3)] Tout objet $L$ de $T$ qui est l.c.f. est somme directe d'objets l.c.f. connexes ; et tout sous-objet de $L$ qui est l.c.f. de $T$. Au-dessus de chaque composantes connexe de $T$, il y a un objet galoisien fini qui trivialise $L$.
+    \item[4)] Soit $L$ un objet l.c.f. de $T$. Au-dessus de chaque composante connexe de $T$, il y a un objet galoisien fini qui trivialise $L$.
+\end{enumerate}
+
+\vskip .3cm
+{\bf 5.2.2.} Nous supposons le topos $T$ somme directe de topos connexes, et qui l'univers de référence admet un élément infini.
+
+Soit $\SLCF(T)$ la sous-catégorie pleine de $T$ formée des sommes directes d'objets l.c.f. Les propositions 1 à 3 ci-dessus montrent que la catégorie $K$ des objets l.c.f. de $T$ vérifie les hypothèses du lemme 2.4.2.. Or, on prouve aisément que cette catégorie est petite à équivalence près ; donc $\SLCF(T)$ est un topos et l'inclusion $SLCF(T) \to T$ définit un morphisme de topos en sens inverse. Enfin, d'après la proposition 4 ci-dessus et le lemme 2.4.10., $\SLCF(T)$ est un topos localement galoisien.
+
+\vskip .3cm
+{\bf 5.2.3.} Disons qu'un topo localement galoisien est \emph{profini} s'il est engendré par ses objets galoisiens finis. Le topos localement galoisien $\SLCF(T)$ est profini, et le morphisme $T \to \SLCF(T)$ fournit pour tout topos localement galoisiens profini $P$ une équivalence de catégories
+$$
+\Homtop(\SLCF(T), P) \to \Homtop(T, P)
+$$
+
+
+
+
+
+
+
+%End
