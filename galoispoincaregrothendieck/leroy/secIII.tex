@@ -1,1 +1,354 @@
+%Begin
 
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% III. --- TOPOS LOCALEMENT GALOISIENS ET GROUPOÏDE FONDAMENTAL
+
+On maintient l'hypothèse (2.4) que l'univers $\cU$ admet un élément de cardinal infini.
+
+\vskip .3cm
+{
+Définition {\bf 3.1.} --- \it Nous dirons qu'un topos $E$ est localement galoisien s'il est engendré par ses objets galoisiens (2.3). Suivant (2.4), cela revient à dire que $E$ est localement connexe et que :
+$$
+\SLC(E) = E.
+$$
+}
+\vskip .3cm
+Dans les numéros (3.2) et (3.3) on montre que les topos localement galoisiens se comportent comme des ``pro-groupoïdes''. On passe ensuite à la définition du (pro-) groupoïde fondamental (3.4).
+
+\vskip .3cm
+{\bf 3.2.} (Les groupoïdes comme topos). Soient $\Top$ la 2-catégorie des $\cU$-topos et $\Grpd$ la 2-catégorie des groupoïdes qui sont $\cU$-petits à équivalence près ; soit enfin $\cG$ la sous-catégorie pleine de $\Top$ formée des topos dont tous les objets sont localement constants (ces topos sont donc a fortiori localement galoisiens). Nous allons établir des équivalences
+$$
+[]
+$$
+
+\vskip .3cm
+{\bf 3.2.1.} Le 2-foncteur [].
+
+Pour tout objet $C$ de $\Grpd$, la catégorie $\widehat{C}$ des $\cU$-préfaisceaux sur $C$ est un $\cU$-topos. La construction du topos $\widehat{C}$ est 2-fonctorielle en $C$ :
+\begin{enumerate}
+    \item[(a)] A tout foncteur $C \xlongrightarrow{m} D$ entre objets de $\Grpd$ correspond un morphisme de topos
+    $$
+    \widehat{m}: \widehat{C} \to \widehat{D}
+    $$
+    défini par le foncteur image inverse
+    $$
+    \widehat{m}^{-1}: \widehat{D} \to \widehat{C}
+    $$
+    $$
+    G \to G \circ m
+    $$
+    \item[(b)] A tout morphisme de $\Grpd$ :
+    $$
+    G(n(X)) \to G(m(X))
+    $$
+    d'où un morphisme fonctoriel
+    $$
+    \widehat{n}^{-1} \to \widehat{m}^{-1}
+    $$
+    c'est-à-dire un morphisme de morphismes de topos
+    $$
+    \widehat{m} \to \widehat{n}
+    $$
+    \item[(c)] Et la compatibilité de ces données avec les diverses opérations de composition se vérifie immédiatement.
+\end{enumerate}
+
+\vskip .3cm
+{\bf 3.2.2.} Pour tout objet $C$ de $\Grpd$, le topos $\widehat{C}$ est objet de $\cG$ : tout préfaisceau représentable sur $C$
+\begin{enumerate}
+    \item[(i)] est connexe et non-vide dans $\widehat{C}$ (clair)
+    \item[(ii)] trivialise tous les objets de $C$ (2.2.1).
+\end{enumerate}
+
+\vskip .3cm
+{\bf 3.2.3.} Soit $C$ un objet de $\Grpd$. Tout foncteur fibre de $\widehat{C}$ est représentable par un objet de $C$, autrement dit, est isomorphe à un foncteur de la forme $F \to F(X)$, où $X$ est un objet de $C$.
+
+{\it Démonstration}. Soit $\phi: \widehat{C} \to \Ens$ un foncteur libre de $\widehat{C}$. Il existe un préfaisceau représentable $X$ sur $C$ tel que $\phi(X) \neq \emptyset$. D'après (3.2.2. (ii)) et (2.1.4), $\phi$ est isomorphe à $F \to F(X)$.
+
+\vskip .3cm
+{\bf 3.2.4.} L'équivalence naturelle $C \to \Point(\widehat{C})$. Soit $C$ un objet de $\Grpd$. A tout objet $X$ de $C$, associons le point $P_X$ de $\widehat{C}$ défini par le foncteur fibre $F \to F(X)$ de $\widehat{C}$ ; cela nous donne un foncteur de $C$ dans la catégorie des points de $\widehat{C}$ :
+$$
+X \to p_X
+$$
+$$
+C \to \Point(\widehat{C})
+$$
+On \c{c}ait que ce foncteur est pleinement fidèle ; donc c'est une équivalence de catégories d'après (3.2.3). 
+
+\vskip .3cm
+{\bf 3.2.5.} Soit $E$ un topos objet de $\cG$. La sous-catégorie pleine $C$ de $E$ formée des objets galoisiens qui trivialisent tous les objets de $E$ est un objet de $\Grpd$, et elle engendre $E$ ; d'où une équivalence $\widehat{C} \isom E$.
+
+[]
+
+\vskip .3cm
+{
+Corollaire {\bf 3.2.6.} --- \it La catégorie $\Point(E)$ des points de $E$ est un objet de $\Grpd$ (3.2.4.).
+}
+
+\vskip .3cm
+{\bf 3.2.7.} L'équivalence naturelle $E\to (\Point(E))\widehat{}$
+\begin{enumerate}
+    \item[a)] Soit $E$ un objet de $\cG$. On définit un \emph{foncteur}
+    $$
+    E \to (\Point(E))\widehat{} \leqno{(*)}
+    $$
+    en associant à l'objet $X$ de $E$ le préfaisceau
+    $$
+    p \to p^{-1}(X)
+    $$
+    sur $\Point(E)$ (l'action sur les morphismes est évidente).
+    \item[b)] Le foncteur (*) est une équivalence de catégories (donc il définit une équivalence de topos $(\Point(E))\widehat{} \to E$).
+\end{enumerate}
+D'après (3.2.5), il suffit de le prouver pour $E = \widehat{C}$, où $C$ est un objet de $\Grpd$. L'équivalence naturelle $C \to \Point(\widehat{C})$ fournit une équivalence de catégories
+$$
+(\Point(\widehat{C}))\widehat{} \to \widehat{C}
+$$
+et le foncteur composé
+$$
+\widehat{C} \to (\Point(\widehat{C}))\widehat{} \to \widehat{C}
+$$
+n'est autre que le foncteur identique de $\widehat{C}$.
+
+\vskip .3cm
+{\bf 3.2.8.} {\it Conclusion}. Les foncteurs
+$$
+C \to \widehat{C}
+$$
+$$
+\Point(E) \leftarrow E
+$$
+définissent des équivalences quasi-inverses entre $\Grpd$ et $\cG$.
+
+\vskip .3cm
+{\bf 3.3.} (Les topos localement galoisiens comme limites projectives filtrantes de groupoïdes)
+
+\vskip .3cm
+{\bf 3.3.0.} Dans tout ce numéro 3.3, on entend par ``ordonnés filtrantes'' les ensembles ordonnés filtrantes à gauche $\cU$-petits, que l'on regarde aussi bien comme des catégories.
+
+\vskip .3cm
+{\bf 3.3.1.} Notre propos est d'établir pour tout $\cU$-topos $E$ l'équivalence des propriétés suivantes :
+\begin{enumerate}
+    \item[(i)] $E$ est localement galoisien.
+    \item[(ii)] Il existe un ordonné filtrant $I$ (3.3.0) et une catégorie fibrée en $\cU$-topos $F \to I$ (A. 1) qui remplit les conditions suivantes :
+    \begin{enumerate}
+        \item[1)] Les fibres de $F$ sont des objets de $\cG$ (3.2).
+        \item[2)] Les foncteurs changement de base de $F$ sont pleinement fidèles.
+        \item[3)] $E$ est une 2-famille projective de $F$ dans la 2-catégorie des $\cU$-topos (A. 4)
+    \end{enumerate}
+\end{enumerate}
+
+\vskip .3cm
+{\bf 3.3.2.} Soit $E$ un $\cU$-topos localement connexe. Pour tout crible $R$ couvrant $e_E$, soit $\LC(E, R)$ la sous-catégorie pleine de $E$ formée des objets qui sont trivialisés par les objets connexes appartenant à $R$
+\begin{enumerate}
+    \item[(i)] La catégorie $\LC(E, R)$ est un $\cU$-topos objet de $\cG$.
+    \item[(ii)] Les inclusions $\LC(E, R) \to \SLC(E)$ et $\LC(E, R) \to E$ définissent des morphismes de topos $\SLC(E) \to \LC(E, R)$ et $E \to \LC(E, R)$.
+\end{enumerate}
+
+{\it Démonstration}. 
+\begin{enumerate}
+    \item[1)] $\LC(E, R)$ est stable dans $E$ par limites inductives et projectives (2.2.4) (elle l'es donc aussi dans $\SLC(E)$ par (2.4)).
+    \item[2)] Soit $K$ la catégorie des objets de $\LC(E, R)$ qui sont galoisiens dans $E$. D'après (2.4.6) et le point (1), $K$ engendre $\LC(E, R)$. Or d'après (2.4.9), $K$ est équivalente à une petite catégorie, donc $\LC(E, R)$ est un $\cU$-topos et on a le point (ii). en particulier, les objets de $K$ qui trivialisent \emph{dans $E$} un objet donné de $\LC(E, R)$ le trivialisent aussi dans $\LC(E, R)$. Donc tout objet de $\LC(E, R)$ est localement constant (2.4.6).
+\end{enumerate}
+
+\vskip .3cm
+{\bf 3.3.3.} Soient $T$ un $\cU$-topos, $I$ un ordonné filtrant (3.3.0) et $(T_i)_{i \in I}$ une famille décroissante d sous-catégories essentiellement pleines de $T$. Soit $F$ la sous-catégorie pleine de $I \times T$ formée des couples $(i, X)$ tels que $X \in Ob(T_i)$. Supposons qu'on ait les propriétés suivantes :
+\begin{enumerate}
+    \item[1)] Pour tout $i \in I$, $T_i$ est un $\cU$-topos objet de $\cG$, et l'inclusion $T_i \to T$ définit un morphisme de topos $T \to T_i$. 
+    \item[2)] La réunion des $Ob(T_i)$ engendre $T$. Alors $F$ est une catégorie fibrée en topos au-dessus de $I$ (cf. A 1), et l'inclusion $F \to I \times T$ définit un morphisme de catégories fibrées en topos $I \times T \to F$ qui fait de $T$ la 2-limite projective des $T_i$ dans la catégorie des $\cU$-topos.
+\end{enumerate}
+
+{\it Démonstration} Il est immédiat que $F$ est une catégorie fibrée en topos, et que l'inclusion $F \to I \times T$ définit un morphisme de catégories fibrées en topos $I \times T \to F$.
+
+Soit $G$ la sous-catégorie pleine de $T$, réunion des $T_i$. On a tout de suite :
+\begin{enumerate}
+    \item[(i)] Les objets de $G$ sont localement constants dans $T$.
+    \item[(ii)] $G$ est stable par limites projectives finies dans $T$.
+\end{enumerate}
+
+Soit maintenant $S$ un $\cU$-topos. Il faut prouver que le foncteur
+$$
+\phi: \Homtop(S, T) \to \Cartop_I(I \times S, F)
+$$
+qui associe au morphisme $f: S \to T$ le morphisme $I \times S \to F$ défini par le foncteur
+$$
+\phi(f)^{-1}: F \to I \times S
+$$
+$$
+(i, X) \to (i, f^{-1}(X))
+$$
+est une équivalence de catégories.
+\begin{enumerate}
+    \item[(i)] $\phi$ est pleinement fidèle : 
+    Soient $f, g: S \to T$ deux morphismes ; étant donné un morphisme de foncteurs cartésiens
+    $$
+    \lambda: \phi(g)^{-1} \to \phi(f)^{-1}
+    $$
+    il existe un morphisme de foncteurs et un seul
+    $$
+    u: g^{-1}_{/G} \to f^{-1}_{/G}
+    $$
+    tel que pour tout objet $(i, X)$ de $F$ on ait: 
+    $$
+    \lambda_{(i, X)} = (i_i, \mu_X)
+    $$
+    Mais puisque $G$ engendre $T$, le foncteur
+    $$
+    f \to f^{-1}_{/G}
+    $$
+    $$
+    \Homtop(S, T) \to (\Fonct(G, S))^\circ
+    $$
+    est pleinement fidèle, d'où notre assertion.
+    \item[(ii)] []
+\end{enumerate}
+
+\vskip .3cm
+{\bf 3.3.4.} Corollaire.
+
+Soient $E$ un $\cU$-topos localement connexe, $I$ un ordonné filtrant (3.3.0) et $(R_i)_{i \in I}$ une famille décroissante de cribles couvrant $e_E$ (i.e. $R_i$ est plus fin que $R_j$ pour $i \leq j$). Supposons que pour tout objet localement constant $L$ de $E$, il existe un $i \in I$ tel que $L$ soit dans $\LC(E, R_i)$ (3.3.2) ; alors le topos $T = \SLC(E)$ est limite projective des $T_i = \LC(E, R_i)$ au sens de (3.3.3).
+
+{\it Remarque}. Puisqu'il existe une telle famille de cribles, l'implication $(i) \Rightarrow (ii)$ de (3.3.1) est prouvée.
+
+\vskip .3cm
+{\bf 3.3.5.} Soient $T$ un ordonné filtrant, et $\Pi: F \to I$ une catégorie fibrée au-dessus de $I$. Si les foncteurs changement de base de $F$ sont pleinement fidèles, il existe une catégorie $K$ et une famille décroissante $(K_i)_{i \in I}$ de sous-catégories essentiellement pleines de $K$ telles que :
+\begin{enumerate}
+    \item[a)] $K$ soit réunion des $K_i$ ;
+    \item[b)] $F$ soit $I$-équivalente à la sous-catégorie pleine $F'$ de $I \times K$ formée des couples $(i, X)$ tels que $X \in Ob(K_i)$ (F' est alors une sous-catégorie fibrée de $I \times K$).
+\end{enumerate}
+
+{\it Démonstration}. J'abrège un peu la démonstration, qui est d'une lourde trivialité. 
+\begin{enumerate}
+    \item[1)] Soit $F_{\cart}$ la catégorie des objets de $F$ et flèches cartésiennes. Pour tout objet $X$ de $F$, soit $I_X$ la catégorie $F_{\cart}/X$. On a un foncteur
+    $$
+    I_X \to F
+    $$
+    (oubli de la flèche structurale), d'où un autre foncteur
+    $$
+    I_X \to I
+    $$
+    composé de $I_X \to F$ et de $F \to I$.
+    \item[2)] Pour tout couple $(X, Y)$ d'objets de $F$, soit
+    $$
+    I_{XY} = I_{X} \times_X I_Y
+    $$
+    Cette catégorie est non-vide puisque $I$ est filtrante ; et on a des foncteurs 
+    $$
+    q^X_{XY} = I_{XY} \xlongrightarrow{pr_1} I_X \to F, \quad q^X_{XY} = I_{XY} \xlongrightarrow{pr_2} I_Y \to F.
+    $$
+    \item[3)] \emph{Remarque}. Étant données un objet
+    $$
+    C = (X' \to X, Y' \to Y)
+    $$
+    de $I_{XY}$ et une flèche $f: X' \to Y'$ au-dessus de $\Pi(X') = \Pi(Y')$, il existe un morphisme de foncteurs cartésiens et un seul
+    $$
+    \lambda: q^X_{XY} \to q^Y_{XY}
+    $$
+    tel que $\lambda_C = f$.
+    \item[4)] Définition de la catégorie $K$:
+    \begin{enumerate}
+        \item[a)] Les objets de $K$ sont les objets de $F$ ;
+        \item[b)] Étant donnés des objets $X$, $Y$ de $K$, les morphismes $X \to Y$ sont les morphismes de foncteurs cartésiens :
+        $$
+        q^X_{XY} \to q^Y_{XY}
+        $$
+        \item[c)] La composition des morphismes se définit de fa\c{c}on évidente à partir de la remarque 3.
+    \end{enumerate}
+    \item[5)] Un foncteur $\epsilon: F \to K$ 
+    []
+    \item[6)] Soit $f: X \to Y$ une flèche de $F$. Pour que $\epsilon(f)$ soit un isomorphisme, il faut et il suffit que $f$ soit cartésienne.
+    \item[7)] Pour tout $i \in I$, la restriction de $\epsilon$ à la fibre $F_i$ est pleinement fidèle
+    \item[8)] Pour tout $i \in I$, soit $K_i$ l'image essentielle de $e_{| F_i}: F_i \to K$. La famille $(K_i)$ est décroissante d'après (6), et $K$ est réunion des $K_i$.
+    \item[9)] Le foncteur
+    $$
+    (\Pi, \epsilon): F \to I \times K
+    $$
+    est $I$-cartésien et pleinement fidèle ; son image essentielle est la sous-catégorie pleine $F'$ de $I \times K$ formée des $(i, X)$ tels que $X \in Ob(K_i)$.
+\end{enumerate}
+
+\vskip .3cm
+{\bf 3.3.6.} Soient $C$ une catégorie, $I$ un ordonné filtrant (3.3.0) et $(G_i)_{i \in I}$ une famille décroissante de sous-catégories essentiellement pleines de $C$. On suppose que:
+\begin{enumerate}
+    \item[(i)] Pour tout $i \in I$, $G_i$ est un $\cU$-topos objet de $\cG$ (cf. 3.2) ;
+    \item[(ii)] Pour $i \leq j$, l'inclusion $G_ j \to G_i$ définit un morphisme de topos $G_i \to G_j$ ;
+    \item[(iii)] $C$ est réunion des sous-catégories $G_i$. Dans ce cas, si l'on munit $C$ de sa topologie canonique, la catégorie $\widetilde{C}$ des $\cU$-faisceaux sur $C$ est un $\cU$-topos localement galoisien, et les foncteurs pleinement fidèles 
+    $$
+    G_i \to C \to \widetilde{C} \leqno{(*)}
+    $$
+    définissent es morphismes de topos $\widetilde{C} \to G_i$.
+\end{enumerate}
+
+{\it Corollaire}. Sous les hypothèses précédentes, soient $(T_i)$ les images essentielles des foncteurs pleinement fidèles (*) ; $\widetilde{C}$ est limite projective des topos $T_i$ au sens de (3.3.3).
+
+{\it Démonstration de la proposition}. Les points suivantes se prouvent tous immédiatement :
+\begin{enumerate}
+    \item[1)] Les limites projectives finies de $C$ sont représentables, et les inclusions $G_i \to C$ sont exactes à gauche.
+    \item[2)] Toute famille de morphismes d'un $G_i$ qui est épimorphique dans $G_i$ est épimorphique effective universelle dans $C$.
+    \item[3)] $C$ admet une petite famille topologiquement génératrice pour la topologie canonique (cela découle de (2) puisque $I$ est petit (3.3.0)).
+    \item[4)] Les foncteurs pleinement fidèles
+    $$
+    G_i \to C \to \widetilde{C}
+    $$
+    définissent des morphismes de topos $\widetilde{C} \to G_i$ (par (1) et (2)).
+    \item[5)] $\widetilde{C}$ est localement galoisien : les objets galoisiens des $G_i$ sont galoisiens dans $\widetilde{C}$ (par (4) et (2.4.10)) et ils engendrent le site $C$ (par (2)), donc le topos $\widetilde{C}$.
+\end{enumerate}
+
+\vskip .3cm
+{\bf 3.3.7.} Les numéros (3.3.5) et (3.3.6) prouvent l'implication (ii) $\Rightarrow$ (i) de 3.3.1. 
+
+\vskip .3cm
+{\bf 3.4.} Le groupoïde fondamental
+
+\vskip .3cm
+{
+Définition {\bf 3.4.1.} --- \it Nous appellerons (par abus de langage) groupoïde fondamental d'un $\cU$-topos $E$ la donnée d'un $\cU$-topos \emph{localement galoisien} $S$ et d'un morphisme de topos :
+$$
+p: E \to S
+$$
+tel que pour tout $\cU$-topos localement galoisien $T$ le foncteur
+$$
+\Homtop(S, T) \to \Homtop(E, T)
+$$
+donné par la composition avec $p$ soit une équivalence de catégories.
+}
+\vskip .3cm
+
+{\it Remarque}. Si $E$ est localement connexe, le morphisme de topos $E \to \SLC(E)$ défini par l'inclusion $\SLC(E) \to E$ (2.4) fait de $\SLC(E)$ un groupoïde fondamental de $E$.
+
+\vskip .3cm
+{\bf 3.4.2.} (Condition suffisante pour qu'un topos connexe admette un groupoïde fondamental)
+
+Soit $E$ un $\cU$-topos connexe. Supposons qu'il existe une petite famille $(Y_{\alpha})$ d'objets galoisiens de $E$, telle que tout objet de $E$ qui admet une structure de torseur sous un groupe constant puisse être trivialisé par un $Y_{\alpha}$. Soient $K$ la sous-catégorie pleine de $E$ formée des objets qui peuvent être trivialisés par un objet galoisien, et $S$ la sous-catégorie pleine de $E$ formée des sommes directes d'objets de $K$. $S$ est un $\cU$-topos localement galoisien, et l'inclusion $S \to E$ qui fait de $S$ un groupoïde fondamental de $E$.
+
+{\it Démonstration}.
+\begin{enumerate}
+    \item[1)] Pour toute famille finie $(L_i)_{1 \leq i \leq n}$ d'objets de $K$, il existe un indice $\alpha$ tel que $Y_\alpha$ trivialise chacun des $L_i$ : en effet, prenons pour chaque $i$ un objet galoisien qui trivialise $L_i$. Le produit
+    $$
+    T = Y_1 \times ... \times Y_n
+    $$
+    trivialise chacun des $L_i$ et admet une structure de torseur sous le groupe constant
+    $$
+    (\Aut(Y_1) \times ... \times \Aut(Y_n))_E
+    $$
+    il existe ainsi un $Y_\alpha$ qui trivialise $T$, et donc chacun des $L_i$.
+    \item[2)] $S$ est un $\cU$-topos localement galoisien, et l'inclusion $S \to E$ définit un morphisme de topos $E \to S$. D'après (1) et la théorie de Galois (les points (iii) et (iv) de 2.3.6), la sous-catégorie $K$ de $E$ remplit les conditions (1) à (4) du lemme (2.4.2.) - compte tenu de fait que les topos de la forme $B^G$ sont objets de $\cG$ -. Or tout objet de $K$ peut être recouvrement par des exemplaires d'un $Y_{\alpha}$, donc $S$ est un $\cU$-topos et l'inclusion $S \to E$ définit un morphisme de topos : $p: E \to S$ (2.4.3.). Mais alors les $Y_{\alpha}$ sont galoisiens dans $S$ (par (2.4.10)), donc $S$ est localement galoisien.
+    \item[3)] $p: E \to S$ est un groupoïde fondamental de $E$. Soit $T$ un $\cU$-topos localement galoisien. Le foncteur
+    $$
+    \Homtop(S, T) \to \Homtop(E, T)
+    $$
+    est évidemment pleinement fidèle. Prouvons qu'il est essentiellement surjectif. Soit $u: E \to T$ un morphisme. Si $Z$ est un objet galoisien de $T$, $u^{-1}(Z)$ admet une structure de torseur sous $(\Aut(Z))_E$ (2.1.5), donc $u^{-1}(Z)$ est dans $S$. Par conséquent, le foncteur $u^{-1}$ se factorise par $S$, c.q.f.d.
+\end{enumerate}
+
+\vskip .3cm
+{\bf 3.4.3.} {\it Question}. Soient $E$ un $\cU$-topos et $p: E \to S$ un groupoïde fondamental de $E$. Le foncteur $p^{-1}: S \to E$ est-il toujours pleinement fidèle ? Si la réponse à cette question était affirmative, on obtiendrait aisément une condition nécessaire et suffisante pour l'existence d'un groupoïde fondamental.
+
+
+
+
+
+
+
+%End
