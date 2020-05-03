@@ -1,1 +1,546 @@
+%Begin
 
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% IV. --- LIMITES INDUCTIVES DE TOPOS ET THÉORÈME DE VAN KAMPEN
+
+Soient $I$ une petite catégorie, $F \xlongrightarrow{\Pi} I$ une catégorie fibrée en $\cU$-topos $(A, 1)$, et
+$$
+L = \Cart_I(I, F)
+$$
+La catégorie des sections cartésiennes de $F$ au-dessus de $I$.
+
+\vskip .3cm
+{\bf 4.1. $L$ comme limite inductive de $F$}
+
+\vskip .3cm
+{\bf 4.1.1.} $L$ est un $\cU$-topos, et le foncteur d'évaluation :
+$$
+(i, S) \to S(i)
+$$
+$$
+I \times L \to F
+$$
+définit un morphisme de catégories fibrées en topos $F \to I \times L$ qui fait de $L$ la 2-limite inductive de $F$ dans la catégorie des $\cU$-topos. (A, 4)
+
+{\it Démonstration}. 
+\begin{enumerate}
+    \item[1)] Les limites projectives finies (resp. les limites inductives) sont représentables dans $L$ ; et pour tout $i \in \Ob(I)$, le foncteur
+    $$
+    S \to S(i)
+    $$
+    $$
+    L \to F_i
+    $$
+    y commute : c'est immédiat puisque les foncteurs changement de base de $F$ sont exacts à gauche et commutent aux limites inductives.
+    \item[2)] $L$ est un $\cU$-topos : compte tenu du critère de Giraud et de (1), il suffit de montrer que $L$ admet une petite famille génératrice. Or (comme par hasard) $F$ remplit les conditions du corollaire I.9.25 de \cite{3}, qui garantissent l'existence d'une telle famille.
+    \item[3)] Le foncteur $I \times L \to F$ définit un morphisme de catégories fibrées en topos $F \to I \times L$ : ce foncteur est évidemment cartésien ; d'où notre assertion par (1).
+    \item[4)] Le morphisme de catégories fibrées en topos $F \to I \times L$ fait de $L$ la 2-limite inductive de $F$ dans la catégorie des $\cU$-topos : soit $E$ un $\cU$-topos. Le foncteur
+    $$
+    \Homtop(L, E) \to Cartop_I(F, I \times E)
+    $$
+    qui associe au morphisme $u: L \to E$ le morphism de catégories fibrées en topos
+    $$
+    F \to I \times E
+    $$
+    définit par le foncteur
+    $$
+    (i, X) \to u^{-1}(X)(i)
+    $$
+    $$
+    I \times E \to F
+    $$
+    est une équivalence de catégories, comme on le vérifie tout de suite en tenant compte de (1).
+\end{enumerate}
+ 
+\vskip .3cm
+{
+Proposition {\bf 4.1.2.} --- \it Si pour tout $i \in \Ob(I)$ la fibre $F_i$ est localement connexe, alors $L$ est localement connexe.
+}
+
+{\it Démonstration}. Pour tout $i \in \Ob(I)$, soit
+$$
+c_i: F_i \to \Ens
+$$
+le foncteur ``composante connexes'' de $F_i$. (1.5)
+
+Soit $S$ une section cartésienne de $F$. Pour toute flèche $u: i \to j$ de $I$, on a une application
+$$
+c_i(S(i)) \to c_j(S(j))
+$$
+qui associe à la composante connexe $C$ de $S(i)$ l'unique composante connexe $D$ de $S(j)$ telle que la restriction à $C$ du $u$-morphisme $S(u): S(i) \to S(j)$ se factorise par $D$.
+
+Étant donnés une seconde section cartésienne $T$ de $F$ et un morphisme $S \to T$ on a pour tout flèche $u: i \to j$ de $I$ le diagramme commutatif :
+$$
+[]
+$$
+
+On peut donc définir un foncteur
+$$
+c: L \to \Ens
+$$
+$$
+S \to c(S) = [] c_i(S(i))
+$$
+Prouvons que $c$ est un foncteur composantes connexes de $L$ (cf 1.5.) :
+
+Soit $A$ un ensemble. Considérons l'objet constant $A_L$ de $L$. Pour tout $i \in \Ob(I)$, $A_L(i)$ s'identifie à $A_{F_i}$ ; pour tout flèche $u: i \to j$ de $I$ et tout $a \in A$, le diagramme
+$$
+[]
+$$
+est commutatif.
+
+Soit maintenant $S$ un objet de $L$. Pour tout $i \in \Ob(I)$, soit $f_i: S(i) \to A_{F_i}$ un $i$-morphisme, correspondant à une application $b_i: c_i(S(i)) \to A$. Étant donnée une flèche $u: i \to j$ de $I$, la commutativité du diagramme
+$$
+[]
+$$
+équivaut à celle du diagramme
+$$
+c_i(S(i)) \to c_j(S(j))
+$$
+[]
+
+Donc le foncteur $c$ est adjoint à gauche du foncteur ``objet constant'' $\Ens \to L$, c.q.f.d.
+
+\vskip .3cm
+{\bf 4.2. Le groupoïde fondamental de $L$}
+
+On définit une \emph{topologie}sur la catégorie $F$, qui fournit un topos $\widetilde{F}$, et un morphisme de topos $\widetilde{F} \to L$ (4.4). Quand les fibres de $F$ sont localement connexes, $\widetilde{F}$ est lui-même localement connexe, et les morphismes de topos $\SLC(\widetilde{F}) \to \SLC(E)$ déduit du morphisme $\widetilde{F} \to L$ est une équivalence (th. 4.5). On montre alors (4.6) comment construire une famille convenable de groupoïdes ``approchés'' $\LC(\widetilde{F}, R)$ (au sens de 3.3.2 et 3.3.4) à l'aide de groupoïdes ``approchés'' des fibres de $F$.
+
+\vskip .3cm
+{\bf 4.3.} Un foncteur pleinement fidèle
+$$
+p: L = \Cart_I(I, F) \to \widehat{F}
+$$
+(cette construction utilise seulement le fait que $\Pi: F \to I$ est un foncteur fibrant).
+\begin{enumerate}
+    \item[(1)] Soit $S: I \to F$ une section cartésienne. On définit le préfaisceau $p(S)$ comme voici :
+    Pour tout objet $X$ de $F$, on prend :
+    $$
+    p(S)(X) = \Hom_i(X, S(i)), \quad \text{où} \quad i = \Pi(X)
+    $$
+    Étant donné un morphisme $f: X \to Y$ de $F$, l'application $p(S)(f): p(S)(Y) \to p(S)(Y)$ est la composée:
+    $$
+    \Hom_j(Y, S(j))\to \Hom_u(X, S(j)) \isommap \Hom_i(X, S(i))
+    $$ 
+    où $u: i \to j$ désigne la projection de $f$. Autrement dit, l'application $p(S)(f)$ envoie l'élément $h$ de $p(S)(Y)$ sur l'élément $g$ de $p(S)(X)$ qui rend commutatif le diagramme
+    $$
+    []
+    $$
+    Il est donc clair qu'on a bien défini un préfaisceau sur $F$.
+    \item[(2)] Soient maintenant $S, T: I \to F$ deux sections cartésiennes et $m: S \to T$ un morphisme. On définit le morphisme
+    $$
+    p(m): p(S) \to p(T)
+    $$
+    comme voici : soit $X$ un objet de $F$, de projection $i$. L'application
+    $$
+    p(m)_X: p(S)(X) \to p(T)(X)
+    $$
+    est la composition avec le $i$-morphisme :
+    $$
+    m_i: s(i) \to t(i)
+    $$
+    fourni par $m$.
+    \item[(3)] Le foncteur $p$ est pleinement fidèle.
+\end{enumerate}
+
+{\it Démonstration}. []
+
+\vskip .3cm
+{\bf 4.4. Le topos $\widetilde{T}$}
+
+\vskip .3cm
+{\bf 4.4.1.} Définition d'un topologie $T$ sur $F$ :
+
+Soit $X$ un objet de $F$, de projection $i \in \Ob(I)$. Une crible $R$ de $F_{/X}$ est couvrant pour $T$ s'il contient une famille épimorphique de la fibre $F_i$.
+
+Les axiomes d'un topologie se vérifient à l'aide des remarques suivantes :
+\begin{enumerate}
+    \item[(i)] Soit $u: i \to j$ une flèche de $I$, et considérons un diagramme commutatif de $F$ :
+    $$
+    []
+    $$
+    où $P \to X$ est un $i$-morphisme, $Z' \to Z$ un $j$-morphisme, et les flèches horizontales des $u$-morphismes. Si l'on prend des flèches $u$-cartésiennes $Y \to Z$, $Y' \to Z'$ on tire de (*) un diagramme commutatif de $i$-morphismes
+    $$
+    []
+    $$
+    Et alors : pour que le diagramme (*) soit \emph{cartésien dans $F$}, il faut et il suffit que le diagramme (**) soit \emph{cartésien dans la fibre $F_i$} (cela vient de ce que les changements de base de $F$ sont exactes à gauche).
+    En particulier :
+    \item[(ii)] Pour tout objet $i$ de $I$, le fonction d'inclusion $F_i \to F$ commute aux produits fibrés.
+\end{enumerate}
+
+\vskip .3cm
+{\bf 4.4.2.}
+\begin{enumerate}
+    \item[(i)] Soit $G$ un $\cU$-préfaisceau su $F$. $G$ est un faisceau si et seulement si la restriction $G_{/F_i}$ est représentable (i.e. un faisceau sur $F_i$) pour tout $i \in \Ob(I)$.
+    \item[(ii)] Pour toute section cartésienne $S$ de $F$, le préfaisceau $p(S)$ (4.3) est un faisceau sur $F$.
+\end{enumerate}
+
+((ii) découle de (i). (i) résulte immédiatement de la définition de $T$, compte tenu de la remarque (ii) de 4.4.1.)
+
+\vskip .3cm
+{\bf 4.4.3.} (Sous-catégories génératrices de $F$)
+
+Soit $S$ une sous-catégorie pleine de $F$. Pour que $S$ engendre la site $F$ (i.e. que tout objet de $F$ puisse être recouvrement par des objets de $S$ au sens de la topologie $T$) il faut et il suffit que pour tout $i \in \Ob(I)$, la fibre $S_i$ engendre le topos $F_i$ (clair).
+
+\vskip .3cm
+{\bf 4.4.4.}
+\begin{enumerate}
+    \item[a)] De (3), on déduit que le site $F$ admet une petite famille topologiquement génératrice. Donc \emph{la catégorie $\widetilde{F}$ de $\cU$-faisceaux sur $F$ est un $\cU$-topos.}
+    \item[b)] Soit $n: F \to \widetilde{F}$ le foncteur naturel, composé du foncteur naturel $f \to \widehat{F}$ et du foncteur faisceau associé. (On a une bijection fonctorielle
+    $$
+    G(X) \isommap \Hom(n(X), G)
+    $$
+    $X \in \Ob(F)$, $G \in  \Ob(\widetilde{F})$.
+\end{enumerate}
+Le foncteur $n$ n'est pas pleinement fidèle en général : les objets vides des fibres de $F$ sont tous couverts par la famille vide, mais forment une sous-catégorie pleine de $F$ équivalente à $I$. Néanmoins :
+
+\vskip .3cm
+{
+Lemme. --- \it Soit $F^*$ la sous-catégorie pleine de $F$ définie comme voici : pour tout $i \in \Ob(I)$, la fibre $(F^*)_i$ est la catégorie des objets non-vides de $F_i$ (autrement dit, $F^*$ est formée des objets $X$ tels que $n(X)$ soit non-vide dans $\widetilde{F}$). La restriction de $n$ à $F_*$ est pleinement fidèle.
+}
+\vskip .3cm
+
+{\it Démonstration}. Soient $X$, $Y$ deux objets de $F^*$, de projections $i$ et $j$ respectivement, et $(f_{\alpha}: X_{\alpha} \to X)$ une famille épimorphique de $F_i$. Soit
+$$
+(g_{\alpha}: X_{\alpha} \to Y)
+$$
+une famille des morphismes de $F$, telle que pour tout couple d'indices $\alpha$, $\beta$ on ait le diagramme commutatif :
+$$
+[]
+$$
+
+Pour tout indice $\alpha$, soit $u_{\alpha}: i \to j$ la projection du morphisme $g_{\alpha}: X_{\alpha} \to Y$. Les diagrammes (*) donnent des diagrammes commutatifs de $I$ :
+$$
+[]
+$$
+donc les $u_{\alpha}$ sont égaux à un certain $u: i \to j$. Prenons maintenant une image inverse $Y' \to Y$ de $Y$ par $u$, et soient $(h_{\alpha})$ les $i$-morphismes $X_{\alpha} \to Y'$ déduits des $u$-morphismes $g_{\alpha}: X_{\alpha} \to Y$.
+
+Soit $g: X \to Y$ un morphisme. Pour que les diagrammes
+$$
+[]
+$$
+soient commutatifs, il faut et il suffit que
+\begin{enumerate}
+    \item[1)] $\Pi(g) = u$ ;
+    \item[2)] Si l'on désigne par $h: X \to Y'$ le $i$-morphisme déduit de $f$, les diagrammes
+    $$
+    []
+    $$
+    de $F_i$ soient commutatifs. Donc il existe un $g: X \to Y$ et un seul qui rend commutatifs les diagrammes (**), c.q.f.d.
+\end{enumerate}
+
+\vskip .3cm
+{\bf 4.4.5.} (Familles épimorphiques de $\widetilde{F}$)
+
+Une famille $(G_{\alpha} \to G)$ de morphismes de $\widetilde{F}$ est épimorphique si et seulement si, pour tout $i \in \Ob(I)$, la famille de morphismes de faisceaux sur $F_i$ :
+$$
+(G_{\alpha/F_i} \to G_{/F_i})
+$$
+est épimorphique :
+
+En effet, d'après 4.4.4, (a), ces deux propriétés sont équivalentes à la suivante : pour tout $i \in \Ob(I)$, tout $X \in \Ob(F_i)$ et tout $x \in G(X)$ il existe une famille épimorphique $(X_{\lambda} \to X)$ de $F_i$ telle que chacun des $x_{/X_{\lambda}}$ se relève l'un des $G_{\alpha}$. 
+
+\vskip .3cm
+{\bf 4.4.6.}
+\begin{enumerate}
+    \item[a)] Le foncteur
+    $$
+    p: L \to \widetilde{F}
+    $$
+    (4.3 et 4.4.2, (ii)) définit un morphisme de topos
+    $$
+    \widetilde{F} \to L
+    $$
+    \item[b)] Pour tout $i \in \Ob(I)$, il existe un morphisme de topos
+    $$
+    u_i: F_i \to F
+    $$
+    tel que le foncteur composé
+    $$
+    \widetilde{F} \xlongrightarrow{u^{-1}_i} F_i \to \widetilde{F_i}
+    $$
+    soit isomorphe au foncteur ``restriction à $F_i$''.
+\end{enumerate}
+Cela découle de 4.4.5, compte tenu de (4.1.1) pour (a) et de (4.4.2, (i)) pour (b).
+
+\vskip .3cm
+{
+Proposition {\bf 4.4.7.} --- \it Soient $i \in \Ob(I)$, $C \in \Ob(F_i)$ et $n: F \to \widetilde{F}$ le foncteur naturel. Si $C$ est connexe dans $F_i$, $n(C)$ est connexe dans $\widetilde{F}$.
+}
+\vskip .3cm
+{
+Corollaire. --- \it Si les $F_i$ sont localement connexes, $\widetilde{F}$ est localement connexe.
+}
+
+{\it Démonstration}. []
+
+\vskip .3cm
+{\bf 4.4.8.} Soient $u: i \to j$ une flèche de $I$, $M$ un objet de $F_j$, $C$ et $D$ des objets connexes et non-vides de $F_i$ et $F_j$ respectivement, et $f: C \to D$ un $u$-morphisme. Si $D$ trivialise $M$, alors l'application de composition avec $f$ : 
+$$
+\Hom_j(D, M) \to \Hom_u(C, M)
+$$
+est \emph{bijective}.
+
+{\it Démonstration}. []
+
+\vskip .3cm
+{\bf 4.4.9.} (Image essentielle du foncteur $p$ (4.3))
+
+Soit $G$ un faisceau sur $F$. Pour tout $i \in \Ob(I)$ représentons la restriction $G_{/F_i}$ par un objet $X_i$ de $F_i$, et soit $\epsilon_i \in G(X_i)$ la section qui défini l'isomorphisme $X_i \to G_{/F_i}$. Les propriétés suivantes sont équivalentes :
+\begin{enumerate}
+    \item[(i)] Il existe une section cartésienne $Y: I \to F$ et un isomorphisme $p(Y) \isom G$ ;
+    \item[(ii)] Pour tout flèche $u: i \to j$ de $I$, il existe un morphisme $u$-cartésienne $X_i \xlongrightarrow{m} X_j$ qui rend commutatif le diagramme :
+    $$
+    []
+    $$
+    (où $n$ désigne le foncteur   naturel $F \to \widetilde{F}$).
+\end{enumerate}
+
+{\it Démonstration}. []
+
+\vskip .3cm
+{\bf 4.5. Théorème de Van Kampen}
+
+Comme dans (2.4) et (3) nous supposons que l'univers $\cU$ admet un élément $d$ cardinal infini.
+
+\vskip .3cm
+{
+Théorème. --- \it Si ls fibres de $F$ sont localement connexes, les topos $\widetilde{F}$ et $L$ sont localement connexes, et le morphisme de topos
+$$
+\widetilde{F} \to L
+$$
+(4.4.6, a) défini par le foncteur pleinement fidèle $p: L \to \widetilde{F}$ (4.3) fournit une équivalence de topos
+$$
+\SLC(\widetilde{F}) \to \SLC(L) \quad (2.4.12), \quad (3.4)
+$$
+}
+\vskip .3cm
+
+{\it Remarque}. cela   revient à dire que le foncteur $p: L \to \widetilde{F}$ induit par restriction une équivalence entre catégories d'objets localement constants. Ainsi la démonstration du théorème se ramène aux points 4.5.1 et 4.5.2 qui suivent :
+
+\vskip .3cm
+{\bf 4.5.1.} Soit $G$ un faisceau sur $F$. Si $G$ est localement constant dans $\widetilde{F}$, il existe une section cartésienne $X: I \to F$ telle que $p(X)$ soit isomorphe à $G$.
+
+Nous utiliserons le critère 4.4.9, dont nous reprenons les notations.
+
+Soit $u: i \to j$ une flèche de $I$.
+
+Soit $K$ l'ensemble des couples
+$$
+(C, D) \in \Ob(F_i) \times \Ob(F_j)
+$$
+qui remplissent les conditions suivantes :
+\begin{enumerate}
+    \item[(i)] $C$ et $D$ sont connexes et non-vides dans $F_i$ et $F_j$ respectivement
+    \item[(ii)] $\Hom_u(C,D) \neq \emptyset$
+    \item[(iii)] $n(D)$ trivialise $G$
+\end{enumerate}
+Soit enfin $S$ la sous-catégorie pleine de $F_i$ formée des objets $C$ qui remplissant la condition suivante : il existe un objet $D$ de $F_j$ tel que $(C, D) \in K$.
+\begin{enumerate}
+    \item[a)] \emph{$S$ engendre $F_i$ :}
+    
+    En effet (4.4.3) les objets connexes $Z$ de $F_j$ tels que $n(Z)$ trivialise $G$ engendrent $F_j$. Donc leurs images inverses par $u$ \emph{recouvrent} $F_i$ ; d'où notre assertion.
+    \item[b)] \emph{Soit $C$ un objet de $S$. Pour chaque $x \in G(C)$, il existe un $u$-morphisme $C \to X_j$ et un seul qui rend commutatif le diagramme :}
+    $$
+    []
+    $$
+    {\it Démonstration}. Soient $D$ un objet de $F_j$ tel que $(C, D) \in K$ et $f: C \to D$ un $u$-morphisme. On en tire un diagramme commutatif:
+$$
+[]
+$$
+(où les flèches verticales se déduisent de $C \to D$ et les flèches horizontales de $n(X_j) \to G$).
+
+Il s'agit de prouver que la flèche du bas est bijective ; or :
+\begin{enumerate}
+    \item[(i)] La flèche du haut est bijective par hypothèse ($X_j$ représente $G_{/F_j}$)
+    \item[(ii)] La flèche $\Hom_j(D, X_j) \to \Hom_u(C, L_j)$ est bijective par (4.4.8) : en effet, la restriction $n(D)_{/F_j}$ trivialise $X_j$ d'après (4.4.6, b), et elle admet une section au-dessus de $D$ ;
+    \item[(iii)] La flèche $G(D) \to G(C)$ est bijective parce que $n(C)$ et $n(D)$ sont connexes non-vides dans $\widetilde{F}$ (4.4.7) et que $n(D)$ trivialise $G$.
+\end{enumerate}
+    \item[c)] Pour tout $C \in \Ob(S)$ et tout $f \in \Hom_i(C, X_i)$, soit $\alpha_C(f)$ le $i$-morphisme $C \to X_j$ qui rend commutatif le diagramme
+    $$
+    []
+    $$
+    L'application 
+    $$
+    \alpha_C: \Hom_i(C, X_i) \to \Hom_u(C, X_j)
+    $$
+    est nécessairement fonctorielle en $C$ ; elle est bijective puisque l'application
+    $$
+    \Hom_i(C, X_i) \to G(C)
+    $$
+    fournie par $X_i \to G_{/F_i}$ l'est. Puisque $S$ engendre $F_i$, les bijections $\alpha_C$ proviennent d'une flèche $u$-cartésienne
+    $$
+    X_i \to X_j
+    $$
+    et l diagramme
+    $$
+    []
+    $$
+    est commutatif.
+\end{enumerate}
+
+\vskip .3cm
+{\bf 4.5.2.} Soit $X: I \to F$ une section cartésienne. Si $p(X)$ est localement constant de $L$.
+
+Recouvrons l'objet final de $\widetilde{F}$ par des objets localement constants $(H_{\alpha})$ qui trivialisent $p(X)$ (par exemple des objets galoisiens 2.4.6). Si on prend des sections cartésiennes $(M_{\alpha})$ de $F$ telles que les $p(M_{\alpha})$ soient isomorphes aux $H_{\alpha}$, les $M_{\alpha}$ trivialisent $X$ puisque $p$ est pleinement fidèle ; or les $M_{\alpha}$ recouvrent $e_L$ par 4.4.5.
+
+\vskip .3cm
+{\bf 4.6. Étude de $\SLC(\widetilde{F}) \isom \SLC(L)$} 
+
+(Nous supposons donc que l'univers $\cU$ admet un élément de cardinal infini, et que le fibres de $F$ sont localement connexes)
+
+Rappelons certaines notations :
+\begin{enumerate}
+    \item[1)] $n: F \to \widetilde{F}$ le foncteur naturel (4.4.4)
+    \item[2)] $p: L \to \widetilde{F}$ le foncteur pleinement fidèle qui définit le morphisme de topos $\widetilde{F} \to L$ (4.4.6).
+\end{enumerate}
+
+\vskip .3cm
+{\bf 4.6.1.} Soit $H$ un objet localement constant de $\widetilde{F}$. Il existe une sous-catégorie pleine $C$ de $F$ qui remplit les conditions suivantes :
+\begin{enumerate}
+    \item[1)] Pour tout $X \in \Ob(C)$, $n(X)$ trivialise $H$ ;
+    \item[2)] Pour tout $i \in \Ob(I)$, les objets de $C_i$ sont galoisiens dans $F_i$ et recouvrent $e_{F_i}$. En outre, deux objets de $C_i$ situés au-dessus de la même composante connexe de $F_i$ sont toujours isomorphes (cette dernière condition veut dire que $C_i$ est un groupoïde (2.3.4)) ;
+    \item[3)] Pour tout flèche $u: i \to j$ de $I$ et tout objet $Y$ de $C_i$, il existe un objet $Z$ de $C_j$ et un $u$-morphisme $Y \to Z$.
+\end{enumerate}
+
+{\it Démonstration}. []
+
+\vskip .3cm
+{\bf 4.6.2.} Soit $C$ une sous-catégorie pleine de $F$ qui remplit la condition (2) de (4.6.1). Pour tout faisceau $H$ sur $F$, les propriétés suivantes sont équivalentes :
+\begin{enumerate}
+    \item[(i)] Pour tout $X \in \Ob(C)$, $n(X)$ trivialise $H$;
+    \item[(ii)] Il existe une section cartésienne $S$ de $F$ telle que $p(S)$ soit isomorphe à $H$ et que, pour tout $i \in \Ob(I)$, les objets de $C_i$ trivialisent $S(i)$.
+\end{enumerate}
+
+\vskip .3cm
+{
+Corollaire. --- \it Soit $S$ une section cartésienne de $F$. Pour que $S$ soit un objet localement constant de $L$, il faut et il suffit que pour tout $i \in \Ob(I)$, $S(i)$ soit un objet localement constant de $F_i$ (cf. 2.4.6 et 4.6.1).
+}
+\vskip .3cm
+
+{\it Démonstration de la proposition}. []
+
+\vskip .3cm
+{\bf 4.6.3.} Soit $C$ une sous-catégorie pleine de $F$ qui remplit les conditions (2) et (3) de (4.6.1).
+\begin{enumerate}
+    \item[(i)] Pour tout $i \in \Ob(I)$, soit $\LC(F_i, C_i)$ la sous-catégorie pleine de $F_i$ formée des objets qui sont trivialisés par les objets de $C_i$. $\LC(F_i, C_i)$ est un $\cU$-topos objet de $\cG$ (cf. 3.2), et l'inclusion $\LC(F_i, C_i) \to F_i$ définit un morphisme de topos
+    $$
+    F_i \to \LC(F_i, C_i) \quad \text{(3.3.2)}
+    $$
+    Le topos $\LC(F_i, C_i)$ est engendré par $C_i$. Comme $C_i$ est un groupoïde, $\LC(F_i, C_i)$ est équivalent à $\widehat{C}_i$.
+    \item[(ii)] Soit $F_C$ la sous-catégorie pleine de $F$ qui a pour fibres les $\LC(F_i, C_i)$. $F_C \to I$ est une sous-catégorie fibrée en $\cU$-topos objets de $\cG$, et l'inclusion $F_C \to F$ définit un morphisme de catégories fibrées en topos 
+    $$
+    F \to F_C
+    $$
+    (preuve: d'après (i), il suffit de voir que $F_C$ est une sous-catégorie fibrée de $F$. Soient donc $u: i \to j$ une flèche de $I$ et $L \to M$ une flèche $u$-cartésienne de $F$. D'après la condition (3), si les objets de $C_j$ trivialisent $M$, les objets de $C_i$ trivialisent $L$).
+    \item[(iii)] L'inclusion $F_C \to F$ identifie donc les sections cartésiennes de $F_C$ à des sections cartésiennes de $F$. D'après (4.6.2), le foncteur
+    $$
+    p: L \to \widetilde{F}
+    $$
+    fournit une \emph{équivalence} de catégories
+    $$
+    \Cart_I(I, F_C) \to \LC(\widetilde{F}, C)
+    $$
+    entre les sections cartésiennes de $F_C$ et les $\cU$-faisceaux sur $F$ qui sont trivialisés par les $n(X)$, $X \in \Ob(C)$.
+    
+    Ainsi \emph{le topos $\LC(\widetilde{F}, C)$ (3.3.2) est limite inductive des topos $\LC(F_i, C_i)$} (4.1.1) ; et l'inclusion $\Cart_I(I, F_C) \to \SLC(L)$ définit un morphisme de topos 
+    $$
+    \SLC(L) \to \Cart_I(I, F_C)
+    $$
+\end{enumerate}
+
+\vskip .3cm
+{\bf 4.6.4.} (Avec les hypothèses et les notations de 4.6.3)
+
+On peut aussi définir sur $F_C$ la topologie (4.4.1). Le foncteur naturel
+$$
+n_C: F_C \to \widetilde{F}_C
+$$
+identifie alors la sous-catégorie pleine $C$ de $F_C$ à une sous-catégorie génératrice du topos $\widetilde{F}_C$ formée d'objets connexes et non-vides ((4.6.3, (i)), (4.4.3), (4.4.4 (b)) et (4.4.7)).
+
+Désignons par :
+$$
+p_C: \Cart_I(I, F_C) \to \widetilde{F}_C
+$$
+le foncteur (4.3).
+
+\vskip .3cm
+{
+Lemme. --- \it Soit $G$ un faisceau sur $F_C$. Les propriétés suivantes de $G$ sont équivalentes :
+\begin{enumerate}
+    \item[a)] $G$ est localement constant dans $\widetilde{F}_C$
+    \item[b)] La restriction $G_{/C}$ est un préfaisceau localement constant
+    \item[c)] Il existe une section cartésienne $S$ de $F_C$ et un isomorphisme $p_C(S) \isom G$.
+\end{enumerate}
+}
+\vskip .3cm
+
+{\it Démonstration}. On prouve $a \Rightarrow c \Rightarrow b \Rightarrow a$ :
+
+Si $G$ est localement constant, il existe (d'après le théorème 4.5 appliqué à $F_C$) une section cartésienne $S$ de $F_C$ et un isomorphisme $p_C(S) \isom G$. Mais alors, pour tout $i \in \Ob(I)$, $S(i)$ est trivialisé par les objets de $C_i$ ; donc (par (4.6.2) appliqué à $F_C$ et (2.2.1)) $G_{/C}$ est un préfaisceau localement constant. L'implication $b \Rightarrow a$ découle de 2.2.1.
+
+\vskip .3cm
+{\bf 4.6.5.} (Corollaire de 4.6.4)
+
+Le foncteur ``restriction à $C$'' donne une équivalence de catégories
+$$
+\LC(\widetilde{F}, C) \to \LC(\widehat{C})
+$$
+où $\LC(\widehat{C})$ désigne la catégorie des $\cU$-préfaisceau localement constants sur $C$.
+
+(Appliquer (4.6.3, iii) et l'équivalence [] du lemme (4.6.4))
+
+{\it Commentaire} : 
+\begin{enumerate}
+    \item[1)] Les préfaisceaux localement constants sur $C$ s'identifient aux préfaisceaux sur les groupoïde fondamental $\Pi(C)$ de la catégorie $C$, obtenu par calcul des fractions (\cite{1}, chap. I, n$^\circ 1$.5.3). Rappelons que $\Pi(C)$ est caractérisé à équivalence près par la propriété universelle suivante : il existe un foncteur $c \to \Pi(C)$ qui donne pour tout groupoïde $\Gamma$ une équivalence de catégories :
+    $$
+    \Fonct(\Pi(C), \Gamma) \to \Fonct(C, \Gamma)
+    $$
+    \item[2)] Le groupoïde $\Pi(C)$ est la 2-limite inductive des groupoïdes $C_i$ au sens suivante :
+    \begin{enumerate}
+        \item[a)] Le foncteur $\Pi_{/C}: C \to I$ est cofibrant, i.e. le foncteur $C^\circ \to I^\circ$ qui s'en déduit est fibrant (condition (3) de (4.6.1) et (4.4.8))
+        \item[b)] $\Pi(C)$ représente le 2-foncteur
+        $$
+        \Gamma \to \Fonct_I(C, I \times \Gamma)
+        $$
+        des groupoïdes dans les catégories.
+    \end{enumerate}
+    \item[3)] On peut exprimer cela autrement : d'après le corollaire (4.6.2), la sous-catégorie $\cG$ de $\Top$ définie en (3.2) est stable par les 2-limites inductives (les objets de $\cG$ sont d'ailleurs les limites inductives de topos ponctuels). Or le foncteur:
+    $$
+    \Point: \cG \to \Grpd
+    $$
+    commute aux 2-limites inductives (puisque c'est une équivalence) ; et dans le cas présent, les $C_i$ sont équivalents aux groupoïdes $\Point(\LC(F_i, C_i))$ (3.2.4 et 4.6.3, (i)). On peut donc se reporter à 4.6.3, (iii).
+\end{enumerate}
+
+\vskip .3cm
+{\bf 4.6.6.} Soit $J(F)$ l'ensemble des sous-catégories pleines de $F$ qui remplissent les conditions (2) et (3) de 4.6.1. On définit une relation de préordre sur $J(F)$ comme voici : $C < D$ si pour tout $i \in \Ob(I)$, les objets de $C_i$ trivialisent les objets de $D_i$.
+\begin{enumerate}
+    \item[(i)] L'ensemble préordonné $J(F)$ est filtrant à gauche
+    \item[(ii)] L'ordonné associé est$\cU$-petit.
+\end{enumerate}
+
+{\it Démonstration}. []
+
+\vskip .3cm
+{\bf 4.6.7.} D'après (4.6.6), (4.6.1) et (4.6.2), il existe un petit ensemble ordonné filtrant à gauche $A$ et une famille croissante $(c^\circ)_{\alpha \in A}$ d'éléments de $J(F)$ qui remplit la condition suivante : pour tout objet localement constant $S$ de $L$, il existe un indice $\alpha$ tel que pour tout $i \in \Ob(I)$, les objets de $C^\alpha_i$ trivialisent $S(i)$ dan $F_i$. Cela veut dire que la catégorie des objets localement constants de $L$ est réunion des sous-catégories essentiellement pleines
+$$
+T_{\alpha} = \Cart_I(I, F_C \alpha)
+$$
+définies en 4.6.3, (ii) et (iii). Puisque les $T_{\alpha}$ sont des $\cU$-topos objets de $\cG$ et que les inclusions $T_{\alpha} \to \SLC(L)$ définissent des morphismes de topos $\SLC(L) \to T_{\alpha}$, on a, suivant (3.3.3), la ``formule''
+$$
+\SLC([] F_i) = [] ([] \LC(F_i, C^\alpha_i))
+$$
+où les lim sont des 2-limites dans la 2-catégorie des $\cU$-topos.
+
+
+
+
+
+
+
+%End
