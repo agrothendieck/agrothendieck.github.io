@@ -8,31 +8,36 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% I. --- OBJETS CONNEXES DANS UN TOPOS
 
-Tous les topos considérés sont des $\underline{U}$-topos
+Tous les topos considérés sont des $\cU$-topos
 
 \vskip .3cm
-{\bf 1.1. Définitions}
+{
+Définitions {\bf 1.1.} --- \it
 \begin{enumerate}
     \item[a)] Un objet d'un topos est \emph{connexe} s'il n'est pas somme directe de deux objets non-vides.
     \item[b)] Soit $X$ un objet d'un topos. On appelle \emph{composante connexe} de $X$ tout sous-objet connexe et non-vide $C$ de $X$ tel que $X$ soit somme directe de $C$ et d'un autre objet.
     \item[c)] Un \emph{topos} est connexe si son objet final est connexe.
     \item[d)] Un topos est \emph{localement connexe} s'il est engendré par ses objets connexes. 
 \end{enumerate}
+}
 
 \vskip .3cm
-{\bf 1.2.} Soir $C$ un objet d'un topos $E$. Les propriétés suivantes sont équivalentes :
+{
+Proposition {\bf 1.2.} --- \it Soit $C$ un objet d'un topos $E$. Les propriétés suivantes sont équivalentes:
 \begin{enumerate}
     \item[a)] $C$ est connexe et non-vide.
     \item[b)] Le foncteur
     $$
-    Hom_E(C, -): E \to \Ens 
+    \Hom_E(C, -): E \to \Ens 
     $$
     commute aux sommes directes.
-    \item[c)] Pour tout ensemble $I$, l'application naturelle $I \to Hom(C, I_E)$ est bijective (c'est immédiat).
+    \item[c)] Pour tout ensemble $I$, l'application naturelle $I \to \Hom(C, I_E)$ est bijective (c'est immédiat).
 \end{enumerate}
+}
 
 \vskip .3cm
-{\bf 1.3.} Soit $(U_i \xlongrightarrow{f_i} V)_{i \in I}$ une famille épimorphique d'un topos $E$. 
+{
+Proposition {\bf 1.3.} --- \it Soit $(U_i \xlongrightarrow{f_i} V)_{i \in I}$ une famille épimorphique d'un topos $E$. 
 
 Considérons les propriétés:
 \begin{enumerate}
@@ -47,7 +52,10 @@ Considérons les propriétés:
     \item[(ii)] si les $U_i$ sont connexes, et non-vides, (b) entraîne (a).
 \end{enumerate}
 \end{enumerate}
-C'est trivial si $I = \emptyset$. On suppose donc $I \neq \emptyset$.
+}
+\vskip .3cm
+
+{\it Démonstration}. C'est trivial si $I = \emptyset$. On suppose donc $I \neq \emptyset$.
 
 {\bf $a \Rightarrow b$} ($U_i$ non-vides). Soit $(I_1, I_2)$ une partition de $I$ telle que [pour] tout $i \in I_1$ et tout $j \in I_2$, $U_i \times_V U_j$ soit vide. Si on désigne par $V_1$ et $V_2$ respectivement les images des morphismes
 $$
@@ -66,12 +74,16 @@ $$
 se factorise par $Y_{\alpha}$. Puisque les $U_i$ sont connexes et non-vides, $I$ est réunion disjointe des $I_{\alpha}$. Soient $\alpha$ et $\beta$ deux indices distincts. Si $i \in I_{\alpha}$ et $j \to I_{\beta}$, $U_i \times_V U_j$ est vide puisque c'est un sous-objet de $U_i \times_V U_j$. Appliquant (b), on voit que $I = I_{\alpha_0}$ pour un []. Donc $V$ est connexe et non-vide par $(1.2).$
 
 \vskip .3cm
-{\bf 1.4.} Tout objet d'un topos localement connexe est somme directe d'objets connexes (donc somme directe de ses composantes connexes).
+{
+Proposition {\bf 1.4.} --- \it Tout objet d'un topos localement connexe est somme directe d'objets connexes (donc somme directe de ses composantes connexes).
+}
+\vskip .3cm
 
-Soit $E$ un topos localement connexe. Soient $Y$ un objet de $E$ et $(U_i \to Y)_{i \in I}$ une famille épimorphique de $E$, où les $U_i$ sont connexes et non-vides. Soit $R$ le graphe de la relation $``U_i \times U_j$ n'est pas vide''. Pour chaque composante connexe $r$ de $R$, soit $C_r$ l'image dans $Y$ de la somme des $U_i$, $i$ parcourant l'ensemble des $i \in I$ qui sont sommets de $r$. $Y$ est somme directe des $C_Y$, qui sont connexes et non-vides d'après (1.3).
+{\it Démonstration}. Soit $E$ un topos localement connexe. Soient $Y$ un objet de $E$ et $(U_i \to Y)_{i \in I}$ une famille épimorphique de $E$, où les $U_i$ sont connexes et non-vides. Soit $R$ le graphe de la relation $``U_i \times U_j$ n'est pas vide''. Pour chaque composante connexe $r$ de $R$, soit $C_r$ l'image dans $Y$ de la somme des $U_i$, $i$ parcourant l'ensemble des $i \in I$ qui sont sommets de $r$. $Y$ est somme directe des $C_Y$, qui sont connexes et non-vides d'après (1.3).
 
 \vskip .3cm
-{\bf 1.5.} Pour qu'un topos $E$ soit localement connexe, il faut et il suffit que le foncteur
+{
+Proposition {\bf 1.5.} --- \it Pour qu'un topos $E$ soit localement connexe, il faut et il suffit que le foncteur
 $$
 I \to I_E
 $$
@@ -91,8 +103,12 @@ Dans ce cas, étant donné un objet $X$ de $E$, les produits fibrés
 		}
 	\]
 ($\gamma$ parcourant $c(X)$) sont les composantes de $X$.
+}
+\vskip .3cm
+
+{\it Démonstration}.
 \begin{enumerate}
-    \item[(i)] Supposons $E$ localement connexe. Pour tout objet $X$ de $E$, désignons par $c(X)$ l'ensemble des classes de $X$-isomorphisme de composantes connexes de $X$ (cet ensemble est bien sûr $\underline{U}$-petit). Soit $f: X \to Y$ un morphisme de $E$ ; étant donnée une composante connexe $C$ de $X$, il existe une composante connexe $D$ de $Y$, unique à $Y$-isomorphisme près, telle que $f_{/C}$ se factorise par $D$. D'où une application
+    \item[(i)] Supposons $E$ localement connexe. Pour tout objet $X$ de $E$, désignons par $c(X)$ l'ensemble des classes de $X$-isomorphisme de composantes connexes de $X$ (cet ensemble est bien sûr $\cU$-petit). Soit $f: X \to Y$ un morphisme de $E$ ; étant donnée une composante connexe $C$ de $X$, il existe une composante connexe $D$ de $Y$, unique à $Y$-isomorphisme près, telle que $f_{/C}$ se factorise par $D$. D'où une application
     $$
     c(X) \to c(Y).
     $$
@@ -102,7 +118,7 @@ Dans ce cas, étant donné un objet $X$ de $E$, les produits fibrés
     $$
     Le foncteur $c$ est adjoint à gauche de $I \to I_E$: en effet, étant donnés un objet $X$ de $E$ et un ensemble $I$, on définit une application : 
     $$
-    App(c(X), I) \to Hom(X, I_E)
+    \App(c(X), I) \to \Hom(X, I_E)
     $$
     en associant à l'application
     $$
@@ -113,17 +129,22 @@ Dans ce cas, étant donné un objet $X$ de $E$, les produits fibrés
     
     Soit $X$ un objet de $E$. Avec les notations de l'énoncé, $X$ est somme directe des $X_{\gamma}$, $\gamma \in c(X)$. Il suffit donc de prouver que les $X_{\gamma}$ sont connexes et non-vides. Or, pour tout ensemble $I$, les applications naturelles
     $$
-    I \to Hom(X_{\gamma}, I_E)
+    I \to \Hom(X_{\gamma}, I_E)
     $$
     fournissant une application
     $$
-    I^{c(X)} \to \prod_\gamma Hom(X_{\gamma}, I_E)
+    I^{c(X)} \to \prod_\gamma \Hom(X_{\gamma}, I_E)
     $$
     qui rend commutatif le diagramme
-    []
+    \[
+        \xymatrix{
+        I^{c(X)} \ar[d] \ar[dr]^? \\
+        \prod_\gamma \Hom(X_{\gamma}, I_E) \ar[r]^-\sim & \Hom(X, I_E)
+        }
+    \]
     donc chacune des applications
     $$
-    I \to Hom(X_{\gamma}, I_E)
+    I \to \Hom(X_{\gamma}, I_E)
     $$
     est bijective ; on conclut par (1.2).
 \end{enumerate}
