@@ -8,17 +8,17 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% APPENDICE: CATÉGORIES FIBRÉES EN TOPOS
 
-Soit $I$ une catégorie $\underline{U}$-petite.
+Soit $I$ une catégorie $\cU$-petite.
 
 \vskip .3cm
-{\bf A.1.} J'appelle catégorie fibrée en $\underline{U}$-topos au dessus de $I$ toute catégorie fibrée [] qui vérifie les axiomes suivantes : 
+{\bf A.1.} J'appelle catégorie fibrée en $\cU$-topos au dessus de $I$ toute catégorie fibrée $F \xlongrightarrow{\Pi} I$ qui vérifie les axiomes suivantes : 
 \begin{enumerate}
-    \item[1)] Pour tout $i \in Ob(I)$, la fibre $F_i$ est un $\underline{U}$-topos. 
+    \item[1)] Pour tout $i \in \Ob(I)$, la fibre $F_i$ est un $\cU$-topos. 
     \item[2)] Pour toute flèche $u: i \to j$ de $I$, le foncteur changement de base $F_j \to F_i$ définit un morphisme de topos $F_i \to F_j$.
 \end{enumerate}
 
 \vskip .3cm
-{\bf A.2.} Définissons maintenant la $2$-catégorie $\Fibtop(I)$ des catégories fibrées en $\underline{U}$-topos au-dessus de $I$ : étant données deux catégories fibrées en topos $F$, $G$ au-dessus de $I$, nous prenons comme catégorie des morphismes de $F$ dan $G$
+{\bf A.2.} Définissons maintenant la $2$-catégorie $\Fibtop(I)$ des catégories fibrées en $\cU$-topos au-dessus de $I$ : étant données deux catégories fibrées en topos $F$, $G$ au-dessus de $I$, nous prenons comme catégorie des morphismes de $F$ dan $G$
 $$
 \Cartop_I(F, G)
 $$
@@ -26,24 +26,24 @@ la sous-catégorie pleine de
 $$
 \Cart_I(G, F)^{\circ}
 $$
-(catégorie opposée de la catégorie des $I$-foncteurs cartésiens $G \to F$) définie comme voici : un $I$-foncteur cartésien $\phi: G \to F$ définit un morphisme de catégories fibrées en topos $F \to G$ si pour tout $i \in Ob(I)$ le foncteur $G_i \to F_i$ déduit de $\phi$ par restriction définit un morphisme de topos $F_i \to G_i$.
+(catégorie opposée de la catégorie des $I$-foncteurs cartésiens $G \to F$) définie comme voici : un $I$-foncteur cartésien $\phi: G \to F$ définit un morphisme de catégories fibrées en topos $F \to G$ si pour tout $i \in \Ob(I)$ le foncteur $G_i \to F_i$ déduit de $\phi$ par restriction définit un morphisme de topos $F_i \to G_i$.
 
 \vskip .3cm
-{\bf A.3.} La $2$-catégorie $\Fibtop(I)$ est équivalente à la $2$-catégorie des $2$-foncteurs de $I$ dans la catégorie des $\underline{U}$-topos: les catégories fibrées de la forme $I \times E$ ($E$ un $\underline{U}$-topos) correspondant aux $2$-foncteurs constants ; d'où une définition des $2$-limites inductives et projectives de topos:
+{\bf A.3.} La $2$-catégorie $\Fibtop(I)$ est équivalente à la $2$-catégorie des $2$-foncteurs de $I$ dans la catégorie des $\cU$-topos: les catégories fibrées de la forme $I \times E$ ($E$ un $\cU$-topos) correspondant aux $2$-foncteurs constants ; d'où une définition des $2$-limites inductives et projectives de topos:
 
 \vskip .3cm
-{\bf A.4.} Soit $F$ une catégorie fibrée en $\underline{U}$-topos au-dessus de $I$. Nous appellerons $2$-limite inductive de $F$ le $2$-foncteur covariant
+{\bf A.4.} Soit $F$ une catégorie fibrée en $\cU$-topos au-dessus de $I$. Nous appellerons $2$-limite inductive de $F$ le $2$-foncteur covariant
 $$
 E \to \Cartop_I(F, I \times E)
 $$
 $$
-\text{\underline{U}-topos} \to \text{\underline{U}-catégories}
+\cU\text{-topos} \to \cU\text{-catégories}
 $$
 et $2$-limite projective de $F$ le $2$-foncteur contravariant
 $$
 E \to \Cartop_I(I \times E, F)
 $$
-La $2$-limite inductive (resp. projective) de $F$ se représente donc, quand c'est possible, par un $\underline{U}$-topos $L$ muni d'un morphisme de catégories fibrées en topos
+La $2$-limite inductive (resp. projective) de $F$ se représente donc, quand c'est possible, par un $\cU$-topos $L$ muni d'un morphisme de catégories fibrées en topos
 $$
 F \to I \times L
 $$
