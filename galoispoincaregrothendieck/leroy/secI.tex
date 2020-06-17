@@ -6,9 +6,12 @@
 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% I. --- OBJETS CONNEXES DANS UN TOPOS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter*{\S \space I. --- OBJETS CONNEXES DANS UN TOPOS}\thispagestyle{empty}
+\label{sec:1}
+\section*{}
 
-Tous les topos considérés sont des $\cU$-topos
+Tous les topos considérés sont des $\cU$-topos.
 
 \vskip .3cm
 {
@@ -23,7 +26,7 @@ Définitions {\bf 1.1.} --- \it
 
 \vskip .3cm
 {
-Proposition {\bf 1.2.} --- \it Soit $C$ un objet d'un topos $E$. Les propriétés suivantes sont équivalentes:
+Proposition {\bf 1.2.} --- \it Soit $C$ un objet d'un topos $E$. Les propriétés suivantes sont équivalentes~:
 \begin{enumerate}
     \item[a)] $C$ est connexe et non-vide.
     \item[b)] Le foncteur
@@ -39,7 +42,7 @@ Proposition {\bf 1.2.} --- \it Soit $C$ un objet d'un topos $E$. Les propriété
 {
 Proposition {\bf 1.3.} --- \it Soit $(U_i \xlongrightarrow{f_i} V)_{i \in I}$ une famille épimorphique d'un topos $E$. 
 
-Considérons les propriétés:
+Considérons les propriétés~:
 \begin{enumerate}
     \item[(a)] $V$ est connexe et non-vide.
     \item[(b)] Le graphe $R \subset I \times I$ de la relation
@@ -57,11 +60,11 @@ Considérons les propriétés:
 
 {\it Démonstration}. C'est trivial si $I = \emptyset$. On suppose donc $I \neq \emptyset$.
 
-{\bf $a \Rightarrow b$} ($U_i$ non-vides). Soit $(I_1, I_2)$ une partition de $I$ telle que [pour] tout $i \in I_1$ et tout $j \in I_2$, $U_i \times_V U_j$ soit vide. Si on désigne par $V_1$ et $V_2$ respectivement les images des morphismes
+{\bf $a \Rightarrow b$} ($U_i$ non-vides). Soit $(I_1, I_2)$ une partition de $I$ telle que pour tout $i \in I_1$ et tout $j \in I_2$, $U_i \times_V U_j$ soit vide. Si on désigne par $V_1$ et $V_2$ respectivement les images des morphismes
 $$
 \amalg_{i \in I_1} U_i \to V, \quad \amalg_{i \in I_2} U_i \to V
 $$
-alors $V$ est somme de $V_1$ et $V_2$. Donc $V_1$ ou $V_2$ est vide. [] %% Comme ?a[..]
+alors $V$ est somme de $V_1$ et $V_2$. Donc $V_1$ ou $V_2$ est vide. Comme aucun
 $U_i$ n'est vide, $I_1$ ou $I_2$ est vide.
 
 {\bf $b \Rightarrow a$} ($U_i$ connexes et non-vides). Soit $(Y_{\alpha})_{\alpha \in A}$ une famille d'objets de $E$, et considérons un morphisme
@@ -72,7 +75,7 @@ Pour chaque $\alpha \in A$, soit $I_{\alpha}$ l'ensemble des $i \in I$ tels que 
 $$
 U_i \to V \to Y
 $$
-se factorise par $Y_{\alpha}$. Puisque les $U_i$ sont connexes et non-vides, $I$ est réunion disjointe des $I_{\alpha}$. Soient $\alpha$ et $\beta$ deux indices distincts. Si $i \in I_{\alpha}$ et $j \to I_{\beta}$, $U_i \times_V U_j$ est vide puisque c'est un sous-objet de $U_i \times_V U_j$. Appliquant (b), on voit que $I = I_{\alpha_0}$ pour un $\alpha_0 \in$ [] et []. Donc $V$ est connexe et non-vide par $(1.2).$
+se factorise par $Y_{\alpha}$. Puisque les $U_i$ sont connexes et non-vides, $I$ est réunion disjointe des $I_{\alpha}$. Soient $\alpha$ et $\beta$ deux indices distincts. Si $i \in I_{\alpha}$ et $j \in I_{\beta}$, $U_i \times_V U_j$ est vide puisque c'est un sous-objet de $U_i \times_Y U_j$. Appliquant (b), on voit que $I = I_{\alpha_0}$ pour un $\alpha_0 \in [A]$ et un [seul]. Donc $V$ est connexe et non-vide par $(1.2).$
 
 \vskip .3cm
 {
@@ -99,7 +102,7 @@ $$
 Dans ce cas, étant donné un objet $X$ de $E$, les produits fibrés
 	\[
 		\xymatrix{
-			X_Y \ar[r] \ar[d]  & e_E \ar[d]^{\gamma} \\
+			X_\gamma \ar[r] \ar[d]  & e_E \ar[d]^{\gamma} \\
 			X\ar[r]                       & c(X)_E
 		}
 	\]
@@ -125,21 +128,21 @@ Dans ce cas, étant donné un objet $X$ de $E$, les produits fibrés
     $$
     a: c(X) \to I
     $$
-    le morphisme $X \to I_E$ dont la restriction à chaque composante connexe $C$ de $X$ est la section de $I_E$ au-dessus de $C$ définie par $a(C) \in I$ ; cette application est bijective par (1.2), et celle est fonctorielle en $X$ et $I$.
+    le morphisme $X \to I_E$ dont la restriction à chaque composante connexe $C$ de $X$ est la section de $I_E$ au-dessus de $C$ définie par $a(C) \in I$ ; cette application est bijective par (1.2), et elle est fonctorielle en $X$ et $I$.
     \item[(ii)] Inversement, supposons qu'on ait un adjoint à gauche $c: E \to \Ens$ du foncteur $I \to I_E$.
     
     Soit $X$ un objet de $E$. Avec les notations de l'énoncé, $X$ est somme directe des $X_{\gamma}$, $\gamma \in c(X)$. Il suffit donc de prouver que les $X_{\gamma}$ sont connexes et non-vides. Or, pour tout ensemble $I$, les applications naturelles
     $$
     I \to \Hom(X_{\gamma}, I_E)
     $$
-    fournissant une application
+    fournissent une application
     $$
     I^{c(X)} \to \prod_\gamma \Hom(X_{\gamma}, I_E)
     $$
     qui rend commutatif le diagramme
     \[
         \xymatrix{
-        I^{c(X)} \ar[d] \ar[dr]^? \\
+        I^{c(X)} \ar[d] \ar[dr]^-\sim \\
         \prod_\gamma \Hom(X_{\gamma}, I_E) \ar[r]^-\sim & \Hom(X, I_E)
         }
     \]
