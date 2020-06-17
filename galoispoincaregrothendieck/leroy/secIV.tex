@@ -6,13 +6,14 @@
 
 
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% IV. --- LIMITES INDUCTIVES DE TOPOS ET THÉORÈME DE VAN KAMPEN
 
 Soient $I$ une petite catégorie, $F \xlongrightarrow{\Pi} I$ une catégorie fibrée en $\cU$-topos $(A, 1)$, et
 $$
 L = \Cart_I(I, F)
 $$
-La catégorie des sections cartésiennes de $F$ au-dessus de $I$.
+la catégorie des sections cartésiennes de $F$ au-dessus de $I$.
 
 \vskip .3cm
 {\bf 4.1. $L$ comme limite inductive de $F$}
@@ -41,16 +42,16 @@ définit un morphisme de catégories fibrées en topos $F \to I \times L$ qui fa
     $$
     y commute : c'est immédiat puisque les foncteurs changement de base de $F$ sont exacts à gauche et commutent aux limites inductives.
     \item[2)] $L$ est un $\cU$-topos : compte tenu du critère de Giraud et de (1), il suffit de montrer que $L$ admet une petite famille génératrice. Or (comme par hasard) $F$ remplit les conditions du corollaire I.9.25 de \cite{3}, qui garantissent l'existence d'une telle famille.
-    \item[3)] Le foncteur $I \times L \to F$ définit un morphisme de catégories fibrées en topos $F \to I \times L$ : ce foncteur est évidemment cartésien ; d'où notre assertion par (1).
+    \item[3)] Le foncteur $I \times L \to F$ définit un morphisme de catégories fibrées en topos $F \to I \times L$~: ce foncteur est évidemment cartésien ; d'où notre assertion par (1).
     \item[4)] Le morphisme de catégories fibrées en topos $F \to I \times L$ fait de $L$ la 2-limite inductive de $F$ dans la catégorie des $\cU$-topos : soit $E$ un $\cU$-topos. Le foncteur
     $$
     \Homtop(L, E) \to \Cartop_I(F, I \times E)
     $$
-    qui associe au morphisme $u: L \to E$ le morphism de catégories fibrées en topos
+    qui associe au morphisme $u: L \to E$ le morphisme de catégories fibrées en topos
     $$
     F \to I \times E
     $$
-    définit par le foncteur
+    défini par le foncteur
     $$
     (i, X) \to u^{-1}(X)(i)
     $$
@@ -98,7 +99,7 @@ Prouvons que $c$ est un foncteur composantes connexes de $L$ (cf 1.5.) :
 Soit $A$ un ensemble. Considérons l'objet constant $A_L$ de $L$. Pour tout $i \in \Ob(I)$, $A_L(i)$ s'identifie à $A_{F_i}$ ; pour tout flèche $u: i \to j$ de $I$ et tout $a \in A$, le diagramme
 $$
 \xymatrix{
-    e_{F_i} \ar[r] \ar[d]_a & e_{F_{[i]}} \ar[d]^a \\ %% should be a j ??
+    e_{F_i} \ar[r] \ar[d]_a & e_{F_j} \ar[d]^a \\
     A_{F_i} \ar[r]_{A_L(u)} & A_{F_j}
 }
 $$
@@ -113,7 +114,7 @@ $$
 $$
 équivaut à celle du diagramme
 $$
-\xymatrix{
+\xymatrix@C=1em{
 c_i(S(i)) \ar[rr] \ar[dr] && \ar[dl] c_j(S(j)) \\
 & A
 }
@@ -123,7 +124,7 @@ Donc le foncteur $c$ est adjoint à gauche du foncteur ``objet constant'' $\Ens 
 \vskip .3cm
 {\bf 4.2. Le groupoïde fondamental de $L$}
 
-On définit une \emph{topologie}sur la catégorie $F$, qui fournit un topos $\widetilde{F}$, et un morphisme de topos $\widetilde{F} \to L$ (4.4). Quand les fibres de $F$ sont localement connexes, $\widetilde{F}$ est lui-même localement connexe, et les morphismes de topos $\SLC(\widetilde{F}) \to \SLC(E)$ déduit du morphisme $\widetilde{F} \to L$ est une équivalence (th. 4.5). On montre alors (4.6) comment construire une famille convenable de groupoïdes ``approchés'' $\LC(\widetilde{F}, R)$ (au sens de 3.3.2 et 3.3.4) à l'aide de groupoïdes ``approchés'' des fibres de $F$.
+On définit une \emph{topologie} sur la catégorie $F$, qui fournit un topos $\widetilde{F}$, et un morphisme de topos $\widetilde{F} \to L$ (4.4). Quand les fibres de $F$ sont localement connexes, $\widetilde{F}$ est lui-même localement connexe, et les morphismes de topos $\SLC(\widetilde{F}) \to \SLC(E)$ déduit du morphisme $\widetilde{F} \to L$ est une équivalence (th. 4.5). On montre alors (4.6) comment construire une famille convenable de groupoïdes ``approchés'' $\LC(\widetilde{F}, R)$ (au sens de 3.3.2 et 3.3.4) à l'aide de groupoïdes ``approchés'' des fibres de $F$.
 
 \vskip .3cm
 {
@@ -138,7 +139,7 @@ $$
     $$
     p(S)(X) = \Hom_i(X, S(i)), \quad \text{où} \quad i = \Pi(X)
     $$
-    Étant donné un morphisme $f: X \to Y$ de $F$, l'application $p(S)(f): p(S)(Y) \to p(S)(Y)$ est la composée:
+    Étant donné un morphisme $f: X \to Y$ de $F$, l'application $p(S)(f): p(S)(Y) \to p(S)(Y)$ est la composée~:
     $$
     \Hom_j(Y, S(j))\to \Hom_u(X, S(j)) \isommap \Hom_i(X, S(i))
     $$ 
@@ -172,13 +173,13 @@ $$
 $$
 \mu_i: p(S)_{/C_i} \to p(T)_{/C_i}
 $$
-le morphism induit par $\mu$ entre les restrictions à la fibre $F_i$. Comme ces restrictions sont représentables par $S(i)$ et $T(i)$ respectivement, $\mu_i$ provient d'un $i$-morphisme
+le morphisme induit par $\mu$ entre les restrictions à la fibre $F_i$. Comme ces restrictions sont représentées par $S(i)$ et $T(i)$ respectivement, $\mu_i$ provient d'un $i$-morphisme
 $$
 m_i: S(i) \to T(i)
 $$
-à savoir $m_i = \mu_{S(i)}(I_{S(i)})$
+à savoir $m_i = \mu_{S(i)}(1_{S(i)})$
 
-Prouvons que les $m_i$ définissent un morphisme $m: S\to T$ : Soit $i \xlongrightarrow{u} i$ une flèche de $i$. On a le diagramme commutatif
+Prouvons que les $m_i$ définissent un morphisme $m: S\to T$ : Soit $i \xlongrightarrow{u} j$ une flèche de $i$. On a le diagramme commutatif
 $$
     \xymatrix{
         p(S)(S(i)) \ar[r]^\mu & p(T)(S(i))\\
@@ -197,14 +198,14 @@ est commutatif, cqfd.
 Soit $n: S \to T$ un morphisme. Pour que $p(n) = \mu$, il faut et il suffit que $n = m$, comme on le vérifie aisément. Donc $p$ est pleinement fidèle.
 
 \vskip .3cm
-{\bf 4.4. Le topos $\widetilde{T}$}
+{\bf 4.4. Le topos $\widetilde{F}$}
 
 \vskip .3cm
 { 
 Définition (Topologie $T$ sur $F$) {\bf 4.4.1.} --- \it 
-Soit $X$ un objet de $F$, de projection $i \in \Ob(I)$. Une crible $R$ de $F_{/X}$ est couvrant pour $T$ s'il contient une famille épimorphique de la fibre $F_i$.
+Soit $X$ un objet de $F$, de projection $i \in \Ob(I)$. Un crible $R$ de $F_{/X}$ est couvrant pour $T$ s'il contient une famille épimorphique de la fibre $F_i$.
 
-Les axiomes d'un topologie se vérifient à l'aide des remarques suivantes :
+Les axiomes d'une topologie se vérifient à l'aide des remarques suivantes :
 \begin{enumerate}
     \item[(i)] Soit $u: i \to j$ une flèche de $I$, et considérons un diagramme commutatif de $F$ :
     $$
@@ -222,7 +223,7 @@ Les axiomes d'un topologie se vérifient à l'aide des remarques suivantes :
     }}
     \quad \text{(**)}
     $$
-    Et alors : pour que le diagramme (*) soit \emph{cartésien dans $F$}, il faut et il suffit que le diagramme (**) soit \emph{cartésien dans la fibre $F_i$} (cela vient de ce que les changements de base de $F$ sont exactes à gauche).
+    Et alors : pour que le diagramme (*) soit \emph{cartésien dans $F$}, il faut et il suffit que le diagramme (**) soit \emph{cartésien dans la fibre $F_i$} (cela vient de ce que les changements de base de $F$ sont exacts à gauche).
     En particulier :
     \item[(ii)] Pour tout objet $i$ de $I$, le fonction d'inclusion $F_i \to F$ commute aux produits fibrés.
 \end{enumerate}
@@ -242,22 +243,19 @@ Proposition {\bf 4.4.2.} --- \it
 
 \vskip .3cm
 { 
-Proposition (Sous-catégories génératrices de $F$) {\bf 4.4.3.} --- \it Soit $S$ une sous-catégorie pleine de $F$. Pour que $S$ engendre la site $F$ (i.e. que tout objet de $F$ puisse être recouvrement par des objets de $S$ au sens de la topologie $T$) il faut et il suffit que pour tout $i \in \Ob(I)$, la fibre $S_i$ engendre le topos $F_i$.
+Proposition (Sous-catégories génératrices de $F$) {\bf 4.4.3.} --- \it Soit $S$ une sous-catégorie pleine de $F$. Pour que $S$ engendre le site $F$ (i.e. que tout objet de $F$ puisse être recouvert par des objets de $S$ au sens de la topologie $T$) il faut et il suffit que pour tout $i \in \Ob(I)$, la fibre $S_i$ engendre le topos $F_i$ (clair).
 }
 \vskip .3cm
 
-(clair).
-
-\vskip .3cm
 {
 Proposition {\bf 4.4.4.} --- \it
 \begin{enumerate}
     \item[a)] De (3), on déduit que le site $F$ admet une petite famille topologiquement génératrice. Donc \emph{la catégorie $\widetilde{F}$ de $\cU$-faisceaux sur $F$ est un $\cU$-topos.}
-    \item[b)] Soit $n: F \to \widetilde{F}$ le foncteur naturel, composé du foncteur naturel $f \to \widehat{F}$ et du foncteur faisceau associé. (On a une bijection fonctorielle
+    \item[b)] Soit $n: F \to \widetilde{F}$ le foncteur naturel, composé du foncteur naturel $F \to \widehat{F}$ et du foncteur faisceau associé. (On a une bijection fonctorielle
     $$
     G(X) \isommap \Hom(n(X), G)
     $$
-    $X \in \Ob(F)$, $G \in  \Ob(\widetilde{F})$.
+    $X \in \Ob(F)$, $G \in  \Ob(\widetilde{F})$).
 \end{enumerate}
 }
 \vskip .3cm
@@ -266,7 +264,7 @@ Le foncteur $n$ n'est pas pleinement fidèle en général : les objets vides des
 
 \vskip .3cm
 {
-Lemme. --- \it Soit $F^*$ la sous-catégorie pleine de $F$ définie comme voici : pour tout $i \in \Ob(I)$, la fibre $(F^*)_i$ est la catégorie des objets non-vides de $F_i$ (autrement dit, $F^*$ est formée des objets $X$ tels que $n(X)$ soit non-vide dans $\widetilde{F}$). La restriction de $n$ à $F_*$ est pleinement fidèle.
+Lemme. --- \it Soit $F^*$ la sous-catégorie pleine de $F$ définie comme voici : pour tout $i \in \Ob(I)$, la fibre $(F^*)_i$ est la catégorie des objets non-vides de $F_i$ (autrement dit, $F^*$ est formée des objets $X$ tels que $n(X)$ soit non-vide dans $\widetilde{F}$). La restriction de $n$ à $F^*$ est pleinement fidèle.
 }
 \vskip .3cm
 
@@ -274,11 +272,11 @@ Lemme. --- \it Soit $F^*$ la sous-catégorie pleine de $F$ définie comme voici 
 $$
 (g_{\alpha}: X_{\alpha} \to Y)
 $$
-une famille des morphismes de $F$, telle que pour tout couple d'indices $\alpha$, $\beta$ on ait le diagramme commutatif :
+une famille de morphismes de $F$, telle que pour tout couple d'indices $\alpha$, $\beta$ on ait le diagramme commutatif :
 $$
     \raisebox{2em}{\xymatrix{
-        X_\alpha \times_X X_\beta \ar[r] \ar[d] & X_\beta \ar[d]^{\epsilon_\beta} \\
-        X_\alpha \ar[r]_{\epsilon_\alpha} & Y
+        X_\alpha \times_X X_\beta \ar[r] \ar[d] & X_\beta \ar[d]^{g_\beta} \\
+        X_\alpha \ar[r]_{g_\alpha} & Y
     }}
     \quad \text{(*)}
 $$
@@ -302,8 +300,8 @@ $$
 $$
 soient commutatifs, il faut et il suffit que
 \begin{enumerate}
-    \item[1)] $\Pi(g) = u$ ;
-    \item[2)] Si l'on désigne par $h: X \to Y'$ le $i$-morphisme déduit de $f$, les diagrammes
+    \item[1)] $\Pi(g) = u$ et 
+    \item[2)] si l'on désigne par $h: X \to Y'$ le $i$-morphisme déduit de $f$, les diagrammes
     $$
     \xymatrix{
         X_\alpha \ar[d]_{f_\alpha} \ar[dr]^{h_\alpha} \\
@@ -364,7 +362,7 @@ Corollaire. --- \it Si les $F_i$ sont localement connexes, $\widetilde{F}$ est l
 
 {\it Démonstration (de la proposition)}. Supposons $n(C)$ somme directe de $G$, $H \in \Ob(\widetilde{F})$. Il existe alors des objets non-vides $(D_\lambda)$ de $F_i$ et une famille épimorphique $D_\lambda \to C$ de $F_i$, telle que chaque $n(D_\lambda) \to n(C)$ se factorise par $G$ ou par $H$. Si $n(D_\lambda) \to n(C)$ se factorise par $G$ et $n(D_\mu) \to n(C)$ par $H$, le produit fibré
 $$
-n(D_\lambda) \times_{n(C)} n(D_\mu) \isom n(D_\lambda \times_C D_\lambda) \quad \text{(cf 4.4.1, (ii))}
+n(D_\lambda) \times_{n(C)} n(D_\mu) \isom n(D_\lambda \times_C D_\mu) \quad \text{(cf 4.4.1, (ii))}
 $$
 est vide dans $\widetilde{F}$, ou encore, ce qui revient au même, $D_\lambda \times_C D_\mu$ est vide dans $F_i$. On conclut par (1.4) que $G$ ou $H$ est vide.
 
@@ -395,7 +393,7 @@ $$
 Si on prend $H = \Hom_j(D, M)$, le $D$-isomorphisme $H_D \to D \times M$ (2.1.3) fournit un nouveau diagramme commutatif:
 $$
      \xymatrix{
-         \Hom_D(D,H_D) \ar[r] \ar[d] & \Hom_D(C,H_D) \ar[d]\\
+         \Hom_D(D,H_D) \ar[r]^{\sim} \ar[d]& \Hom_D(C,H_D) \ar[d]\\
          H = \Hom_j(D,M) \ar[r] & \Hom_u(C,M)
      }
 $$
@@ -403,22 +401,22 @@ d'où notre proposition.
 
 \vskip .3cm
 {
-Proposition (Image essentielle du foncteur $p$ (4.3)) {\bf 4.4.9.} --- \it Soit $G$ un faisceau sur $F$. Pour tout $i \in \Ob(I)$ représentons la restriction $G_{/F_i}$ par un objet $X_i$ de $F_i$, et soit $\epsilon_i \in G(X_i)$ la section qui défini l'isomorphisme $X_i \to G_{/F_i}$. Les propriétés suivantes sont équivalentes :
+Proposition (Image essentielle du foncteur $p$ (4.3)) {\bf 4.4.9.} --- \it Soit $G$ un faisceau sur $F$. Pour tout $i \in \Ob(I)$ représentons la restriction $G_{/F_i}$ par un objet $X_i$ de $F_i$, et soit $\epsilon_i \in G(X_i)$ la section qui définit l'isomorphisme $X_i \to G_{/F_i}$. Les propriétés suivantes sont équivalentes :
 \begin{enumerate}
     \item[(i)] Il existe une section cartésienne $Y: I \to F$ et un isomorphisme $p(Y) \isommap G$ ; 
-    \item[(ii)] Pour tout flèche $u: i \to j$ de $I$, il existe un morphisme $u$-cartésienne $X_i \xlongrightarrow{m} X_j$ qui rend commutatif le diagramme :
+    \item[(ii)] Pour toute flèche $u: i \to j$ de $I$, il existe un morphisme $u$-cartésien $X_i \xlongrightarrow{m} X_j$ qui rend commutatif le diagramme :
     $$
     \raisebox{2em}{\xymatrix@C=1em{
         n(X_i) \ar[dr]_{\epsilon_i} \ar[rr]^{n(m)} && \ar[dl]^{\epsilon_j} n(X_j)\\
         & G
     }}
-    $$
+     \quad \text{(*)} $$
     (où $n$ désigne le foncteur   naturel $F \to \widetilde{F}$).
 \end{enumerate}
 }
 \vskip .3cm
 
-{\it Démonstration}. (i) $\Rightarrow$ (ii) Pour tout $i \in \Ob(I)$, désignons par $\alpha_i$ la section $i_{Y_i}$ de $p(Y)$ au-dessus de $Y(i)$ (4.3). Il existe un isomorphisme et un seul $Y(i) \to X_i$ qui rend commutatif le diagramme
+{\it Démonstration}. (i) $\Rightarrow$ (ii) Pour tout $i \in \Ob(I)$, désignons par $\alpha_i$ la section $1_{Y_i}$ de $p(Y)$ au-dessus de $Y(i)$ (4.3). Il existe un isomorphisme et un seul $Y(i) \to X_i$ qui rend commutatif le diagramme
  $$
      \xymatrix{
          n(Y(i)) \ar[r]^-\sim \ar[d]_{\alpha_i} & n(X_i) \ar[d]^{\epsilon_i}\\
@@ -434,26 +432,26 @@ Proposition (Image essentielle du foncteur $p$ (4.3)) {\bf 4.4.9.} --- \it Soit 
  $$
  est commutatif, d'où (ii).
  
- (ii) $\Rightarrow$ (i) Soit $u: i \to j$ une flèche de $I$. Prouvons qu'il n'existe qu'une flèche $u$-cartésienne $m: X_i \to X_j$ qui rend commutatif le diagramme (*) : soit $m'$ une seconde flèche qui jouit de la même propriété. Il existe une $i$-automorphisme de $X_i$ et un seul, soit $\alpha$, tel que $m' = m \circ \alpha$. On a donc :
+ (ii) $\Rightarrow$ (i) Soit $u: i \to j$ une flèche de $I$. Prouvons qu'il n'existe qu'une flèche $u$-cartésienne $m: X_i \to X_j$ qui rend commutatif le diagramme (*) : soit $m'$ une seconde flèche qui jouit de la même propriété. Il existe un $i$-automorphisme de $X_i$ et un seul, soit $\alpha$, tel que $m' = m \circ \alpha$. On a donc :
  $$
  \epsilon_i = \epsilon_j \circ n(m') = \epsilon_j \circ n(m) \circ n(\alpha) = \epsilon_i \circ n(\alpha)
  $$
- cela veut dire que $i_{X_i}$ et $\alpha$ ont même image par l'isomorphisme $X_i \isommap G_{/F_i}$\footnote{Plus précisément, par la bijection composée $\Hom_i(X_i, X_i) \isommap G(X_i) \isommap \Hom_{\widetilde{F}}(n(X_i), G)$}, d'où $m = m'$.
+ cela veut dire que $1_{X_i}$ et $\alpha$ ont même image par l'isomorphisme $X_i \isommap G_{/F_i}$\footnote{Plus précisément, par la bijection composée $\Hom_i(X_i, X_i) \isommap G(X_i) \isommap \Hom_{\widetilde{F}}(n(X_i), G)$}, d'où $m = m'$.
  
- Nous prouvons donc définir une section cartésienne $X: I \to F$ comme voici :
+ Nous pouvons donc définir une section cartésienne $X: I \to F$ comme voici :
  \begin{enumerate}
      \item[a)] $X(i) = X_i$ pour tout $i \in \Ob(I)$
-     \item[b)] pour toute flèche $i \xlongrightarrow{u} j$ de $I$, la flèche $u$-cartésienne $X(u): X_i \to X_j$ est déterminée par le diagramme commutatif (*) (en effet, l'unicité que l'on vient de prouver nous garantir que $X(v \circ u) = X(v) \circ X(u)$ pour tout couple de flèches $i \xlongrightarrow{u} j \xlongrightarrow{u} k$ de $I$). Et il est clair que $p(X)$ est isomorphe à G.
+     \item[b)] pour toute flèche $i \xlongrightarrow{u} j$ de $I$, la flèche $u$-cartésienne $X(u): X_i \to X_j$ est déterminée par le diagramme commutatif (*) (en effet, l'unicité que l'on vient de prouver nous garantit que $X(v \circ u) = X(v) \circ X(u)$ pour tout couple de flèches $i \xlongrightarrow{u} j \xlongrightarrow{v} k$ de $I$). Et il est clair que $p(X)$ est isomorphe à $G$.
  \end{enumerate}
 
 \vskip .3cm
 {\bf 4.5. Théorème de Van Kampen}
 
-Comme dans (2.4) et (3) nous supposons que l'univers $\cU$ admet un élément $d$ cardinal infini.
+Comme dans (2.4) et (3) nous supposons que l'univers $\cU$ admet un élément de cardinal infini.
 
 \vskip .3cm
 {
-Théorème. --- \it Si ls fibres de $F$ sont localement connexes, les topos $\widetilde{F}$ et $L$ sont localement connexes, et le morphisme de topos
+Théorème. --- \it Si les fibres de $F$ sont localement connexes, les topos $\widetilde{F}$ et $L$ sont localement connexes, et le morphisme de topos
 $$
 \widetilde{F} \to L
 $$
@@ -495,7 +493,7 @@ Soit enfin $S$ la sous-catégorie pleine de $F_i$ formée des objets $C$ qui rem
         n(C) \ar[ur] \ar[r]_x & G
     }
     $$
-    {\it Démonstration}. Soient $D$ un objet de $F_j$ tel que $(C, D) \in K$ et $f: C \to D$ un $u$-morphisme. On en tire un diagramme commutatif:
+    {\it Démonstration}. Soient $D$ un objet de $F_j$ tel que $(C, D) \in K$ et $f: C \to D$ un $u$-morphisme. On en tire un diagramme commutatif~:
 $$
     \xymatrix{
         \Hom_j(D,X_j) \ar[r] \ar[d] & G(D) \ar[d]\\
@@ -507,12 +505,12 @@ $$
 Il s'agit de prouver que la flèche du bas est bijective ; or :
 \begin{enumerate}
     \item[(i)] La flèche du haut est bijective par hypothèse ($X_j$ représente $G_{/F_j}$)
-    \item[(ii)] La flèche $\Hom_j(D, X_j) \to \Hom_u(C, L_j)$ est bijective par (4.4.8) : en effet, la restriction $n(D)_{/F_j}$ trivialise $X_j$ d'après (4.4.6, b), et elle admet une section au-dessus de $D$ ;
+    \item[(ii)] La flèche $\Hom_j(D, X_j) \to \Hom_u(C, L_j)$ est bijective par (4.4.8) : en effet, la restriction $n(D)_{/F_j}$ trivialise $X_j$ d'après (4.4.6, b), et elle admet une section au-dessus de $D$.
     \item[(iii)] La flèche $G(D) \to G(C)$ est bijective parce que $n(C)$ et $n(D)$ sont connexes non-vides dans $\widetilde{F}$ (4.4.7) et que $n(D)$ trivialise $G$.
 \end{enumerate}
     \item[c)] Pour tout $C \in \Ob(S)$ et tout $f \in \Hom_i(C, X_i)$, soit $\alpha_C(f)$ le $i$-morphisme $C \to X_j$ qui rend commutatif le diagramme
     $$
-    \xymatrix{
+    \xymatrix@C=1em{
         n(C) \ar[d] \ar[drr]\\
         n(X_i) \ar[dr] && n(X_j) \ar[dl]\\
         & G
@@ -530,9 +528,9 @@ Il s'agit de prouver que la flèche du bas est bijective ; or :
     $$
     X_i \to X_j
     $$
-    et l diagramme
+    et le diagramme
     $$
-    \xymatrix{
+    \xymatrix@C=1em{
         n(X_i) \ar[rr] \ar[dr] && n(X_j) \ar[dl]\\
         & G
     }
@@ -550,7 +548,7 @@ Proposition {\bf 4.5.2.} --- \it Soit $X: I \to F$ une section cartésienne. Si 
 
 \vskip .3cm
 {\bf 4.6. Étude de $\SLC(\widetilde{F}) \isom \SLC(L)$} 
-(Nous supposons donc que l'univers $\cU$ admet un élément de cardinal infini, et que le fibres de $F$ sont localement connexes)
+(Nous supposons donc que l'univers $\cU$ admet un élément de cardinal infini, et que les fibres de $F$ sont localement connexes)
 
 Rappelons certaines notations :
 \begin{enumerate}
@@ -562,8 +560,8 @@ Rappelons certaines notations :
 {
 Proposition {\bf 4.6.1.} --- \it Soit $H$ un objet localement constant de $\widetilde{F}$. Il existe une sous-catégorie pleine $C$ de $F$ qui remplit les conditions suivantes :
 \begin{enumerate}
-    \item[1)] Pour tout $X \in \Ob(C)$, $n(X)$ trivialise $H$ ;
-    \item[2)] Pour tout $i \in \Ob(I)$, les objets de $C_i$ sont galoisiens dans $F_i$ et recouvrent $e_{F_i}$. En outre, deux objets de $C_i$ situés au-dessus de la même composante connexe de $F_i$ sont toujours isomorphes (cette dernière condition veut dire que $C_i$ est un groupoïde (2.3.4)) ;
+    \item[1)] Pour tout $X \in \Ob(C)$, $n(X)$ trivialise $H$.
+    \item[2)] Pour tout $i \in \Ob(I)$, les objets de $C_i$ sont galoisiens dans $F_i$ et recouvrent $e_{F_i}$. En outre, deux objets de $C_i$ situés au-dessus de la même composante connexe de $F_i$ sont toujours isomorphes (cette dernière condition veut dire que $C_i$ est un groupoïde (2.3.4)).
     \item[3)] Pour tout flèche $u: i \to j$ de $I$ et tout objet $Y$ de $C_i$, il existe un objet $Z$ de $C_j$ et un $u$-morphisme $Y \to Z$.
 \end{enumerate}
 }
@@ -571,7 +569,7 @@ Proposition {\bf 4.6.1.} --- \it Soit $H$ un objet localement constant de $\wide
 
 {\it Démonstration}. Soient $(U_\alpha)_{\alpha \in A}$ les composantes connexes de $e_{\widetilde{F}}$. Au-dessus chaque $U_\alpha$, prenons un objet galoisien $G_\alpha$ qui trivialise $H$ (2.4.6).
 
-Il existe (4.5) de sections cartésiennes $S_\alpha$ de $F$ et des isomorphismes $p(S_\alpha) \isom F$. Nous définissons la catégorie $C$ comme voici : pour tout $i \in \Ob(I)$, a fibre $C_i$ est la sous-catégorie pleine de $C_i$ formée des composantes connexes des $S_\alpha(i)$.
+Il existe (4.5) des sections cartésiennes $S_\alpha$ de $F$ et des isomorphismes $p(S_\alpha) \isom F$. Nous définissons la catégorie $C$ comme voici : pour tout $i \in \Ob(I)$, la fibre $C_i$ est la sous-catégorie pleine de $C_i$ formée des composantes connexes des $S_\alpha(i)$.
 
 Vérification de (1) : pour tout $X \in \Ob(C)$, il existe un $\alpha \in A$ et une section de $G_\alpha$ au dessus de $X$, i.e. un morphisme $n(X) \to G_\alpha$. Donc $n(X)$ trivialise $H$.
 
@@ -583,7 +581,7 @@ Quant au point (3), il est évident.
 {
 Proposition {\bf 4.6.2.} --- \it Soit $C$ une sous-catégorie pleine de $F$ qui remplit la condition (2) de (4.6.1). Pour tout faisceau $H$ sur $F$, les propriétés suivantes sont équivalentes :
 \begin{enumerate}
-    \item[(i)] Pour tout $X \in \Ob(C)$, $n(X)$ trivialise $H$;
+    \item[(i)] Pour tout $X \in \Ob(C)$, $n(X)$ trivialise $H$.
     \item[(ii)] Il existe une section cartésienne $S$ de $F$ telle que $p(S)$ soit isomorphe à $H$ et que, pour tout $i \in \Ob(I)$, les objets de $C_i$ trivialisent $S(i)$.
 \end{enumerate}
 }
@@ -595,7 +593,7 @@ Corollaire. --- \it Soit $S$ une section cartésienne de $F$. Pour que $S$ soit 
 
 {\it Démonstration de la proposition}. (i) $\Rightarrow$ (ii) Par définition de la topologie de $F$, les $n(X)$, $X \in \Ob(C)$ recouvrent le faisceau final. Donc $H$ est localement constant, et il existe une section cartésienne $S$ de $F$ telle que $p(S)$ soit isomorphe à $H$. Soient $i \in \Ob(I)$ et $X$ un objet de $C_i$ ; la restriction $n(X)_{/F_i}$ admet une section au-dessus de $X$, et elle trivialise $H_{/F_i}$ d'après (4.4.6, b) ; donc $X$ trivialise $S(i)$ qui représente $H_{/F_i}$, c.q.f.d. 
 
-(ii) $\Rightarrow$ (i) Soit $K$ la sous-catégorie pleine de $F$ définie comme voici : pour tout $i \in \Ob(I)$, la fibre $K_i$ est formée des objets connexes non-vides de $F_i$ qui sont dans le crible engendré par les objets de $C_i$. Le foncteur $n: F \to \widetilde{F}$ identifie $K$ à une sous-catégories génératrices de $\widetilde{F}$ formée d'objets connexes non-vides (d'après le lemme 4.4.4, b et 4.4.7). Il suffit donc, d'après (2.2.1), de voir que $H$ est un préfaisceau localement constant sur $K$ ; ce qui découle de (4.4.8), compte tenu de l'isomorphisme $p(S) \isom H$. 
+(ii) $\Rightarrow$ (i) Soit $K$ la sous-catégorie pleine de $F$ définie comme voici : pour tout $i \in \Ob(I)$, la fibre $K_i$ est formée des objets connexes non-vides de $F_i$ qui sont dans le crible engendré par les objets de $C_i$. Le foncteur $n: F \to \widetilde{F}$ identifie $K$ à une sous-catégorie génératrice de $\widetilde{F}$ formée d'objets connexes non-vides (d'après le lemme 4.4.4, b et 4.4.7). Il suffit donc, d'après (2.2.1), de voir que $H$ est un préfaisceau localement constant sur $K$ ; ce qui découle de (4.4.8), compte tenu de l'isomorphisme $p(S) \isom H$. 
 
 \vskip .3cm
 {
@@ -665,7 +663,7 @@ Le foncteur ``restriction à $C$'' donne une équivalence de catégories
 $$
 \LC(\widetilde{F}, C) \to \LC(\widehat{C})
 $$
-où $\LC(\widehat{C})$ désigne la catégorie des $\cU$-préfaisceau localement constants sur $C$.
+où $\LC(\widehat{C})$ désigne la catégorie des $\cU$-préfaisceaux localement constants sur $C$.
 }
 \vskip .3cm
 
@@ -673,11 +671,11 @@ où $\LC(\widehat{C})$ désigne la catégorie des $\cU$-préfaisceau localement 
 
 {\it Commentaire} : 
 \begin{enumerate}
-    \item[1)] Les préfaisceaux localement constants sur $C$ s'identifient aux préfaisceaux sur les groupoïde fondamental $\Pi(C)$ de la catégorie $C$, obtenu par calcul des fractions (\cite{1}, chap. I, n$^\circ 1$.5.3). Rappelons que $\Pi(C)$ est caractérisé à équivalence près par la propriété universelle suivante : il existe un foncteur $c \to \Pi(C)$ qui donne pour tout groupoïde $\Gamma$ une équivalence de catégories :
+    \item[1)] Les préfaisceaux localement constants sur $C$ s'identifient aux préfaisceaux sur les groupoïde fondamental $\Pi(C)$ de la catégorie $C$, obtenu par calcul des fractions (\cite{1}, chap. I, n$^\circ 1$.5.3). Rappelons que $\Pi(C)$ est caractérisé à équivalence près par la propriété universelle suivante : il existe un foncteur $C \to \Pi(C)$ qui donne pour tout groupoïde $\Gamma$ une équivalence de catégories :
     $$
     \Fonct(\Pi(C), \Gamma) \to \Fonct(C, \Gamma)
     $$
-    \item[2)] Le groupoïde $\Pi(C)$ est la 2-limite inductive des groupoïdes $C_i$ au sens suivante :
+    \item[2)] Le groupoïde $\Pi(C)$ est la 2-limite inductive des groupoïdes $C_i$ au sens suivant :
     \begin{enumerate}
         \item[a)] Le foncteur $\Pi_{/C}: C \to I$ est cofibrant, i.e. le foncteur $C^\circ \to I^\circ$ qui s'en déduit est fibrant (condition (3) de (4.6.1) et (4.4.8))
         \item[b)] $\Pi(C)$ représente le 2-foncteur
@@ -705,18 +703,22 @@ Proposition {\bf 4.6.6.} --- \it Soit $J(F)$ l'ensemble des sous-catégories ple
 
 {\it Démonstration}. Le point (ii) résulte de 2.4.9.
 
-Prouvons (i). Soient $C$ et $C'$ deux éléments de $J(F)$. On définit un minorant $D$ de $\{C, C'\}$ comme voici : étant donné $i \in \Ob(I)$, un objet $Z$ de $F_i$ est dans $D_i$ s'il existe un objet $Y$ de $C_i$ et un objet $Y'$ de $C'$ tels que $Z$ soit isomorphe à une composante connexe de $Y \times Y'$ (cf. 2.4.5, (ii)). 
+Prouvons (i). Soient $C$ et $C'$ deux éléments de $J(F)$. On définit un minorant $D$ de $\{C, C'\}$ comme voici : étant donné $i \in \Ob(I)$, un objet $Z$ de $F_i$ est dans $D_i$ s'il existe un objet $Y$ de $C_i$ et un objet $Y'$ de $C_i'$ tels que $Z$ soit isomorphe à une composante connexe de $Y \times Y'$ (cf. 2.4.5, (ii)). 
 
 \vskip .3cm
 {\bf 4.6.7.} D'après (4.6.6), (4.6.1) et (4.6.2), il existe un petit ensemble ordonné filtrant à gauche $A$ et une famille croissante $(C^\alpha)_{\alpha \in A}$ d'éléments de $J(F)$ qui remplit la condition suivante : pour tout objet localement constant $S$ de $L$, il existe un indice $\alpha$ tel que pour tout $i \in \Ob(I)$, les objets de $C^\alpha_i$ trivialisent $S(i)$ dan $F_i$. Cela veut dire que la catégorie des objets localement constants de $L$ est réunion des sous-catégories essentiellement pleines
 $$
-T_{\alpha} = \Cart_I(I, F_C \alpha)
+T_{\alpha} = \Cart_I(I, F_{C^ \alpha})
 $$
 définies en 4.6.3, (ii) et (iii). Puisque les $T_{\alpha}$ sont des $\cU$-topos objets de $\cG$ et que les inclusions $T_{\alpha} \to \SLC(L)$ définissent des morphismes de topos $\SLC(L) \to T_{\alpha}$, on a, suivant (3.3.3), la ``formule''
 $$
 \SLC(\varinjlim_I F_i) = \varprojlim_A (\varinjlim_I \LC(F_i, C^\alpha_i))
 $$
 où les $\lim$ sont des 2-limites dans la 2-catégorie des $\cU$-topos.
+
+
+
+
 
 
 
