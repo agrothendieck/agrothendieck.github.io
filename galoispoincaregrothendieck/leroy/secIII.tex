@@ -23,13 +23,11 @@ Dans les numéros (3.2) et (3.3) on montre que les topos localement galoisiens s
 \vskip .3cm
 {\bf 3.2.} (Les groupoïdes comme topos). Soient $\Top$ la 2-catégorie des $\cU$-topos et $\Grpd$ la 2-catégorie des groupoïdes qui sont $\cU$-petits à équivalence près ; soit enfin $\cG$ la sous-catégorie pleine de $\Top$ formée des topos dont tous les objets sont localement constants (ces topos sont donc a fortiori localement galoisiens). Nous allons établir des équivalences
 $$
-\Grpd \rightleftarrows \cG %%I want to use \longrightleftarrows, but it needs a package
+\Grpd \rightleftarrows \cG
 $$
 
 \vskip .3cm
 {\bf 3.2.1.} Le 2-foncteur \hspace{2em} $\xymatrix@R=0pt{\Grpd \ar[r] & \Top\\ C \ar@{|->}[r]& \widehat{C}}$. 
-%$\xymatrix@R=0pt{C \ar[r]& \widehat{C}\\ \Grpd \ar[r] & \Top}$. 
-%% I really want to have the top arrow here to be \ar@{|->}[r] i.e. a \mapsto, if we are updating notation.
 
 Pour tout objet $C$ de $\Grpd$, la catégorie $\widehat{C}$ des $\cU$-préfaisceaux sur $C$ est un $\cU$-topos. La construction du topos $\widehat{C}$ est 2-fonctorielle en $C$ :
 \begin{enumerate}
@@ -44,7 +42,7 @@ Pour tout objet $C$ de $\Grpd$, la catégorie $\widehat{C}$ des $\cU$-préfaisce
     $$
     G \to G \circ m
     $$
-    \item[(b)] A tout morphisme de morphismes $\Grpd$ :
+    \item[(b)] A tout morphisme de morphismes de $\Grpd$ :
     $$
     \xymatrix{
         C \ar@<2ex>[r]_{\ }="s"^m \ar@<-2ex>[r]^{\ }="t"_n & D
@@ -70,10 +68,11 @@ Pour tout objet $C$ de $\Grpd$, la catégorie $\widehat{C}$ des $\cU$-préfaisce
 {
 Proposition {\bf 3.2.2.} --- \it Pour tout objet $C$ de $\Grpd$, le topos $\widehat{C}$ est objet de $\cG$ : tout préfaisceau représentable sur $C$
 \begin{enumerate}
-    \item[(i)] est connexe et non-vide dans $\widehat{C}$ (clair)
-    \item[(ii)] trivialise tous les objets de $C$ (2.2.1).
+    \item[(i)] est connexe et non-vide dans $\widehat{C}$ (clair) 
+    \item[(ii)] trivialise tous les objets de $C$ (2.2.1). 
 \end{enumerate}
 }
+2.2.1.
 
 \vskip .3cm
 {
@@ -114,7 +113,7 @@ Corollaire {\bf 3.2.7.} --- \it L'équivalence naturelle $E\to (\Point(E))\wideh
 \begin{enumerate}
     \item[a)] Soit $E$ un objet de $\cG$. On définit un \emph{foncteur}
     $$
-    E \to (\Point(E))\widehat{\phantom{C}} \leqno{(*)}
+    E \to (\Point(E))\widehat{\phantom{C}} \leqno{\text{(*)}}
     $$
     en associant à l'objet $X$ de $E$ le préfaisceau
     $$
@@ -139,7 +138,7 @@ n'est autre que le foncteur identique de $\widehat{C}$.
 \vskip .3cm
 {\bf 3.2.8.} {\it Conclusion}. Les foncteurs
 $$
-C \mapsto \widehat{C} %% I took the liberty of editing these, since you did a similar replacement elsewhere
+C \mapsto \widehat{C}
 $$
 $$
 \Point(E) \mapsfrom E
@@ -150,7 +149,7 @@ définissent des équivalences quasi-inverses entre $\Grpd$ et $\cG$.
 {\bf 3.3.} (Les topos localement galoisiens comme limites projectives filtrantes de groupoïdes)
 
 \vskip .3cm
-{\bf 3.3.0.} Dans tout ce numéro 3.3, on entend par ``ordonnés filtrantes'' les ensembles ordonnés filtrantes à gauche $\cU$-petits, que l'on regarde aussi bien comme des catégories.
+{\bf 3.3.0.} Dans tout ce numéro 3.3, on entend par ``ordonnés filtrants'' les ensembles ordonnés filtrants à gauche $\cU$-petits, que l'on regarde aussi bien comme des catégories.
 
 \vskip .3cm
 {\bf 3.3.1.} Notre propos est d'établir pour tout $\cU$-topos $E$ l'équivalence des propriétés suivantes :
@@ -166,7 +165,7 @@ définissent des équivalences quasi-inverses entre $\Grpd$ et $\cG$.
 
 \vskip .3cm
 {
-Proposition {\bf 3.3.2.} --- \it Soit $E$ un $\cU$-topos localement connexe. Pour tout crible $R$ couvrant $e_E$, soit $\LC(E, R)$ la sous-catégorie pleine de $E$ formée des objets qui sont trivialisés par les objets connexes appartenant à $R$
+Proposition {\bf 3.3.2.} --- \it Soit $E$ un $\cU$-topos localement connexe. Pour tout crible $R$ couvrant $e_E$, soit $\LC(E, R)$ la sous-catégorie pleine de $E$ formée des objets qui sont trivialisés par les objets connexes appartenant à $R$.
 \begin{enumerate}
     \item[(i)] La catégorie $\LC(E, R)$ est un $\cU$-topos objet de $\cG$.
     \item[(ii)] Les inclusions $\LC(E, R) \to \SLC(E)$ et $\LC(E, R) \to E$ définissent des morphismes de topos $\SLC(E) \to \LC(E, R)$ et $E \to \LC(E, R)$.
@@ -176,13 +175,13 @@ Proposition {\bf 3.3.2.} --- \it Soit $E$ un $\cU$-topos localement connexe. Pou
 
 {\it Démonstration}. 
 \begin{enumerate}
-    \item[1)] $\LC(E, R)$ est stable dans $E$ par limites inductives et projectives (2.2.4) (elle l'es donc aussi dans $\SLC(E)$ par (2.4)).
-    \item[2)] Soit $K$ la catégorie des objets de $\LC(E, R)$ qui sont galoisiens dans $E$. D'après (2.4.6) et le point (1), $K$ engendre $\LC(E, R)$. Or d'après (2.4.9), $K$ est équivalente à une petite catégorie, donc $\LC(E, R)$ est un $\cU$-topos et on a le point (ii). en particulier, les objets de $K$ qui trivialisent \emph{dans $E$} un objet donné de $\LC(E, R)$ le trivialisent aussi dans $\LC(E, R)$. Donc tout objet de $\LC(E, R)$ est localement constant (2.4.6).
+    \item[1)] $\LC(E, R)$ est stable dans $E$ par limites inductives et projectives (2.2.4) (elle l'est donc aussi dans $\SLC(E)$ par (2.4)).
+    \item[2)] Soit $K$ la catégorie des objets de $\LC(E, R)$ qui sont galoisiens dans $E$. D'après (2.4.6) et le point (1), $K$ engendre $\LC(E, R)$. Or d'après (2.4.9), $K$ est équivalente à une petite catégorie, donc $\LC(E, R)$ est un $\cU$-topos et on a le point (ii). En particulier, les objets de $K$ qui trivialisent \emph{dans $E$} un objet donné de $\LC(E, R)$ le trivialisent aussi dans $\LC(E, R)$. Donc tout objet de $\LC(E, R)$ est localement constant (2.4.6).
 \end{enumerate}
 
 \vskip .3cm
 {
-Proposition {\bf 3.3.3.} --- \it Soient $T$ un $\cU$-topos, $I$ un ordonné filtrant (3.3.0) et $(T_i)_{i \in I}$ une famille décroissante d sous-catégories essentiellement pleines de $T$. Soit $F$ la sous-catégorie pleine de $I \times T$ formée des couples $(i, X)$ tels que $X \in \Ob(T_i)$. Supposons qu'on ait les propriétés suivantes :
+Proposition {\bf 3.3.3.} --- \it Soient $T$ un $\cU$-topos, $I$ un ordonné filtrant (3.3.0) et $(T_i)_{i \in I}$ une famille décroissante de sous-catégories essentiellement pleines de $T$. Soit $F$ la sous-catégorie pleine de $I \times T$ formée des couples $(i, X)$ tels que $X \in \Ob(T_i)$. Supposons qu'on ait les propriétés suivantes :
 \begin{enumerate}
     \item[1)] Pour tout $i \in I$, $T_i$ est un $\cU$-topos objet de $\cG$, et l'inclusion $T_i \to T$ définit un morphisme de topos $T \to T_i$. 
     \item[2)] La réunion des $\Ob(T_i)$ engendre $T$. Alors $F$ est une catégorie fibrée en topos au-dessus de $I$ (cf. A 1), et l'inclusion $F \to I \times T$ définit un morphisme de catégories fibrées en topos $I \times T \to F$ qui fait de $T$ la 2-limite projective des $T_i$ dans la catégorie des $\cU$-topos.
@@ -218,11 +217,11 @@ est une équivalence de catégories.
     $$
     il existe un morphisme de foncteurs et un seul
     $$
-    u: g^{-1}_{/G} \to f^{-1}_{/G}
+    \mu: g^{-1}_{/G} \to f^{-1}_{/G}
     $$
-    tel que pour tout objet $(i, X)$ de $F$ on ait: 
+    tel que pour tout objet $(i, X)$ de $F$ on ait~: 
     $$
-    \lambda_{(i, X)} = (i_i, \mu_X)
+    \lambda_{(i, X)} = (1_i, \mu_X)
     $$
     Mais puisque $G$ engendre $T$, le foncteur
     $$
@@ -248,11 +247,11 @@ est une équivalence de catégories.
     \begin{enumerate}
         \item[a)] Il existe un foncteur $b: G \to S$ tel que le foncteur $a: F \to S$ soit isomorphe au foncteur $(i, X) \to b(X)$ :
         
-        Puisque les changements de base de $F$ sont donnés par les inclusions entre les $G_i$, on peut définir pour tut objet $X$ de $G$ :
+        Puisque les changements de base de $F$ sont donnés par les inclusions entre les $G_i$, on peut définir pour tout objet $X$ de $G$ :
         $$
         b(X) = \varprojlim_{X \in \Ob(T_i)} a(i, X)
         $$
-    Toutes les projections $a(X) \to a(i, X)$ sont des isomorphismes. Étant donné un morphisme $X \to Y$ de $G$, il existe un morphisme et un seul $b(X) \to b(Y)$ tel que, dès que $X$ et $Y$ sont dans $\Ob(T_i)$, on ait le diagramme commutatif :
+    Toutes les projections $b(X) \to a(i, X)$ sont des isomorphismes. Étant donné un morphisme $X \to Y$ de $G$, il existe un morphisme et un seul $b(X) \to b(Y)$ tel que, dès que $X$ et $Y$ sont dans $\Ob(T_i)$, on ait le diagramme commutatif :
     $$
         \xymatrix{
             b(X) \ar[r]^\sim \ar[d] & a(i,X) \ar[d]\\
@@ -260,14 +259,16 @@ est une équivalence de catégories.
         }
     $$
      d'où un foncteur $b: G\to S$ qui remplit clairement les conditions requises.
-     \item[b)] Le foncteur $b$ est exact à gauche : en effet, les restrictions de $a$ aux fibres de $F$ sont des foncteurs exacts à gauche, ainsi que les inclusions $T_i \to G$ ;
-     \item[c)] Soit $(X_\alpha \to X)$ une famille de morphisme de $G$ qui est épimorphique dans $T$ ; la famille de morphismes $(b(X_\alpha) \to b(X))$ de $S$ est épimorphique:
+     \item[b)] Le foncteur $b$ est exact à gauche : en effet, les restrictions de $a$ aux fibres de $F$ sont des foncteurs exacts à gauche, ainsi que les inclusions $T_i \to G$.
+     \item[c)] Soit $(X_\alpha \to X)$ une famille de morphisme de $G$ qui est épimorphique dans $T$ ; la famille de morphismes $(b(X_\alpha) \to b(X))$ de $S$ est épimorphique~:
      
      Soit $i$ un indice tel que $X \in \Ob(T_i)$. Décomposons $X$ en ses composantes connexes dans $T_i$ :
      $$
      X = \amalg_{\gamma \in C} Y_\gamma .
      $$
-     Les $Y_\gamma$ sont encore connexes dans $T$ (2.4.10). Pour out $\gamma \in C$, il existe un objet non-vide $Z_\gamma$ de $G$ et un morphisme $Z_\gamma \to Y_\gamma$ tel que $Z_\gamma \to Y_\gamma \to X$ se factorise par un $X_\alpha \to X$. Le morphisme $Z_\gamma \to Y_\gamma$ est un épimorphisme (2.2.6) donc aussi $b(Z_\gamma) \to b(Y_\gamma)$ (puisque $Z_\gamma$ et $Y_\gamma$ sont tous deux dans un même $T_j$). Mais $b(X)$ est somme directe des $b(Y_\gamma) \to b(X)$ est épimorphique, d'où notre assertion ;
+
+
+     Les $Y_\gamma$ sont encore connexes dans $T$ (2.4.10). Pour tout $\gamma \in C$, il existe un objet non-vide $Z_\gamma$ de $G$ et un morphisme $Z_\gamma \to Y_\gamma$ tel que $Z_\gamma \to Y_\gamma \to X$ se factorise par un $X_\alpha \to X$. Le morphisme $Z_\gamma \to Y_\gamma$ est un épimorphisme (2.2.6) donc aussi $b(Z_\gamma) \to b(Y_\gamma)$ (puisque $Z_\gamma$ et $Y_\gamma$ sont tous deux dans un même $T_j$). Mais $b(X)$ est somme directe des $b(Y_\gamma)$ ; donc la famille $(b(Z_\gamma) \to b(X))$ est épimorphique, d'où notre assertion.
      \item[d)] Il existe donc un morphisme de topos $f: S \to T$ tel que la restriction $f^{-1}_{|G}$ soit isomorphe à $b$ ; le foncteur
      $$
      (i, X) \to (i, f^{-1}(X))
@@ -296,7 +297,7 @@ Corollaire {\bf 3.3.4.} --- \it Soient $E$ un $\cU$-topos localement connexe, $I
 Proposition {\bf 3.3.5.} --- Soient $T$ un ordonné filtrant, et $\Pi: F \to I$ une catégorie fibrée au-dessus de $I$. Si les foncteurs changement de base de $F$ sont pleinement fidèles, il existe une catégorie $K$ et une famille décroissante $(K_i)_{i \in I}$ de sous-catégories essentiellement pleines de $K$ telles que :
 \begin{enumerate}
     \item[a)] $K$ soit réunion des $K_i$ ;
-    \item[b)] $F$ soit $I$-équivalente à la sous-catégorie pleine $F'$ de $I \times K$ formée des couples $(i, X)$ tels que $X \in \Ob(K_i)$ (F' est alors une sous-catégorie fibrée de $I \times K$).
+    \item[b)] $F$ soit $I$-équivalente à la sous-catégorie pleine $F'$ de $I \times K$ formée des couples $(i, X)$ tels que $X \in \Ob(K_i)$ ($F'$ est alors une sous-catégorie fibrée de $I \times K$).
 \end{enumerate}
 }
 \vskip .3cm
@@ -314,13 +315,13 @@ Proposition {\bf 3.3.5.} --- Soient $T$ un ordonné filtrant, et $\Pi: F \to I$ 
     composé de $I_X \to F$ et de $F \to I$.
     \item[2)] Pour tout couple $(X, Y)$ d'objets de $F$, soit
     $$
-    I_{XY} = I_{X} \times_X I_Y
+    I_{XY} = I_{X} \times_I I_Y
     $$
     Cette catégorie est non-vide puisque $I$ est filtrante ; et on a des foncteurs 
     $$
-    q^X_{XY} = I_{XY} \xlongrightarrow{pr_1} I_X \to F, \quad q^X_{XY} = I_{XY} \xlongrightarrow{pr_2} I_Y \to F.
+    q^X_{XY} = I_{XY} \xlongrightarrow{pr_1} I_X \to F, \quad q^Y_{XY} = I_{XY} \xlongrightarrow{pr_2} I_Y \to F.
     $$
-    \item[3)] \emph{Remarque}. Étant données un objet
+    \item[3)] \emph{Remarque}. Étant donnés un objet
     $$
     C = (X' \to X, Y' \to Y)
     $$
@@ -366,15 +367,15 @@ Proposition {\bf 3.3.5.} --- Soient $T$ un ordonné filtrant, et $\Pi: F \to I$ 
 
 \vskip .3cm
 {
-Proposition {\bf 3.3.6.} --- \it Soient $C$ une catégorie, $I$ un ordonné filtrant (3.3.0) et $(G_i)_{i \in I}$ une famille décroissante de sous-catégories essentiellement pleines de $C$. On suppose que:
+Proposition {\bf 3.3.6.} --- \it Soient $C$ une catégorie, $I$ un ordonné filtrant (3.3.0) et $(G_i)_{i \in I}$ une famille décroissante de sous-catégories essentiellement pleines de $C$. On suppose que~:
 \begin{enumerate}
     \item[(i)] Pour tout $i \in I$, $G_i$ est un $\cU$-topos objet de $\cG$ (cf. 3.2) ;
     \item[(ii)] Pour $i \leq j$, l'inclusion $G_ j \to G_i$ définit un morphisme de topos $G_i \to G_j$ ;
     \item[(iii)] $C$ est réunion des sous-catégories $G_i$. Dans ce cas, si l'on munit $C$ de sa topologie canonique, la catégorie $\widetilde{C}$ des $\cU$-faisceaux sur $C$ est un $\cU$-topos localement galoisien, et les foncteurs pleinement fidèles 
     $$
-    G_i \to C \to \widetilde{C} \leqno{(*)}
+    G_i \to C \to \widetilde{C} \leqno{\text{(*)}}
     $$
-    définissent es morphismes de topos $\widetilde{C} \to G_i$.
+    définissent des morphismes de topos $\widetilde{C} \to G_i$.
 \end{enumerate}
 }
 \vskip .3cm
@@ -384,7 +385,7 @@ Corollaire. --- \it Sous les hypothèses précédentes, soient $(T_i)$ les image
 }
 \vskip .3cm
 
-{\it Démonstration de la proposition}. Les points suivantes se prouvent tous immédiatement :
+{\it Preuve de la proposition}. Les points suivants se prouvent tous immédiatement :
 \begin{enumerate}
     \item[1)] Les limites projectives finies de $C$ sont représentables, et les inclusions $G_i \to C$ sont exactes à gauche.
     \item[2)] Toute famille de morphismes d'un $G_i$ qui est épimorphique dans $G_i$ est épimorphique effective universelle dans $C$.
