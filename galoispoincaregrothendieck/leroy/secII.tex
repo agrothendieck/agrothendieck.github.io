@@ -6,7 +6,10 @@
 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% II. --- OBJETS LOCALEMENT CONSTANTS ET OBJETS GALOISIENS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter*{\S \space II. --- OBJETS LOCALEMENT CONSTANTS ET OBJETS GALOISIENS}\thispagestyle{empty}
+\label{sec:2}
+\section*{}
 
 On se donne un $\cU$-topos $E$.
 
@@ -27,7 +30,7 @@ Définitions {\bf 2.1.1.} --- \it
 Proposition {\bf 2.1.2.} --- \it Soient $Y$ un objet de $E$ et $D \xlongrightarrow{u} C$ un morphisme de $E$. 
 \begin{enumerate}
     \item[(i)] Si $C$ trivialise $Y$, $D$ trivialise $Y$ ;
-    \item[(ii)] Si, en outre, $C$ et $D$ sont connexes et non-vides, l'application $f \to f \circ u$ de $\Hom(C, Y)$ dans $\Hom(D, Y)$ est \emph{bijective}.
+    \item[(ii)] si, en outre, $C$ et $D$ sont connexes et non-vides, l'application $f \to f \circ u$ de $\Hom(C, Y)$ dans $\Hom(D, Y)$ est \emph{bijective}.
 \end{enumerate}
 }
 \vskip .3cm
@@ -57,11 +60,11 @@ Proposition {\bf 2.1.2.} --- \it Soient $Y$ un objet de $E$ et $D \xlongrightarr
         D \ar[u]^{(1_D,g)} \ar[r] & C \ar[u]_{(1_C,f)}
     }
     $$
-    soit commutatif, ou encore que soit commutative le diagramme
+    soit commutatif, ou encore que soit commutatif le diagramme
     $$
         \xymatrix{
             I_D \ar[r] & I_C \\
-            D \ar[r] \ar[u]^{\beta\circ (1_D,g)} %% I think it is \beta here, the scan is unclear.
+            D \ar[r] \ar[u]^{\beta\circ (1_D,g)}
             & C \ar[u]_{\alpha\circ (1_C,f)}
         }
     $$
@@ -101,16 +104,16 @@ Proposition {\bf 2.1.3.} --- \it
 
 {\it Démonstration}. En effet, prenons un ensemble $I$ et un $C$-isomorphisme $I_C \to C \times X$. On en tire une bijection :
 $$
-\Hom(C, I_C) \isom \Hom_C(C, C \times X) \isom \Hom(C, X)
+\Hom_C(C, I_C) \isom \Hom_C(C, C \times X) \isom \Hom(C, X)
 $$
-d'où un diagramme de $E_{/C}$:
+d'où un diagramme de $E_{/C}$~:
 $$
     \xymatrix{
         (\Hom_C(C, I_C))_C \ar[r]^-\sim \ar[d] & \Hom(C, X)_C \ar[d]\\
         I_C \ar[r] & C\times X
     }
 $$
-[donc] la commutativité prouve notre assertion.
+dont la commutativité prouve notre assertion.
 
 \vskip .3cm
 {
@@ -149,7 +152,7 @@ Soient $V_0$ et $V_1$ respectivement les images de :
 $$
 \amalg_{i \in I_0} U_i \to e_E, \quad \amalg_{i \in I_1} U_i \to e_E.
 $$
-Évidement, $V_1$ est un sous-objet de $U$, et $U \times V_0$ est vide. Comme $e_E$ est somme de $V_0$ et $V_1$, on conclut que $V_1 \isom U$ et $U \amalg V_0 \isom e_E$. 
+Évidemment, $V_1$ est un sous-objet de $U$, et $U \times V_0$ est vide. Comme $e_E$ est somme de $V_0$ et $V_1$, on conclut que $V_1 \isom U$ et $U \amalg V_0 \isom e_E$. 
 
 \vskip .3cm
 {\bf 2.2.} Nous supposons maintenant le topos $E$ \emph{localement connexe}
@@ -195,7 +198,7 @@ $$
     V_1 \ar[r]_{f_1} & R
 }
 $$
-on a $x(V_0, f_0) = x(V_1, f_1)$ ; donc (d'après (1.3) les $x(V, f)$ sont tous égaux à un même $x \in F(U)$; et on a $x_{/R} = t$ par construction de $x$).
+on a $x(V_0, f_0) = x(V_1, f_1)$ ; donc (d'après (1.3)) les $x(V, f)$ sont tous égaux à un même $x \in F(U)$ ; et on a $x_{/R} = t$ par construction de $x$.
 
 \vskip .3cm
 {
@@ -213,9 +216,9 @@ Proposition {\bf 2.2.4.} ($\varprojlim$ et $\varinjlim$ d'objets localement cons
 
 Soient $I$ une petite catégorie et 
 $L: I \to E$
-un foncteur tel que $L(i)$ soit localement constant pour tout $i \in \Ob(I)$. \emph{Supposons qu'il existe un site générateur $S$ adapté à tous les $L(i)$}; alors :
+un foncteur tel que $L(i)$ soit localement constant pour tout $i \in \Ob(I)$. \emph{Supposons qu'il existe un site générateur $S$ adapté à tous les $L(i)$} ; alors :
 \begin{enumerate}
-    \item[(i)] $P = \varprojlim\limits_{I} L(i)$ est localement constant et $S$ est un site générateur adapté à p (2.2.1).
+    \item[(i)] $P = \varprojlim\limits_{I} L(i)$ est localement constant et $S$ est un site générateur adapté à P (2.2.1).
     \item[(ii)] Le préfaisceau sur $S$ :
     $$
     C \to L(C) = \varinjlim_I \Hom (C, L(i))
@@ -243,15 +246,15 @@ Proposition {\bf 2.2.5.} --- \it Soit $L$ un objet localement constant de $E$.
 \begin{enumerate}
     \item[(i)] Soit $S$ un site générateur adapté à $K$ et à $L$. Le préfaisceau sur $S$
     $$
-    C \to M(C) = \Hom(C, L) \to \Hom(C, K)
+    C \to M(C) = \Hom(C, L) - \Hom(C, K)
     $$
     est un faisceau (2.2.2), et $L$ est somme directe de $K$ de $M$, c.q.f.d.
-    \item[(ii)] Si $L$ est somme directe de deux sous-objets $K$ de $K'$, alors $C \times L$ qui est constant dans $E_{/C}$ est somme directe de $C \times K$ et $C \times K'$, qui sont donc constants dans $E_{/C}$ puisque $C$ est connexe et non-vide.
+    \item[(ii)] Si $L$ est somme directe de deux sous-objets $K$ et $K'$, alors $C \times L$ qui est constant dans $E_{/C}$ est somme directe de $C \times K$ et $C \times K'$, qui sont donc constants dans $E_{/C}$ puisque $C$ est connexe et non-vide.
 \end{enumerate}
 
 \vskip .3cm
 {
-Corollaires {\bf 2.2.5.} --- \it 
+Corollaires {\bf 2.2.6.} --- \it 
 \begin{enumerate}
     \item[(a)] Tout morphisme d'un objet localement constant non-vide de $E$ dans un objet localement constant connexe de $E$ est un épimorphisme.
     \item[(b)] Soient des morphismes de $E$ :
@@ -273,7 +276,7 @@ Corollaires {\bf 2.2.5.} --- \it
 \emph{On ne suppose plus} le topos $E$ localement connexe.
 
 \vskip .3cm
-{\bf 2.3.1.} {Définition. --- \it Nous dirons qu'un objet $Y$ de $E$ est galoisien s'il est localement constant, connexe et non-vide, et s'il est un pseudo-torseur sous le groupe constant $\Aut(Y)_E$.
+{\bf 2.3.1.} {Définition. --- \it Nous dirons qu'un objet $Y$ de $E$ est \emph{galoisien} s'il est localement constant, connexe et non-vide, et s'il est un pseudo-torseur sous le groupe constant $\Aut(Y)_E$.
 }
 \vskip .3cm
 {\it Remarques}.
@@ -284,7 +287,7 @@ Corollaires {\bf 2.2.5.} --- \it
 
 \vskip .3cm
 {
-Proposition {\bf 2.3.2.} --- \it Soient $A$ et $B$ deux objets connexes de $E$ tel que $A \times B$ soit non-vide. Si $A$ et $B$ se trivialisent l'un l'autre, ils sont isomorphes.
+Proposition {\bf 2.3.2.} --- \it Soient $A$ et $B$ deux objets connexes de $E$ tels que $A \times B$ soit non-vide. Si $A$ et $B$ se trivialisent l'un l'autre, ils sont isomorphes.
 }
 \vskip .3cm
 
@@ -314,9 +317,9 @@ $$
 \vskip .3cm
 {\bf 2.3.5.} Soient $G$ un groupe, $B^G$ le topos des $G$--ensembles à droite et $T^G \in \Ob(B^G)$ l'ensemble $G$ muni de l'opération de $G$ par translations à droite.
 
-L'opération de $G$ sur l'ensemble $G$ par translations à gauche fait de $T^G$ un torseur de $B^G$ sous le groupe constant $G_{B^G}$. Pour tout morphisme de topos $E^U \to B^G$, on a donc une structure de $G_E$-torseur à gauche sur $u^{-1}(T^G)$ ; d'où un foncteur
+L'opération de $G$ sur l'ensemble $G$ par translations à gauche fait de $T^G$ un torseur de $B^G$ sous le groupe constant $G_{B^G}$. Pour tout morphisme de topos $E \xrightarrow{u} B^G$, on a donc une structure de $G_E$-torseur à gauche sur $u^{-1}(T^G)$ ; d'où un foncteur
 $$
-\Homtop(E, B^G)^\circ \to \Tors(E, G_E) \leqno{(*)}
+\Homtop(E, B^G)^\circ \to \Tors(E, G_E) \leqno{\text{(*)}}
 $$
 de la catégorie opposée à $\Homtop(E, B^G)$ dans la catégorie des $G_E$-torseurs à gauche de $E$.
 \vskip .3cm
@@ -326,8 +329,8 @@ Lemme. --- \it Le foncteur (*) est une équivalence de catégories.
 \vskip .3cm
 {\it Démonstration abrégée}.
 \begin{enumerate}
-    \item[a)] Le foncteur (*) est pleinement fidèle parce que $(T^G)$ engendre $B^G$.
-    \item[b)] Pour tout objet $F$ de $B^G$, l'opération de $G$ sur l'ensemble $F$ fournis une opération du groupe constant $G_E$ sur l'objet constant $F_E$.
+    \item[a)] Le foncteur (*) est pleinement fidèle parce que $\{T^G\}$ engendre $B^G$.
+    \item[b)] Pour tout objet $F$ de $B^G$, l'opération de $G$ sur l'ensemble $F$ fournit une opération du groupe constant $G_E$ sur l'objet constant $F_E$.
 \end{enumerate}
 Étant donné un $G_E$-torseur à gauche $T$, le foncteur
 $$
@@ -368,8 +371,8 @@ Soit $\LC(E, Y)$ la sous-catégorie pleine de $E$ formée des objets qui sont tr
     u^{-1}: B^G \to E
     $$
     est pleinement fidèle et prend ses valeurs dans $\LC(E, Y)$.
-    \item[(ii)] La restriction à $\LC(E, Y)$ du foncteur image directe $u_*$ [] $\phi$ est pleinement fidèle. %% this might be a \simeq
-    D'où les corollaires:
+    \item[(ii)] La restriction à $\LC(E, Y)$ du foncteur image directe $u_*\simeq\phi$ est pleinement fidèle.
+    D'où les corollaires~:
     \item[(iii)] Les foncteurs $\phi_{/\LC(E, Y)}$ et $u^{-1}$ fournissent des équivalences quasi-inverses
     $$
     \LC(E,Y) \leftrightarrows B^G
@@ -391,7 +394,7 @@ Soit $\LC(E, Y)$ la sous-catégorie pleine de $E$ formée des objets qui sont tr
         $$
         est un isomorphisme. En effet, $\phi u^{-1}(T^G)$ est un $G$-torseur puisque $u^{-1}(T^G)$ est isomorphe à $Y$ (2.3.4).
         \item[b)] $\phi$ commute aux sommes directes. (1.2)
-        \item[c)] Puisque $T$ trivialise $F$, le morphisme
+        \item[c)] Puisque $T^G$ trivialise $F$, le morphisme
         $$
         T^G \times F \to \phi u^{-1}(T^G \times F) \isom \phi u^{-1}(T^G) \times \phi u^{-1}(F)
         $$
@@ -431,7 +434,8 @@ Soit $\LC(E, Y)$ la sous-catégorie pleine de $E$ formée des objets qui sont tr
 \end{enumerate}
 
 \vskip .3cm
-{\bf 2.4.} Nous supposons à nouveau le topos $E$ localement connexe. Et nous $f$ faisons l'hypothèse suivante sur l'univers $\cU$ :
+{\bf 2.4.} Nous supposons à nouveau le topos $E$ localement connexe. Et nous %$f$
+faisons l'hypothèse suivante sur l'univers $\cU$ :
 
 $\cU$ admet un élément de cardinal infini.
 
@@ -450,7 +454,7 @@ Théorème {\bf 2.4.} --- \it
 {
 Proposition {\bf 2.4.1.} --- \it
 \begin{enumerate}
-    \item[(i)] $\SLC(E)$ est stable dans $E$ par sommes directes et limites projectives finies ;
+    \item[(i)] $\SLC(E)$ est stable dans $E$ par sommes directes et limites projectives finies.
     \item[(ii)] Étant donnés un objet $A$ de $\SLC(E)$ et une relation d'équivalence $R \hookrightarrow A \times A$ de $E$, le quotient $A_{|_R}$ est dans $\SLC(E)$ dès que $R$ y est.
 \end{enumerate}
 }
@@ -460,7 +464,7 @@ Compte tenu de (2.2.4), (2.2.5) et (2.2.6, a), cela découle du lemme suivant :
 
 \vskip .3cm
 {
-Proposition {\bf 2.4.2.} --- \it Soient $T$ un $\cU$-topos, $K$ une sous-catégorie pleine de $T$, $S$ la sous-catégorie pleine de $T$ formée des objets qui sont sommes directes d'objets de $K$. Supposons que:
+Lemme {\bf 2.4.2.} --- \it Soient $T$ un $\cU$-topos, $K$ une sous-catégorie pleine de $T$, $S$ la sous-catégorie pleine de $T$ formée des objets qui sont sommes directes d'objets de $K$. Supposons que:
 \begin{enumerate}
     \item[1)] Tout objet de $K$ est somme directe d'objets connexes $\in \Ob(K)$ ; et tout sous-objet d'un objet $X$ de $K$ qui est somme directe de composantes connexes de $X$ est dans $K$.
     \item[2)] Tout morphisme d'un objet non-vide $\in \Ob(K)$ dans un objet connexe $\in \Ob(K)$ est un épimorphisme (dans $T$).
@@ -492,7 +496,7 @@ R_{i j} = C_i \times_Q C_j.
 $$
 Prouvons que $R_{i j}$ est objet de $K$. $R_{i j}$ est produit fibré de $R$ avec $C_i \times C_j$ au-dessus de $A \times A$ ; puisque ces trois objets sont dans $S$, $R_{i j}$ est dans $S$ ; donc $R_{i j} \hookrightarrow C_i \times C_j$ est somme directe de composantes connexes de $C_i \times C_j$, qui est dans $K$ ; donc par (1), $R_{i j}$ est dans $K$.
 
-Pour tout $i \in I$, soit $M_i \hookrightarrow Q$ l'image de $\Pi_{|_{C_i}}$. On a $C_i \times_{M_i} C_i = C_i \times_Q R_{i i}$, donc le diagramme
+Pour tout $i \in I$, soit $M_i \hookrightarrow Q$ l'image de $\pi_{|_{C_i}}$. On a $C_i \times_{M_i} C_i = C_i \times_Q C_i=  R_{i i}$, donc le diagramme
 $$
     \xymatrix{
         R_{ii} \ar[r]^{p_1} \ar[d]_{p_2} & C_i \ar[d]^\pi\\
@@ -510,23 +514,23 @@ sont des épimorphismes par (2), donc $M_i$ et $M_j$ définissent le même sous-
 \vskip .3cm
 {
 Corollaire (de 2.4.2) {\bf 2.4.3.} --- \it 
-S'il existe en outre une petite famille $(Y_{\alpha})$ d'objets de $K$ telle que tout objet de $K$ puisse être recouvrement (dans $T$) par des $Y_{\alpha}$, alors $S$ est un $\cU$-topos et l'inclusion $S \to T$ définit un morphisme de topos $T \to S$ (par le critère de Giraud).
+S'il existe en outre une petite famille $(Y_{\alpha})$ d'objets de $K$ telle que tout objet de $K$ puisse être recouvert (dans $T$) par des $Y_{\alpha}$, alors $S$ est un $\cU$-topos et l'inclusion $S \to T$ définit un morphisme de topos $T \to S$ (par le critère de Giraud).
 }
 
 \vskip .3cm
 {
-Proposition {\bf 2.4.4.} --- \it Soient $L$ et $M$ deux objets de $E$. Tout objet connexe de $E$ qui trivialise $L$ et $M$ trivialise le faisceau $\underline{\Isom}(L, M)$ des germes d'isomorphisme de $L$ dans $M$. 
+Proposition {\bf 2.4.4.} --- \it Soient $L$ et $M$ deux objets de $E$. Tout objet connexe de $E$ qui trivialise $L$ et $M$ trivialise le faisceau $\underline{\Isom}(L, M)$ des germes d'isomorphisme de $L$ dans $M$. (immédiat)
 }
-\vskip .3cm
+\vskip .3cm 
 
-(immédiat)
+%(immédiat)
 
 \vskip .3cm
 {\bf 2.4.5.}
 \begin{enumerate}
-    \item[(i)] {Définition. --- \it Soient $G$ un groupe de $E$, $F$ un objet de $E$ et $G \times F \xlongrightarrow{a} F$ une opération de $G$ sur $F$. On dit que $G$ opère \emph{transitivement} sur $F$ si les conditions équivalentes que voici sont remplies:
+    \item[(i)] {Définition. --- \it Soient $G$ un groupe de $E$, $F$ un objet de $E$ et $G \times F \xlongrightarrow{a} F$ une opération de $G$ sur $F$. On dit que $G$ opère \emph{transitivement} sur $F$ si les conditions équivalentes que voici sont remplies~:
     \begin{enumerate}
-        \item[1)] Le quotient $F_{/G}$ est un sous-objet de l'objet final (un ouvert) ;
+        \item[1)] Le quotient $F_{/G}$ est un sous-objet de l'objet final (un ouvert).
         \item[2)] Le morphisme $(a, pr_2): G \times F \to F \times F$ est un épimorphisme.
     \end{enumerate}}
     \item[(ii)] {Lemme. --- \it Soit $L$ un objet localement constant de $E$. Si le groupe constant $\Aut(L)_E$ opère transitivement sur $L$, les composantes connexes de $L$ sont des objets \emph{galoisiens} ; et deux composantes connexes de $L$ situées au-dessus de la même composante connexe de $e_E$ sont toujours \emph{isomorphes}.}
@@ -569,7 +573,7 @@ Proposition {\bf 2.4.8.} --- \it Soient $Y$ un objet connexe de $E$ et $U$ l'ima
 }
 \vskip .3cm
 
-{\it Démonstration}. On sait déjà que ces conditions sont nécessaires (2.3.1, Remarque (i)). Prouvons qu'elles suffisent. Soit $V$ un sous-objet de $e_E$ tel que $U \amalg V \isom e_E$. $Y$ et $V$ trivialisent $Y$, donc $Y$ est localement constant ; puisque en outre $Y$ est connexe, il existe un objet galoisien $Z$ au-dessus de $U$, qui trivialise $Y$ et est trivialisé par $Y$ (2.4.6). Le produit $Y \times Z$ n'est pas vide puisque $U$ n l'est pas, $Y$ et $Z$ sont isomorphes (2.3.2), c.q.f.d.
+{\it Démonstration}. On sait déjà que ces conditions sont nécessaires (2.3.1, Remarque (i)). Prouvons qu'elles suffisent. Soit $V$ un sous-objet de $e_E$ tel que $U \amalg V \isom e_E$. $Y$ et $V$ trivialisent $Y$, donc $Y$ est localement constant ; puisque en outre $Y$ est connexe, il existe un objet galoisien $Z$ au-dessus de $U$, qui trivialise $Y$ et est trivialisé par $Y$ (2.4.6). Le produit $Y \times Z$ n'est pas vide puisque $U$ ne l'est pas, donc $Y$ et $Z$ sont isomorphes (2.3.2), c.q.f.d.
 
 \vskip .3cm
 {
@@ -579,9 +583,7 @@ Proposition {\bf 2.4.9.} --- \it La catégorie des objets galoisiens de $E$ est 
 
 {\it Démonstration}. Compte tenu de l'hypothèse sur l'univers $\cU$, cela résulte des deux points suivants :
 \begin{enumerate}
-    \item[(i)] Soient $S$ une catégorie $\cU$-petite et $I$ un ensemble $\cU$-petit. L'ensemble des préfaisceaux $F$ sur $S$ tels que $F(X) \subset I$ pour tout $X \in \Ob(S)$ est $\cU$-petit
-    
-    (Clair)
+    \item[(i)] Soient $S$ une catégorie $\cU$-petite et $I$ un ensemble $\cU$-petit. L'ensemble des préfaisceaux $F$ sur $S$ tels que $F(X) \subset I$ pour tout $X \in \Ob(S)$ est $\cU$-petit. (Clair)
     \item[(ii)] Soient $G \subset \Ob(E)$ une petite famille génératrice de $E$, formée d'objets connexes non-vides. Soient $c$ le cardinal de l'ensemble des flèches entre objets $\in G$, et $d$ le cardinal dénombrable. Pour tout objet galoisien $Y$ de $E$ et tout $U \in \Ob(G)$, on a :
     $$
     \Card(\Hom(U, Y)) \leq c^d.
@@ -598,7 +600,7 @@ Proposition {\bf 2.4.9.} --- \it La catégorie des objets galoisiens de $E$ est 
     $$
     (en effet, ou bien $\Hom(V, Y) = \emptyset$, ou bien $V$ trivialise $Y$ et alors $\Hom(V, Y) \to \Hom(W, Y)$ est bijective). Puisque l'ensemble des flèches appartenant à $A$ recouvre $Y$, on déduit de (1.3) que :
     $$
-    \Card(A) \leq \sum_{0 \leq n} c^{2n} \leq c^d
+    \Card(A) \leq \sum_{n \geq 0} c^{2n} \leq c^d
     $$
     d'où a fortiori notre assertion.
 \end{enumerate}
@@ -617,7 +619,7 @@ Proposition {\bf 2.4.10.} --- \it Soit $u: A \to B$ un morphisme de topos tel qu
 \begin{enumerate}
     \item[(i)] On a pour tout ensemble $I$ des bijections naturelles
     $$
-    \Hom(Y, I_B) \isommap \Hom(u^{-1}(Y), u^{-1}(I_B)) \isommap \Hom(u^{-1}(Y), I_A). \quad \text{cf 1.2}
+    \Hom(Y, I_B) \isommap \Hom(u^{-1}(Y), u^{-1}(I_B)) \isommap \Hom(u^{-1}(Y), I_A). \quad \text{(cf 1.2)}
     $$
     \item[(ii)]
     \begin{enumerate}
@@ -633,7 +635,7 @@ Proposition {\bf 2.4.10.} --- \it Soit $u: A \to B$ un morphisme de topos tel qu
         Or $u_*u^{-1}(V)$ est isomorphe à $V$ puisque $u^{-1}$ est pleinement fidèle. Donc $V$ est une composante connexe de $e_B$ d'après (i).
         
         $Y$ se trivialise lui-même puisque $u^{-1}$ se trivialise lui-même et que $u^{-1}$ est pleinement fidèle ; $Y$ est connexe et non-vide d'après (i). Donc $Y$ est galoisien d'après 2.4.8.
-        \item[c)] Réciproquement, supposons $Y$ galoisien. $U^{-1}(Y)$ est alors localement constant, connexe et non-vide (i) ; et puisque le morphisme de groupes $\Aut(Y) \to \Aut(u^{-1}(Y))$ donné par le foncteur $u^{-1}$ est un isomorphisme, $u^{-1}$ est un pseudo-torseur sous le groupe constant $\Aut(u^{-1}(Y))_A$.
+        \item[c)] Réciproquement, supposons $Y$ galoisien. $u^{-1}(Y)$ est alors localement constant, connexe et non-vide (i) ; et puisque le morphisme de groupes $\Aut(Y) \to \Aut(u^{-1}(Y))$ donné par le foncteur $u^{-1}$ est un isomorphisme, $u^{-1}$ est un pseudo-torseur sous le groupe constant $\Aut(u^{-1}(Y))_A$.
     \end{enumerate}
 \end{enumerate}
 
