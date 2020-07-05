@@ -23,11 +23,11 @@ Dans les numéros (3.2) et (3.3) on montre que les topos localement galoisiens s
 \vskip .3cm
 {\bf 3.2.} (Les groupoïdes comme topos). Soient $\Top$ la 2-catégorie des $\cU$-topos et $\Grpd$ la 2-catégorie des groupoïdes qui sont $\cU$-petits à équivalence près ; soit enfin $\cG$ la sous-catégorie pleine de $\Top$ formée des topos dont tous les objets sont localement constants (ces topos sont donc a fortiori localement galoisiens). Nous allons établir des équivalences
 $$
-\Grpd \rightleftarrows \cG
+\xymatrix@C=4em{\Grpd \ar@<1ex>[r] \ar@{<-}@<-1ex>[r]& \cG}
 $$
 
 \vskip .3cm
-{\bf 3.2.1.} Le 2-foncteur \hspace{2em} $\xymatrix@R=0pt{\Grpd \ar[r] & \Top\\ C \ar@{|->}[r]& \widehat{C}}$. 
+{\bf 3.2.1.} Le 2-foncteur \hspace{1.5em} $\xymatrix@R=0pt{\Grpd \ar[r] & \Top\\ C \ar@{|->}[r]& \widehat{C}}$\quad. 
 
 Pour tout objet $C$ de $\Grpd$, la catégorie $\widehat{C}$ des $\cU$-préfaisceaux sur $C$ est un $\cU$-topos. La construction du topos $\widehat{C}$ est 2-fonctorielle en $C$ :
 \begin{enumerate}
@@ -40,7 +40,7 @@ Pour tout objet $C$ de $\Grpd$, la catégorie $\widehat{C}$ des $\cU$-préfaisce
     \widehat{m}^{\;-1}: \widehat{D} \to \widehat{C}
     $$
     $$
-    G \to G \circ m
+    G \mapsto G \circ m
     $$
     \item[(b)] A tout morphisme de morphismes de $\Grpd$ :
     $$
@@ -86,8 +86,8 @@ Proposition {\bf 3.2.3.} --- \it Soit $C$ un objet de $\Grpd$. Tout foncteur fib
 {
 Proposition {\bf 3.2.4.} --- \it L'équivalence naturelle $C \to \Point(\widehat{C})$. Soit $C$ un objet de $\Grpd$. A tout objet $X$ de $C$, associons le point $p_X$ de $\widehat{C}$ défini par le foncteur fibre $F \to F(X)$ de $\widehat{C}$ ; cela nous donne un foncteur de $C$ dans la catégorie des points de $\widehat{C}$ :
 \begin{align*}
-X& \mapsto p_X\\
-C & \to \Point(\widehat{C})
+C & \to \Point(\widehat{C})\\
+X& \mapsto p_X
 \end{align*}
 On \c{c}ait que ce foncteur est pleinement fidèle ; donc c'est une équivalence de catégories d'après (3.2.3). 
 }
@@ -117,7 +117,7 @@ Corollaire {\bf 3.2.7.} --- \it L'équivalence naturelle $E\to (\Point(E))\wideh
     $$
     en associant à l'objet $X$ de $E$ le préfaisceau
     $$
-    p \to p^{-1}(X)
+    p \mapsto p^{-1}(X)
     $$
     sur $\Point(E)$ (l'action sur les morphismes est évidente).
     \item[b)] Le foncteur (*) est une équivalence de catégories (donc il définit une équivalence de topos $(\Point(E))\widehat{\phantom{C}} \to E$).
@@ -137,12 +137,10 @@ n'est autre que le foncteur identique de $\widehat{C}$.
 
 \vskip .3cm
 {\bf 3.2.8.} {\it Conclusion}. Les foncteurs
-$$
-C \mapsto \widehat{C}
-$$
-$$
+\begin{align*}
+C \mapsto \widehat{C}\\
 \Point(E) \mapsfrom E
-$$
+\end{align*}
 définissent des équivalences quasi-inverses entre $\Grpd$ et $\cG$.
 
 \vskip .3cm
@@ -202,12 +200,10 @@ $$
 \phi: \Homtop(S, T) \to \Cartop_I(I \times S, F)
 $$
 qui associe au morphisme $f: S \to T$ le morphisme $I \times S \to F$ défini par le foncteur
-$$
-\phi(f)^{-1}: F \to I \times S
-$$
-$$
-(i, X) \to (i, f^{-1}(X))
-$$
+\begin{align*}
+\phi(f)^{-1}: F &\to I \times S\\
+(i, X) &\mapsto (i, f^{-1}(X))
+\end{align*}
 est une équivalence de catégories.
 \begin{enumerate}
     \item[(i)] $\phi$ est pleinement fidèle : 
@@ -224,12 +220,10 @@ est une équivalence de catégories.
     \lambda_{(i, X)} = (1_i, \mu_X)
     $$
     Mais puisque $G$ engendre $T$, le foncteur
-    $$
-    f \to f^{-1}_{/G}
-    $$
-    $$
-    \Homtop(S, T) \to (\Fonct(G, S))^\circ
-    $$
+    \begin{align*}
+    \Homtop(S, T) & \to (\Fonct(G, S))^\circ \\
+    f & \mapsto f^{-1}_{/G}
+    \end{align*}
     est pleinement fidèle, d'où notre assertion.
     \item[(ii)] $\phi$ est essentiellement surjectif : 
     
@@ -238,14 +232,12 @@ est une équivalence de catégories.
     I \times S \to F
     $$
     défini par un $I$-foncteur cartésien
-    $$
-    F \to I \times S
-    $$
-    $$
-    (i, X) \to (i, a(i, X))
-    $$
+    \begin{align*}
+    F &\to I \times S\\
+    (i, X) & \mapsto (i, a(i, X))
+    \end{align*}
     \begin{enumerate}
-        \item[a)] Il existe un foncteur $b: G \to S$ tel que le foncteur $a: F \to S$ soit isomorphe au foncteur $(i, X) \to b(X)$ :
+        \item[a)] Il existe un foncteur $b: G \to S$ tel que le foncteur $a: F \to S$ soit isomorphe au foncteur $(i, X) \mapsto b(X)$ :
         
         Puisque les changements de base de $F$ sont donnés par les inclusions entre les $G_i$, on peut définir pour tout objet $X$ de $G$ :
         $$
@@ -260,7 +252,7 @@ est une équivalence de catégories.
     $$
      d'où un foncteur $b: G\to S$ qui remplit clairement les conditions requises.
      \item[b)] Le foncteur $b$ est exact à gauche : en effet, les restrictions de $a$ aux fibres de $F$ sont des foncteurs exacts à gauche, ainsi que les inclusions $T_i \to G$.
-     \item[c)] Soit $(X_\alpha \to X)$ une famille de morphisme de $G$ qui est épimorphique dans $T$ ; la famille de morphismes $(b(X_\alpha) \to b(X))$ de $S$ est épimorphique~:
+     \item[c)] Soit $(X_\alpha \to X)$ une famille de morphismes de $G$ qui est épimorphique dans $T$ ; la famille de morphismes $(b(X_\alpha) \to b(X))$ de $S$ est épimorphique~:
      
      Soit $i$ un indice tel que $X \in \Ob(T_i)$. Décomposons $X$ en ses composantes connexes dans $T_i$ :
      $$
@@ -270,15 +262,13 @@ est une équivalence de catégories.
 
      Les $Y_\gamma$ sont encore connexes dans $T$ (2.4.10). Pour tout $\gamma \in C$, il existe un objet non-vide $Z_\gamma$ de $G$ et un morphisme $Z_\gamma \to Y_\gamma$ tel que $Z_\gamma \to Y_\gamma \to X$ se factorise par un $X_\alpha \to X$. Le morphisme $Z_\gamma \to Y_\gamma$ est un épimorphisme (2.2.6) donc aussi $b(Z_\gamma) \to b(Y_\gamma)$ (puisque $Z_\gamma$ et $Y_\gamma$ sont tous deux dans un même $T_j$). Mais $b(X)$ est somme directe des $b(Y_\gamma)$ ; donc la famille $(b(Z_\gamma) \to b(X))$ est épimorphique, d'où notre assertion.
      \item[d)] Il existe donc un morphisme de topos $f: S \to T$ tel que la restriction $f^{-1}_{|G}$ soit isomorphe à $b$ ; le foncteur
-     $$
-     (i, X) \to (i, f^{-1}(X))
-     $$
-     $$
-     F \to I \times S
-     $$
+     \begin{align*}
+     F & \to I \times S \\
+     (i, X) & \mapsto (i, f^{-1}(X))
+     \end{align*}
      est alors isomorphe au foncteur
      $$
-     (i, X) \to (i, a(i, X)),
+     (i, X) \mapsto (i, a(i, X)),
      $$
      c.q.f.d.
     \end{enumerate}
@@ -294,7 +284,7 @@ Corollaire {\bf 3.3.4.} --- \it Soient $E$ un $\cU$-topos localement connexe, $I
 
 \vskip .3cm
 {
-Proposition {\bf 3.3.5.} --- Soient $T$ un ordonné filtrant, et $\Pi: F \to I$ une catégorie fibrée au-dessus de $I$. Si les foncteurs changement de base de $F$ sont pleinement fidèles, il existe une catégorie $K$ et une famille décroissante $(K_i)_{i \in I}$ de sous-catégories essentiellement pleines de $K$ telles que :
+Proposition {\bf 3.3.5.} --- \it Soient $I$ un ordonné filtrant, et $\Pi: F \to I$ une catégorie fibrée au-dessus de $I$. Si les foncteurs changement de base de $F$ sont pleinement fidèles, il existe une catégorie $K$ et une famille décroissante $(K_i)_{i \in I}$ de sous-catégories essentiellement pleines de $K$ telles que :
 \begin{enumerate}
     \item[a)] $K$ soit réunion des $K_i$ ;
     \item[b)] $F$ soit $I$-équivalente à la sous-catégorie pleine $F'$ de $I \times K$ formée des couples $(i, X)$ tels que $X \in \Ob(K_i)$ ($F'$ est alors une sous-catégorie fibrée de $I \times K$).
@@ -425,7 +415,7 @@ donné par la composition avec $p$ soit une équivalence de catégories.
 (Condition suffisante pour qu'un topos connexe admette un groupoïde fondamental)
 
 Proposition {\bf 3.4.2.} --- \it
-Soit $E$ un $\cU$-topos connexe. Supposons qu'il existe une petite famille $(Y_{\alpha})$ d'objets galoisiens de $E$, telle que tout objet de $E$ qui admet une structure de torseur sous un groupe constant puisse être trivialisé par un $Y_{\alpha}$. Soient $K$ la sous-catégorie pleine de $E$ formée des objets qui peuvent être trivialisés par un objet galoisien, et $S$ la sous-catégorie pleine de $E$ formée des sommes directes d'objets de $K$. $S$ est un $\cU$-topos localement galoisien, et l'inclusion $S \to E$ qui fait de $S$ un groupoïde fondamental de $E$.
+Soit $E$ un $\cU$-topos connexe. Supposons qu'il existe une petite famille $(Y_{\alpha})$ d'objets galoisiens de $E$, telle que tout objet de $E$ qui admet une structure de torseur sous un groupe constant puisse être trivialisé par un $Y_{\alpha}$. Soient $K$ la sous-catégorie pleine de $E$ formée des objets qui peuvent être trivialisés par un objet galoisien, et $S$ la sous-catégorie pleine de $E$ formée des sommes directes d'objets de $K$. $S$ est un $\cU$-topos localement galoisien, et l'inclusion $S \to E$ fait de $S$ un groupoïde fondamental de $E$.
 }
 \vskip .3cm
 
