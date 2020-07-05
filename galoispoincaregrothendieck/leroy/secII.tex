@@ -6,6 +6,7 @@
 
 
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% II. --- OBJETS LOCALEMENT CONSTANTS ET OBJETS GALOISIENS
 
 On se donne un $\cU$-topos $E$.
@@ -27,7 +28,7 @@ Définitions {\bf 2.1.1.} --- \it
 Proposition {\bf 2.1.2.} --- \it Soient $Y$ un objet de $E$ et $D \xlongrightarrow{u} C$ un morphisme de $E$. 
 \begin{enumerate}
     \item[(i)] Si $C$ trivialise $Y$, $D$ trivialise $Y$ ;
-    \item[(ii)] si, en outre, $C$ et $D$ sont connexes et non-vides, l'application $f \to f \circ u$ de $\Hom(C, Y)$ dans $\Hom(D, Y)$ est \emph{bijective}.
+    \item[(ii)] si, en outre, $C$ et $D$ sont connexes et non-vides, l'application $f \mapsto f \circ u$ de $\Hom(C, Y)$ dans $\Hom(D, Y)$ est \emph{bijective}.
 \end{enumerate}
 }
 \vskip .3cm
@@ -115,23 +116,19 @@ dont la commutativité prouve notre assertion.
 \vskip .3cm
 {
 Proposition {\bf 2.1.4.} --- \it Soient $p$ un point de $E$, $C$ un objet connexe de $E$, $y_0$ un point de la fibre $p^{-1}(C)$ et $X$ un objet de $E$. Si $C$ trivialise $X$, l'application
-$$
-f \to f(y_0)
-$$
-$$
-\Hom(C, X) \to p^{-1}(X)
-$$
+\begin{align*}
+\Hom(C, X) & \to p^{-1}(X)\\
+f & \mapsto f(y_0)
+\end{align*}
 est \emph{bijective}.
 }
 \vskip .3cm
 
 {\it Démonstration}. En effet, elle se déduit de l'application
-$$
-(y, f) \to (y, f(y))
-$$
-$$
-p^{-1}(C) \times\Hom(C, X) \to p^{-1}(C) \times p^{-1}(X)
-$$
+\begin{align*}
+p^{-1}(C) \times\Hom(C, X) & \to p^{-1}(C) \times p^{-1}(X))\\
+(y, f) & \mapsto (y, f(y))
+\end{align*}
 qui provient, par passage aux fibres, de l'isomorphisme naturel
 $$
 \Hom(C, X)_C \to C \times X \quad (2.1.3, ii)
@@ -165,12 +162,10 @@ Proposition {\bf 2.2.1.} --- \it Soient $Z$ un objet de $E$ et $S$ une sous-cat�
 \vskip .3cm
 
 {\it Démonstration}. (a) $\Rightarrow$ (b) : c'est (2.1.2). (b) $\Rightarrow$ (a) : soit $C_0$ un objet de $S$. Pour tout objet $D$ de $S$, l'application
-$$
-(u, f) \to (u, f \circ u)
-$$
-$$
-\Hom(D, C_0) \times \Hom(C_0, Z) \to \Hom(D, C_0) \times \Hom(D, Z)
-$$
+\begin{align*}
+\Hom(D, C_0) \times \Hom(C_0, Z) & \to \Hom(D, C_0) \times \Hom(D, Z)\\
+(u, f) & \mapsto (u, f \circ u)
+\end{align*}
 au-dessus de $\Hom(D, C_0)$ est bijective, d'où un $C_0$-isomorphisme
 $$
 \Hom(C_0, Z)_{C_0} \to C_0 \times Z.
@@ -201,7 +196,7 @@ on a $x(V_0, f_0) = x(V_1, f_1)$ ; donc (d'après (1.3)) les $x(V, f)$ sont tous
 {
 Définition auxiliaire {\bf 2.2.3.} --- \it
 \begin{enumerate}
-    \item[(i)] Soit $L$ un objet localement constant de $E$. Soit $S$ une sous-catégorie génératrice de $E$, dont les objets sont connexes non-vides dans $E$ et trivialise $L$. On appellera \emph{site générateur adapté à} $L$ une telle sous-catégorie, munie de la topologie induite par $E$. 
+    \item[(i)] Soit $L$ un objet localement constant de $E$. Soit $S$ une sous-catégorie génératrice de $E$, dont les objets sont connexes non-vides dans $E$ et trivialisent $L$. On appellera \emph{site générateur adapté à} $L$ une telle sous-catégorie, munie de la topologie induite par $E$. 
     \item[(ii)] Si $(L_i)_{1 \leq i \leq n}$ est une famille finie d'objets localement constants de $E$, il existe un site générateur de $E$ adapté à chacun des $L_i$ : cela découle de (2.1.2, (i)) par récurrence sur $n$.
 \end{enumerate}
 }
@@ -209,7 +204,7 @@ Définition auxiliaire {\bf 2.2.3.} --- \it
 
 \vskip .3cm
 {
-Proposition {\bf 2.2.4.} ($\varprojlim$ et $\varinjlim$ d'objets localement constants) --- \it
+Proposition {\bf 2.2.4.} ($\varprojlim$ et $\varinjlim$ d'objets localement constants). --- \it
 
 Soient $I$ une petite catégorie et 
 $L: I \to E$
@@ -243,7 +238,7 @@ Proposition {\bf 2.2.5.} --- \it Soit $L$ un objet localement constant de $E$.
 \begin{enumerate}
     \item[(i)] Soit $S$ un site générateur adapté à $K$ et à $L$. Le préfaisceau sur $S$
     $$
-    C \to M(C) = \Hom(C, L) - \Hom(C, K)
+    C \to M(C) = \Hom(C, L)\ - \ \Hom(C, K)
     $$
     est un faisceau (2.2.2), et $L$ est somme directe de $K$ de $M$, c.q.f.d.
     \item[(ii)] Si $L$ est somme directe de deux sous-objets $K$ et $K'$, alors $C \times L$ qui est constant dans $E_{/C}$ est somme directe de $C \times K$ et $C \times K'$, qui sont donc constants dans $E_{/C}$ puisque $C$ est connexe et non-vide.
@@ -330,12 +325,10 @@ Lemme. --- \it Le foncteur (*) est une équivalence de catégories.
     \item[b)] Pour tout objet $F$ de $B^G$, l'opération de $G$ sur l'ensemble $F$ fournit une opération du groupe constant $G_E$ sur l'objet constant $F_E$.
 \end{enumerate}
 Étant donné un $G_E$-torseur à gauche $T$, le foncteur
-$$
-u^{-1}_T: B^G \to E
-$$
-$$
-F \to T \wedge_{G_E} F_E
-$$
+\begin{align*}
+u^{-1}_T: B^G & \to E \\
+F & \mapsto T \wedge_{G_E} F_E
+\end{align*}
 (produit contracté) définit un morphisme de topos $u_T: E \to B^G$ et $u^{-1}_T(T^G)$ est isomorphe à $T$ en tant que $G_E$-torseur.
 
 \vskip .3cm
@@ -372,7 +365,7 @@ Soit $\LC(E, Y)$ la sous-catégorie pleine de $E$ formée des objets qui sont tr
     D'où les corollaires~:
     \item[(iii)] Les foncteurs $\phi_{/\LC(E, Y)}$ et $u^{-1}$ fournissent des équivalences quasi-inverses
     $$
-    \LC(E,Y) \leftrightarrows B^G
+    \xymatrix{ \LC(E,Y) \ar@<-1ex>[r]  & \ar@<-1ex>[l] B^G}
     $$
     \item[(iv)] La catégorie $\LC(E, Y)$ est un $\cU$-topos et l'inclusion $\LC(E, Y) \to E$ définit un morphisme de topos $E \to \LC(E, Y)$.
 \end{enumerate}
@@ -410,12 +403,10 @@ Soit $\LC(E, Y)$ la sous-catégorie pleine de $E$ formée des objets qui sont tr
     \Hom(Y \times L, M) \isommap \App(\phi(L), \phi(M))
     $$
     en associant au morphisme $m: Y \times L \to M$ l'application
-    $$
-    f \to m(f) = m \circ (1_Y, f)
-    $$
-    $$
-    \phi(L) \to \phi(M).
-    $$
+    \begin{align*}
+    \phi(L) &\to \phi(M)\\
+    f & \mapsto m(f) = m \circ (1_Y, f).
+    \end{align*}
     Or on a le diagramme commutatif
     $$
     \xymatrix{
@@ -431,7 +422,7 @@ Soit $\LC(E, Y)$ la sous-catégorie pleine de $E$ formée des objets qui sont tr
 \end{enumerate}
 
 \vskip .3cm
-{\bf 2.4.} Nous supposons à nouveau le topos $E$ localement connexe. Et nous %$f$
+{\bf 2.4.} Nous supposons à nouveau le topos $E$ localement connexe. Et nous %f
 faisons l'hypothèse suivante sur l'univers $\cU$ :
 
 $\cU$ admet un élément de cardinal infini.
@@ -452,7 +443,7 @@ Théorème {\bf 2.4.} --- \it
 Proposition {\bf 2.4.1.} --- \it
 \begin{enumerate}
     \item[(i)] $\SLC(E)$ est stable dans $E$ par sommes directes et limites projectives finies.
-    \item[(ii)] Étant donnés un objet $A$ de $\SLC(E)$ et une relation d'équivalence $R \hookrightarrow A \times A$ de $E$, le quotient $A_{|_R}$ est dans $\SLC(E)$ dès que $R$ y est.
+    \item[(ii)] Étant donnés un objet $A$ de $\SLC(E)$ et une relation d'équivalence $R \hookrightarrow A \times A$ de $E$, le quotient $A/R$ est dans $\SLC(E)$ dès que $R$ y est. 
 \end{enumerate}
 }
 \vskip .3cm
@@ -520,14 +511,12 @@ Proposition {\bf 2.4.4.} --- \it Soient $L$ et $M$ deux objets de $E$. Tout obje
 }
 \vskip .3cm 
 
-%(immédiat)
-
 \vskip .3cm
 {\bf 2.4.5.}
 \begin{enumerate}
     \item[(i)] {Définition. --- \it Soient $G$ un groupe de $E$, $F$ un objet de $E$ et $G \times F \xlongrightarrow{a} F$ une opération de $G$ sur $F$. On dit que $G$ opère \emph{transitivement} sur $F$ si les conditions équivalentes que voici sont remplies~:
     \begin{enumerate}
-        \item[1)] Le quotient $F_{/G}$ est un sous-objet de l'objet final (un ouvert).
+        \item[1)] Le quotient $F/G$ est un sous-objet de l'objet final (un ouvert).
         \item[2)] Le morphisme $(a, pr_2): G \times F \to F \times F$ est un épimorphisme.
     \end{enumerate}}
     \item[(ii)] {Lemme. --- \it Soit $L$ un objet localement constant de $E$. Si le groupe constant $\Aut(L)_E$ opère transitivement sur $L$, les composantes connexes de $L$ sont des objets \emph{galoisiens} ; et deux composantes connexes de $L$ situées au-dessus de la même composante connexe de $e_E$ sont toujours \emph{isomorphes}.}
@@ -621,9 +610,9 @@ Proposition {\bf 2.4.10.} --- \it Soit $u: A \to B$ un morphisme de topos tel qu
     \item[(ii)]
     \begin{enumerate}
         \item[a)] L foncteur $u_*$ commute aux sommes directes : en effet, pour tout objet connexe non-vide $D$ de $B$, le foncteur $\Hom_A(u^{-1}(D), -)$ y commute (i). 
-        \item[b)] Supposons $u^{-1}(Y)$ galoisien. Soit $V$ l'image de $Y \to e_E$. $u^{-1}(V)$ est connexe et non-vide, et il existe un objet $U'$ de $A$ tel que 
+        \item[b)] Supposons $u^{-1}(Y)$ galoisien. Soit $V$ l'image de $Y \to e_B$. $u^{-1}(V)$ est connexe et non-vide, et il existe un objet $U'$ de $A$ tel que 
         $$
-        u^{-1}(V) \amalg U' \isom e_E
+        u^{-1}(V) \amalg U' \isom e_A
         $$
         on a alors (d'après (a))
         $$
