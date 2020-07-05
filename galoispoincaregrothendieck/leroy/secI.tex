@@ -72,7 +72,7 @@ Pour chaque $\alpha \in A$, soit $I_{\alpha}$ l'ensemble des $i \in I$ tels que 
 $$
 U_i \to V \to Y
 $$
-se factorise par $Y_{\alpha}$. Puisque les $U_i$ sont connexes et non-vides, $I$ est réunion disjointe des $I_{\alpha}$. Soient $\alpha$ et $\beta$ deux indices distincts. Si $i \in I_{\alpha}$ et $j \in I_{\beta}$, $U_i \times_V U_j$ est vide puisque c'est un sous-objet de $U_i \times_Y U_j$. Appliquant (b), on voit que $I = I_{\alpha_0}$ pour un $\alpha_0 \in [A]$ et un [seul]. Donc $V$ est connexe et non-vide par $(1.2).$
+se factorise par $Y_{\alpha}$. Puisque les $U_i$ sont connexes et non-vides, $I$ est réunion disjointe des $I_{\alpha}$. Soient $\alpha$ et $\beta$ deux indices distincts. Si $i \in I_{\alpha}$ et $j \in I_{\beta}$, $U_i \times_V U_j$ est vide puisque c'est un sous-objet de $U_i \times_Y U_j$. Appliquant (b), on voit que $I = I_{\alpha_0}$ pour un $\alpha_0 \in A$ et un seul. Donc $V$ est connexe et non-vide par $(1.2).$
 
 \vskip .3cm
 {
@@ -85,12 +85,10 @@ Proposition {\bf 1.4.} --- \it Tout objet d'un topos localement connexe est somm
 \vskip .3cm
 {
 Proposition {\bf 1.5.} --- \it Pour qu'un topos $E$ soit localement connexe, il faut et il suffit que le foncteur
-$$
-I \to I_E
-$$
-$$
-\Ens \to E
-$$
+\begin{align*}
+  \Ens \to E\\
+  I \mapsto I_E
+\end{align*}
 admette un adjoint à gauche
 $$
 c: E \to \Ens.
@@ -117,7 +115,7 @@ Dans ce cas, étant donné un objet $X$ de $E$, les produits fibrés
     $$
     c: E \to \Ens.
     $$
-    Le foncteur $c$ est adjoint à gauche de $I \to I_E$: en effet, étant donnés un objet $X$ de $E$ et un ensemble $I$, on définit une application : 
+    Le foncteur $c$ est adjoint à gauche de $I \mapsto I_E$: en effet, étant donnés un objet $X$ de $E$ et un ensemble $I$, on définit une application : 
     $$
     \App(c(X), I) \to \Hom(X, I_E)
     $$
@@ -149,6 +147,7 @@ Dans ce cas, étant donné un objet $X$ de $E$, les produits fibrés
     $$
     est bijective ; on conclut par (1.2).
 \end{enumerate}
+
 
 
 
