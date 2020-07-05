@@ -21,12 +21,10 @@ la catégorie des sections cartésiennes de $F$ au-dessus de $I$.
 \vskip .3cm
 {
 Proposition {\bf 4.1.1.} --- \it $L$ est un $\cU$-topos, et le foncteur d'évaluation :
-$$
-(i, S) \to S(i)
-$$
-$$
-I \times L \to F
-$$
+\begin{align*}
+I \times L &\to F\\
+(i, S) & \mapsto S(i)
+\end{align*}
 définit un morphisme de catégories fibrées en topos $F \to I \times L$ qui fait de $L$ la 2-limite inductive de $F$ dans la catégorie des $\cU$-topos. (A, 4)
 }
 \vskip .3cm
@@ -34,12 +32,10 @@ définit un morphisme de catégories fibrées en topos $F \to I \times L$ qui fa
 {\it Démonstration}. 
 \begin{enumerate}
     \item[1)] Les limites projectives finies (resp. les limites inductives) sont représentables dans $L$ ; et pour tout $i \in \Ob(I)$, le foncteur
-    $$
-    S \to S(i)
-    $$
-    $$
-    L \to F_i
-    $$
+    \begin{align*}
+    L &\to F_i \\
+    S &\mapsto S(i)
+    \end{align*}
     y commute : c'est immédiat puisque les foncteurs changement de base de $F$ sont exacts à gauche et commutent aux limites inductives.
     \item[2)] $L$ est un $\cU$-topos : compte tenu du critère de Giraud et de (1), il suffit de montrer que $L$ admet une petite famille génératrice. Or (comme par hasard) $F$ remplit les conditions du corollaire I.9.25 de \cite{3}, qui garantissent l'existence d'une telle famille.
     \item[3)] Le foncteur $I \times L \to F$ définit un morphisme de catégories fibrées en topos $F \to I \times L$~: ce foncteur est évidemment cartésien ; d'où notre assertion par (1).
@@ -52,12 +48,10 @@ définit un morphisme de catégories fibrées en topos $F \to I \times L$ qui fa
     F \to I \times E
     $$
     défini par le foncteur
-    $$
-    (i, X) \to u^{-1}(X)(i)
-    $$
-    $$
-    I \times E \to F
-    $$
+    \begin{align*}
+    I \times E &\to F\\
+    (i, X) &\mapsto u^{-1}(X)(i)
+    \end{align*}
     est une équivalence de catégories, comme on le vérifie tout de suite en tenant compte de (1).
 \end{enumerate}
  
@@ -88,12 +82,10 @@ $$
 $$
 
 On peut donc définir un foncteur
-$$
-c: L \to \Ens
-$$
-$$
-S \to c(S) = \varinjlim_I c_i(S(i))
-$$
+\begin{align*}
+c: L &\to \Ens\\
+S &\mapsto c(S) = \varinjlim_I c_i(S(i))
+\end{align*}
 Prouvons que $c$ est un foncteur composantes connexes de $L$ (cf 1.5.) :
 
 Soit $A$ un ensemble. Considérons l'objet constant $A_L$ de $L$. Pour tout $i \in \Ob(I)$, $A_L(i)$ s'identifie à $A_{F_i}$ ; pour tout flèche $u: i \to j$ de $I$ et tout $a \in A$, le diagramme
@@ -161,7 +153,7 @@ $$
     $$
     est la composition avec le $i$-morphisme :
     $$
-    m_i: s(i) \to t(i)
+    m_i: S(i) \to T(i)
     $$
     fourni par $m$.
     \item[(3)] Le foncteur $p$ est pleinement fidèle.
@@ -171,7 +163,7 @@ $$
 
 {\it Démonstration}. Soient $S$, $T$ deux sections cartésiennes de $F$ et $\mu: p(S) \to p(T)$ un morphisme. Pour tout $i \in \Ob(I)$, soit
 $$
-\mu_i: p(S)_{/C_i} \to p(T)_{/C_i}
+\mu_i: p(S)_{/F_i} \to p(T)_{/F_i}
 $$
 le morphisme induit par $\mu$ entre les restrictions à la fibre $F_i$. Comme ces restrictions sont représentées par $S(i)$ et $T(i)$ respectivement, $\mu_i$ provient d'un $i$-morphisme
 $$
@@ -179,7 +171,9 @@ m_i: S(i) \to T(i)
 $$
 à savoir $m_i = \mu_{S(i)}(1_{S(i)})$
 
-Prouvons que les $m_i$ définissent un morphisme $m: S\to T$ : Soit $i \xlongrightarrow{u} j$ une flèche de $i$. On a le diagramme commutatif
+Prouvons que les $m_i$ définissent un morphisme $m: S\to T$ : 
+
+Soit $i \xlongrightarrow{u} j$ une flèche de $I$. On a le diagramme commutatif
 $$
     \xymatrix{
         p(S)(S(i)) \ar[r]^\mu & p(T)(S(i))\\
@@ -337,7 +331,7 @@ Proposition {\bf 4.4.6.} --- \it
     $$
     \item[b)] Pour tout $i \in \Ob(I)$, il existe un morphisme de topos
     $$
-    u_i: F_i \to F
+    u_i: F_i \to \widetilde{F}
     $$
     tel que le foncteur composé
     $$
@@ -508,7 +502,7 @@ Il s'agit de prouver que la flèche du bas est bijective ; or :
     \item[(ii)] La flèche $\Hom_j(D, X_j) \to \Hom_u(C, L_j)$ est bijective par (4.4.8) : en effet, la restriction $n(D)_{/F_j}$ trivialise $X_j$ d'après (4.4.6, b), et elle admet une section au-dessus de $D$.
     \item[(iii)] La flèche $G(D) \to G(C)$ est bijective parce que $n(C)$ et $n(D)$ sont connexes non-vides dans $\widetilde{F}$ (4.4.7) et que $n(D)$ trivialise $G$.
 \end{enumerate}
-    \item[c)] Pour tout $C \in \Ob(S)$ et tout $f \in \Hom_i(C, X_i)$, soit $\alpha_C(f)$ le $i$-morphisme $C \to X_j$ qui rend commutatif le diagramme
+    \item[c)] Pour tout $C \in \Ob(S)$ et tout $f \in \Hom_i(C, X_i)$, soit $\alpha_C(f)$ le $u$-morphisme $C \to X_j$ qui rend commutatif le diagramme
     $$
     \xymatrix@C=1em{
         n(C) \ar[d] \ar[drr]\\
@@ -715,9 +709,6 @@ $$
 \SLC(\varinjlim_I F_i) = \varprojlim_A (\varinjlim_I \LC(F_i, C^\alpha_i))
 $$
 où les $\lim$ sont des 2-limites dans la 2-catégorie des $\cU$-topos.
-
-
-
 
 
 
