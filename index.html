@@ -394,6 +394,122 @@ div.ex {
   background-color: white;
   overflow: hidden;
 }
+
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+#slides{
+  background-color: white;
+}
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+
+
+
+
+
+
+
+
+
  </style>
 </head> 
 
@@ -1217,7 +1333,124 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
 
 </center> -->
 
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="https://raw.githubusercontent.com/agrothendieck/agrothendieck.github.io/master/img/sga7.jpg" width="100%">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="https://raw.githubusercontent.com/agrothendieck/agrothendieck.github.io/master/img/groth8.jpeg" width="100%">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="https://raw.githubusercontent.com/agrothendieck/agrothendieck.github.io/master/img/sga1.jpeg" width="100%">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="https://raw.githubusercontent.com/agrothendieck/agrothendieck.github.io/master/img/sga2.JPG" width="100%">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="https://raw.githubusercontent.com/agrothendieck/agrothendieck.github.io/master/img/sga5.JPG" width="100%">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="https://raw.githubusercontent.com/agrothendieck/agrothendieck.github.io/master/img/sga6.JPG" width="100%">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="https://raw.githubusercontent.com/agrothendieck/agrothendieck.github.io/master/img/sga4.jpg" width="100%">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="https://raw.githubusercontent.com/agrothendieck/agrothendieck.github.io/master/img/groth2.jpeg" width="100%">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="https://raw.githubusercontent.com/agrothendieck/agrothendieck.github.io/master/img/groth1.jpg" width="100%">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="https://raw.githubusercontent.com/agrothendieck/agrothendieck.github.io/master/img/sga3.png" width="100%">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="https://raw.githubusercontent.com/agrothendieck/agrothendieck.github.io/master/img/groth3.PNG" width="100%">
+  <div class="text"></div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+  <span class="dot" onclick="currentSlide(4)"></span> 
+  <span class="dot" onclick="currentSlide(5)"></span> 
+  <span class="dot" onclick="currentSlide(6)"></span>
+  <span class="dot" onclick="currentSlide(7)"></span> 
+  <span class="dot" onclick="currentSlide(8)"></span> 
+  <span class="dot" onclick="currentSlide(9)"></span> 
+  <span class="dot" onclick="currentSlide(10)"></span> 
+  <span class="dot" onclick="currentSlide(11)"></span>  
+</div>
+
 <script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+<!-- <script>
 var slideIndex = 0;
 showSlides();
 
@@ -1237,7 +1470,7 @@ function showSlides() {
   dots[slideIndex-1].className += " active";
   setTimeout(showSlides, 13000); // Change image every 13 seconds
 }
-</script>
+</script> -->
 
 <br><br> 
 
@@ -4067,31 +4300,1365 @@ rel="noopener noreferrer"><em>Récoltes et semailles</em></a></p>&nbsp;
 
 <font color="white">
 <center>
-<!-- <div class="timeline"> -->
 
-  <!-- <div class="container left"> -->
-    <div class="content">
-      <h3><p align="center"><a href="/SGAEGAFGA.html"><font color="ffffff">SGA, EGA, FGA</font></a></p></h3>
-     <p>  
-     </p>
-    <!-- </div> -->
-  </div>
- 
- <!-- <br><br>
- 
-    <div class="content">
-      <h3><p align="center"><a href="/corr.html"><font color="ffffff">Some Letters</font></a></p></h3>
-     <p>
-     </p>
-    </div> -->
+  
+<button class="accordion"><h3><font color="ffffff">SGA, EGA, FGA</font></h3></button>
+<div class="panel">
+  <p id="divers">
+<h2><p align="center">SGA <br> Séminaire de Géométrie Algébrique du Bois Marie</p></h2>
+
+<br><br>
+
+<p align="center"><span class="quotation">
+Quote
+</span>&#151;&nbsp;<a href="" target="_blank" rel="noopener noreferrer"><em>Quote</em></a>, Quote</p>&nbsp;
+
+<br><br>
 	
+<p><img class=" wp-image-4130 aligncenter" src="https://raw.githubusercontent.com/carmonamateo/carmonamateo.github.io/master/img/breakpage.png" alt="pagebreak dark green" width="392" height="56" srcset="https://raw.githubusercontent.com/carmonamateo/carmonamateo.github.io/master/img/breakpage.png 300w, https://raw.githubusercontent.com/carmonamateo/carmonamateo.github.io/master/img/breakpage.png 768w, https://raw.githubusercontent.com/carmonamateo/carmonamateo.github.io/master/img/breakpage.png 1024w, https://raw.githubusercontent.com/carmonamateo/carmonamateo.github.io/master/img/breakpage.png 1189w" sizes="(max-width: 192px) 100vw, 192px" /></p>
+
+<br><br>
+
+<center>
+
+      <h3>SGA 1. Revêtements Étales et Groupe Fondamental <br>
+      1960-1961</h3>
+      <p>
+	      
+      <i>Un séminaire dirigé par A. Grothendieck <br> Augmenté de deux exposés de Mme M. Raynaud</i> <br><br>
+	      
+	      
+      Springer Lecture Notes in Mathematics 224 (1971) <br><br>
+       
+      SGA 1, <a href="https://wstein.org/sga/sga/pdf/sga1.pdf">[scan]</a> by A Chambert-Loir <br><br> 
+      
+      <a href="https://arxiv.org/abs/math/0206203">[SGA 1]</a>, Edited by B Edixhoven <br><br>
+      
+      Lettre <a href="https://agrothendieck.github.io/galoispoincaregrothendieck/LetterSGA1incom.pdf">[scan]</a> <br><br>
+      
+      Groupe fondamental <a href="https://grothendieck.umontpellier.fr/archives-grothendieck/">[Cote n° 29]</a>
+      </p>
+      </p>
+
+<br><br>
+
+
+<hr WIDTH="33%">
+
+
+<br><br>
+
+      <h3>SGA 2. Cohomologie Locale et Théorèmes de Lefschetz Locaux et 
+		Globaux <br> 1961-1962</h3>
+      <p>
+	 
+	<i>A. Grothendieck (rédigé par un groupe d'auditeurs) <br> Augmenté d'un exposé de Mme M. Raynaud</i> <br><br>      
+	      
+		North-Holland Publ. Co, Amsterdam, 1968.
+       <br><br>       
+		SGA 2, <a href="https://wstein.org/sga/sga/pdf/sga2.pdf">[scan]</a> by A Chambert-Loir
+	<br><br>       
+	<a href="https://arxiv.org/abs/math/0511279">[SGA 2]</a>, Edited by Y Lazslo
+     </p>
+
+<br><br>
+
+
+<hr WIDTH="33%">
+
+
+<br><br>
+
+      <h3>SGA 3 (SGA D). Schémas en groupes<br>
+      1962–1964</h3>
+      <p> 
+	  
+	<i>Un séminaire dirigé par M. Demazure et A. Grothendieck <br> Avec la collaboration de M. Artin, J. E. Bertin
+	      P. Gabriel, M. Raynaud, J. P. Serre</i> <br><br>
+	      
+      Lecture Notes in Mathematics, n° 151, Springer (1970) <br><br>
+	      
+      SGA 3-I. Propriétés générales des schémas en groupes <a href="https://wstein.org/sga/sga/pdf/sga3-1.pdf">[scan]</a>, <br>
+      SGA 3-II. Groupes de type multiplicatif, et structure des schémas en groupes généraux <a href="https://wstein.org/sga/sga/pdf/sga3-2.pdf">[scan]</a>, <br>
+      SGA 3-III. Structure des schémas en groupes réductifs <a href="https://wstein.org/sga/sga/pdf/sga3-3.pdf">[scan]</a>, <br>
+	      scans by A Chambert-Loir <br><br>
+       
+      <a href="https://wstein.org/sga/SGA3/">[SGA 3]</a>, Réédition par P Gille and P Polo <br><br>
+      
+      Compléments XII à XVII <a href="https://grothendieck.umontpellier.fr/archives-grothendieck/">[Cote n° 27]</a> <br><br>
+      
+      Groupes algébriques <a href="https://grothendieck.umontpellier.fr/archives-grothendieck/">[Cote n° 28]</a>
+      </p>
+
+<br><br>
+
+
+<hr WIDTH="33%">
+
+
+<br><br>
+
+      <h3>SGA 4 (SGA A). Théorie des topos et cohomologie étale des schémas<br>
+      1963–1964</h3>
+      <p> 
+	      
+	<i>Un séminaire dirigé par M. Artin, A. Grothendieck, J. L. Verdier <br> Avec la collaboration de N. Bourbaki,
+	      P. Deligne, B. Saint-Donat</i> <br><br>      
+	      
+      Lecture Notes in Mathematics, n° 270, Springer (1972) <br><br>
+       
+      SGA 4-I. <a href="https://wstein.org/sga/sga/pdf/sga4-1.pdf">[scan]</a>, <br>
+      SGA 4-II. <a href="https://wstein.org/sga/sga/pdf/sga4-2.pdf">[scan]</a>, <br>
+      SGA 4-III. <a href="https://wstein.org/sga/sga/pdf/sga4-3.pdf">[scan]</a>, <br>
+	      scans by A Chambert-Loir <br><br>
+	      
+      SGA 4-I. <a href="http://www.cmls.polytechnique.fr/perso/laszlo/sga4/SGA4-1/sga41.pdf">[pdf]</a>, <br>
+      SGA 4-II. <a href="http://www.cmls.polytechnique.fr/perso/laszlo/sga4/SGA4-2/sga42.pdf">[pdf]</a>, <br>
+      SGA 4-III. <a href="http://www.cmls.polytechnique.fr/perso/laszlo/sga4/SGA4-3/sga43.pdf">[pdf]</a>, <br>
+	      Réédition par Y Laszlo <br><br>	      
+       
+      <a href="http://fabrice.orgogozo.perso.math.cnrs.fr/SGA4/details/index.html">[SGA 4]</a>, Réédition par F Orgogozo <a href="http://www.normalesup.org/~forgogozo/SGA4/tomes/SGA4.pdf">[pdf]</a>	<br><br>      
+      
+      Note <a href="https://agrothendieck.github.io/galoispoincaregrothendieck/SGA4Note.pdf">[pdf]</a>, <a href="https://grothendieck.umontpellier.fr/archives-grothendieck/">[Cote n° 37]</a> <br><br> 
+      
+      Lettre <a href="/divers/LG16scan.pdf">[scan]</a> <br><br>
+      
+      Lettre à J L Verdier <a href="/divers/LGV23671scan.pdf">[scan]</a> <br><br>
+      
+      Lettre <a href="/divers/LG28scan.pdf">[scan]</a> <br><br>
+      
+      Lettre à J L Verdier <a href="/divers/LGV23671scan.pdf">[scan]</a> <br><br>
+      
+      Lettre à J L Verdier <a href="/divers/LGV31170scan.pdf">[scan]</a> <br><br>
+      
+      Résidus de rédaction <a href="https://grothendieck.umontpellier.fr/archives-grothendieck/">[Cote n° 31]</a> <br><br>
+      
+      Corrections (références, rajouts) <a href="https://grothendieck.umontpellier.fr/archives-grothendieck/">[Cote n° 32]</a> <br><br>
+      
+      Letter to A. Grothendieck, J. Murre 1967 <a href="/divers/LMG1667scan.pdf">[scan]</a> <br><br>
+      
+      Letter to A. Grothendieck, J. Murre 1967 <a href="/divers/LMG24467scan.pdf">[scan]</a> <br><br>
+      
+      Letter to J. Murre <a href="/divers/LGM1scan.pdf">[scan]</a> <br><br>
+      
+      Letter to J. Murre 1967 <a href="/divers/LMG24467scan.pdf">[scan]</a> <br><br>
+      
+      Letter to J. Murre <a href="/divers/LGM2scan.pdf">[scan]</a> <br><br>
+      
+      Letter to A. Grothendieck, J. Murre 1969 <a href="/divers/LMG30469scan.pdf">[scan]</a> <br><br>
+      
+      Groupe fondamental <a href="https://grothendieck.umontpellier.fr/archives-grothendieck/">[Cote n° 29]</a>
+      </p>
+      
+      
+
+<br><br>
+
+
+<hr WIDTH="33%">
+
+
+<br><br>
+
+
+      <h3>SGA 5. Cohomologie l-adique et fonctions L <br>
+      1965-1966</h3>
+      <p>
+	      
+	<i>Un séminaire dirigé par A. Grothendieck <br> Avec la collaboration de I. Bucur, C. Houzel, L. Illusie, 
+	      J. P Jouanolou et J. P Serre</i> <br><br>      
+	      
+      Lecture Notes in Mathematics n° 589, Springer (1977) <br><br>
+
+      <a href="https://agrothendieck.github.io/galoispoincaregrothendieck/SGA5.pdf">[pdf]</a>, Réédition par M. Carmona <br><br>	      
+       
+      SGA 5, <a href="https://wstein.org/sga/sga5/SGA5.pdf">[scan]</a> by V Maillot <br><br> 
+      
+            Note <a href="https://agrothendieck.github.io/galoispoincaregrothendieck/SGA5Note.pdf">[pdf]</a>, <a href="https://grothendieck.umontpellier.fr/archives-grothendieck/">[Cote n° 37]</a> <br><br> 
+      
+      Lettre à A. Grothendieck 1969, R Hartshorne <a href="/divers/LHG469scan.pdf">[scan]</a> 
+      
+      </p>
+
+<br><br>
+
+
+<hr WIDTH="33%">
+
+
+<br><br>
+
+      <h3>SGA 6. Théorie des Intersections et Théorème de Riemann-Roch <br>
+      1966-1967</h3>
+      <p>
+	      
+	 <i>Un séminaire dirigé par P. Berthelot, A. Grothendieck et L. Illusie <br> Avec la collaboration de D. Ferrand,
+	      J. P. Jouanolou, O. Jussila, S. Kleiman, M. Raynaud et J. P Serre</i> <br><br>     
+	      
+      Lecture Notes, n° 225, Springer-Verlag, Berlin, 1971 <br><br>
+	      
+      <a href="https://agrothendieck.github.io/intersections/SGA6.pdf">[pdf]</a>, Réédition par M. Carmona <br><br>	      
+      
+      SGA 6, <a href="https://wstein.org/sga/sga/pdf/sga6.pdf">[scan]</a> by A Chambert-Loir <br><br>
+      
+            Note <a href="https://agrothendieck.github.io/galoispoincaregrothendieck/SGA6Note.pdf">[pdf]</a>, <a href="https://grothendieck.umontpellier.fr/archives-grothendieck/">[Cote n° 37]</a> <br><br>
+      
+      Letter to J. P. Serre 1959 <a href="/divers/LGS1859scan.pdf">[scan]</a>
+	      <a href="/divers/LGS1859en.pdf">[pdf.en]</a>
+      </p>
+
+<br><br>
+
+
+<hr WIDTH="33%">
+
+
+<br><br>
+
+      <h3>SGA 7. Groupes de monodromie en géométrie algébrique <br>
+      1960-1961</h3>
+      <p>
+      Springer Lecture Notes in Mathematics 288 <br><br>
+      
+      SGA 7 I, <a href="https://wstein.org/sga/sga/pdf/sga7-1.pdf">[scan]</a> by A Chambert-Loir  <br>
+      <i>Un séminaire dirigé par A. Grothendieck <br> Avec la collaboration de M. Raynaud et D. S. Rim</i> <br>
+      <a href="https://agrothendieck.github.io/galoispoincaregrothendieck/SGA7I.pdf">[pdf]</a>, Réédition par M. Carmona <br><br>     
+	      
+	      
+      SGA 7 II, <a href="https://wstein.org/sga/sga/pdf/sga7-2.pdf">[scan]</a> by A Chambert-Loir <br>
+	      <i>Par P. Deligne et N. Katz</i> <br><br> 
+	      
+            Note <a href="https://agrothendieck.github.io/galoispoincaregrothendieck/SGA7Note.pdf">[pdf]</a>, <a href="https://grothendieck.umontpellier.fr/archives-grothendieck/">[Cote n° 37]</a> <br><br> 
+      
+      Lettre à D. Ferrand <a href="/divers/LGF31170scan.pdf">[scan]</a> <br><br>
+      
+      Lettre à A. Grothendieck, P Deligne <a href="/divers/LDG2168scan.pdf">[scan]</a> <br><br>
+      
+      SGA 7 <a href="https://grothendieck.umontpellier.fr/archives-grothendieck/">[Cote n° 34]</a> <br><br>
+      
+      Plan SGA 7 <a href="https://grothendieck.umontpellier.fr/archives-grothendieck/">[Cote n° 35]</a> <br><br>
+      
+      SGA 7 <a href="https://grothendieck.umontpellier.fr/archives-grothendieck/">[Cote n° 36]</a><br><br>
+      
+      Note, Groupe fondamental <a href="https://agrothendieck.github.io/galoispoincaregrothendieck/NoteSGA7.pdf">[scan]</a>   
+      </p>
+
+</center>
+  
+<br><br><br>
+  
+<hr WIDTH="27%">  
+
+<br>
+
+<center>
+ 
+      <h3>SGA8</h3>
+      <p>
+      </p>
+</center>
+
+<br><br>
+
+<hr WIDTH="33%">
+
+<br><br>
+
+<br><br><br><br>
+
+<center>
+    
+    SGA Note <a href="https://agrothendieck.github.io/divers/SGAsumm.pdf">[pdf]</a>
+    
+    <br><br>
+    
+    Lettre à P. Deligne 1970 <a href="/divers/LGD31170scan.pdf">[pdf]</a>
+    
+    <br><br>
+    
+    Lettre à Mme Michon 1970 <a href="/divers/LGM131170scan.pdf">[pdf]</a>
+    
+    <br><br>
+    
+    SGA 1965 <a href="https://grothendieck.umontpellier.fr/archives-grothendieck/">[Cote n° 33]</a>    
+    
+    <br><br>
+ 
+	SGA4½ Cohomologie étale <br>
+	Springer Lecture Notes in Mathematics 569, 1977 
+	<a href="https://github.com/NomiL/sga4.5">[SGA 4 1/2]</a>
+	<a href="http://www.math.harvard.edu/~yifei/SGA_etale.pdf">[pdf]</a>, 
+	<a href="https://wstein.org/sga/sga/pdf/sga4h.pdf">[scan]</a> by A Chambert-Loir <br>
+	Translation of "Deligne, P., Cohomologie étale: les points de départ. Cohomologie étale, 4--75, Lecture Notes in Math., 569, Springer, Berlin, 1977." <a href="https://www.jmilne.org/math/Documents/DeligneArcata.pdf">[pdf]</a>
+	
+	<br><br>
+	
+	<a href="https://smf.emath.fr/publications/documents-mathematiques">[Documents Mathématiques]</a>, SMF
+	
+	<br><br>
+	
+	<a href="https://wstein.org/sga/">[SGA]</a>, by the Bourbakistas	
+
+	<br><br>
+	
+	<a href="https://youtu.be/CT76bpRQRrk">[Remembering the SGA’s]</a>, L Illusie
+	
+     </center>
+
+
+
+
+<br><br><br><br><br><br>
+
+<h2><p align="center">EGA <br> Éléments de Géométrie Algébrique</p></h2>
+
+<br><br>
+
+<p align="center"><span class="quotation">
+Unless there are unexpected difficulties or I get bogged down, the multiplodocus should be ready in 3 years time, <br>
+or 4 at the outside. We will then be able to start doing algebraic geometry!
+</span>&#151;&nbsp;<a href="" target="_blank" rel="noopener noreferrer"><em>Letter to J.-P Serre</em></a>, August 18, 1959</p>&nbsp;
+
+<br><br>
+	
+<p><img class=" wp-image-4130 aligncenter" src="https://raw.githubusercontent.com/carmonamateo/carmonamateo.github.io/master/img/breakpage.png" alt="pagebreak dark green" width="392" height="56" srcset="https://raw.githubusercontent.com/carmonamateo/carmonamateo.github.io/master/img/breakpage.png 300w, https://raw.githubusercontent.com/carmonamateo/carmonamateo.github.io/master/img/breakpage.png 768w, https://raw.githubusercontent.com/carmonamateo/carmonamateo.github.io/master/img/breakpage.png 1024w, https://raw.githubusercontent.com/carmonamateo/carmonamateo.github.io/master/img/breakpage.png 1189w" sizes="(max-width: 192px) 100vw, 192px" /></p>
+
+<br><br>
+
+<center>
+      <h3>EGA I <br> 
+      <a href="http://www.numdam.org/item/PMIHES_1960__4__5_0/">[Le langage des schémas]</a></h3>
+      <p> 
+       Publications Mathématiques de l'IHÉS, Volume 4 (1960), p. 5-228 <br><br>
+       
+      Note <a href="https://agrothendieck.github.io/chalg/EGAINote.pdf">[scan]</a>, <a href="https://grothendieck.umontpellier.fr/archives-grothendieck/">[Cote n° 37]</a> <br><br>
+      
+      Lettre à J Dieudonné 1967 <a href="/divers/LGD27867scan.pdf">[scan]</a> <br><br>
+      
+      Lettre à A. Grothendieck 1967, J Dieudonné <a href="/divers/LDG1167scan.pdf">[scan]</a> <br><br>
+      
+      Lettre à J Dieudonné 1967 <a href="/divers/LGD15967.pdf">[scan]</a>
+      </p>
+  
+<br><br>
+
+
+<hr WIDTH="33%">
+
+
+<br><br>
+  
+      <h3>EGA II <br> 
+      <a href="http://www.numdam.org/item/PMIHES_1961__8__5_0/">[Étude globale élémentaire de quelques classes de morphismes]</a></h3>
+      <p>
+       Publications Mathématiques de l'IHÉS, Volume 8 (1961), p. 5-222 <br><br>
+       
+       Note <a href="https://agrothendieck.github.io/chalg/EGAIInote.pdf">[scan]</a>, <a href="https://grothendieck.umontpellier.fr/archives-grothendieck/">[Cote n° 37]</a>
+     </p>
+  
+<br><br>
+
+
+<hr WIDTH="33%">
+
+
+<br><br>
+  
+      <h3>EGA III <br>
+      Étude cohomologique des faisceaux cohérents <a href="http://www.numdam.org/item/PMIHES_1961__11__5_0/">[EGA III-1]</a>, <a href="http://www.numdam.org/item/PMIHES_1963__17__5_0/">[EGA III-2]</a> <br>
+      Cohomologie des Faisceaux algébriques cohérents. Applications. </h3>
+      <p> 
+	Publications Mathématiques de l'IHÉS, Volume 11 (1961), p. 5-167 <br>
+	Publications Mathématiques de l'IHÉS, Volume 17 (1963), p. 5-91       
+      </p>
+
+<br><br>
+
+
+<hr WIDTH="33%">
+
+
+<br><br>
+
+      <h3>EGA IV <br> 
+      Étude locale des schémas et des morphismes de schémas
+	<a href="http://www.numdam.org/item/PMIHES_1964__20__5_0/">[EGA IV-1]</a>,
+	<a href="http://www.numdam.org/item/PMIHES_1965__24__5_0/">[EGA IV-2]</a>,
+	<a href="http://www.numdam.org/item/PMIHES_1966__28__5_0/">[EGA IV-3]</a>,
+	<a href="http://www.numdam.org/item/PMIHES_1967__32__5_0/">[EGA IV-4]</a>,</h3>
+      <p> 
+	Publications Mathématiques de l'IHÉS, Volume 20 (1964), p. 5-259 <br>
+	Publications Mathématiques de l'IHÉS, Volume 24 (1965), p. 5-231 <br>
+	Publications Mathématiques de l'IHÉS, Volume 28 (1966), p. 5-255 <br>
+	Publications Mathématiques de l'IHÉS, Volume 32 (1967), p. 5-361  <br><br>  
+    
+    Cohen, différentielles, algèbres formellement simples (Compléments) <a href="https://grothendieck.umontpellier.fr/archives-grothendieck/">[Cote n° 22]</a> <br><br>
+    
+    Compléments <a href="https://grothendieck.umontpellier.fr/archives-grothendieck/">[Cote n° 23]</a> <br><br>
+       
+       Lettre à A. Grothendieck 1968 <a href="/divers/LG0168.pdf">[scan]</a> <br><br>
+       
+       Lettre à A. Grothendieck, P. Deligne 1966 <a href="/divers/LDG1566scan.pdf">[scan]</a> <br><br>
+       
+       Lettre à A. Grothendieck, P. Deligne 1966 <a href="/divers/LDG2966scan.pdf">[scan]</a> <br><br>
+       
+       Lettre à A. Grothendieck, P. Deligne 1966 <a href="/divers/LDG1766scan.pdf">[scan]</a>
+      </p>
+  
+  </center>
+  
+<br><br><br>
+  
+<hr WIDTH="27%">  
+
+<br>
+ 
+ <center>
+
+      <h3>EGA V <br> 
+      Procédés élémentaires de construction de schémas <br>
+      Complements sur les morphismes projectifs</h3>
+      <p> 
+      EGA V, A. Grothendieck <a href="https://grothendieck.umontpellier.fr/archives-grothendieck/">[Cote n° 25]</a> <br><br>
+      
+      EGA V, based on notes of A. Grothendieck <a href="https://grothendieck.umontpellier.fr/archives-grothendieck/">[Cote n° 24]</a>, stage 0 translated by P Blass <br><br>
+      
+      EGA V, based on notes of A. Grothendieck <a href="https://www.jmilne.org/math/Documents/EGA-V.pdf">[pdf]</a>, edited translation of the prenotes by Joseph and Piotr Blass, as TeXed by Dottie Phares (IAS). <br><br>
+       
+       Lettre à P. Blass 1987 <a href="/divers/LGB887.pdf">[pdf]</a> <br><br>
+       
+       Lettre à J. Dieudonné 1965 <a href="/divers/LGD29965.pdf">[pdf]</a>, <a href="/divers/LGD29965scan.pdf">[scan]</a>
+      </p>
+  
+<br><br>
+
+
+<hr WIDTH="33%">
+
+
+<br><br>
+  
+  
+      <h3>EGA VI <br> 
+      Technique de descente. Méthode générale de construction des schémas <br>
+      Techniques de construction de schémas</h3>
+      <p> 
+      Plans, notations, problèmes ouverts <a href="https://grothendieck.umontpellier.fr/archives-grothendieck/">[Cote n° 26]</a>
+      </p>
+
+<br><br>
+
+
+<hr WIDTH="33%">
+
+
+<br><br>
+
+      <h3>EGA VII <br> 
+      Schémas de groupes, espaces fibrés principaux </h3>
+      <p> 
+      Plan <a href="https://grothendieck.umontpellier.fr/archives-grothendieck/">[Cote n° 27]</a>
+      </p>
+  
+<br><br>
+
+
+<hr WIDTH="33%">
+
+
+<br><br>
+  
+  
+      <h3>EGA VIII <br> 
+      Étude différentielle des espaces fibrés <br>
+      Le schéma de Picard</h3>
+      <p>
+      </p>
+
+  
+<br><br>
+
+
+<hr WIDTH="33%">
+
+
+<br><br>
+
+      <h3>EGA IX <br> 
+      Le groupe fondamental</h3>
+      <p>
+      </p>
+  
+<br><br>
+
+
+<hr WIDTH="33%">
+
+
+<br><br>
+
+      <h3>EGA X <br> 
+      Résidus et dualité </h3>
+      <p>
+      </p>
+  
+<br><br>
+
+
+<hr WIDTH="33%">
+
+
+<br><br>
+  
+      <h3>EGA XI <br> 
+      Théorie d'intersection, classes de Chern, théorème de Riemann-Roch</h3>
+      <p>
+      </p>
+  
+<br><br>
+
+
+<hr WIDTH="33%">
+
+
+<br><br>
+  
+      <h3>EGA XII <br> 
+      Schémas abéliens et schémas de Picard <br>
+      Cohomologie étale des schémas</h3>
+      <p>
+      </p>
+  
+<br><br>
+
+
+<hr WIDTH="33%">
+
+
+<br><br>
+  
+  <!-- <div class="container left">
+    <div class="content"> -->
+      <h3>EGA XIII <br>
+      Cohomologie de Weil</h3>
+      <p>
+      </p>
+    <!-- </div>
+  </div> 
+  
+</div>
+</font> -->
+</center>
+
+<br><br>
+
+<hr WIDTH="33%">
+
+<br><br>
+
+<br><br><br><br>
+
+<!-- <font color="white">
+<div class="timeline">
+   <div class="container left"> 
+    <div class="content"> -->
+<center>
+
+    EGA 0 III <a href="https://grothendieck.umontpellier.fr/archives-grothendieck/">[Cote n° 21]</a>    
+    
+    <br><br>
+    
+  <a href="https://doi.org/10.1016/0001-8708(69)90007-3">[Fondements de la géométrie algébrique moderne]</a>, J Dieudonné. Adv. Math., 3 (1969), pp. 322-413
+  
+  <br><br>
+  
+  <a href="https://doi.org/10.1016/0001-8708(69)90006-1">[Algebraic geometry]</a>, J Dieudonné. Adv. Math., 3 (1969), pp. 233-321
+  
+  <br><br>
+  
+  Lang, S. (1961). "Review: Éléments de géométrie algébrique, par A. Grothendieck, rédigés avec la collaboration de J. Dieudonné". Bull. Amer. Math. Soc. 67 (3): 239–246 <a href="https://www.ams.org/journals/bull/1961-67-03/S0002-9904-1961-10564-8/S0002-9904-1961-10564-8.pdf">[pdf]</a> 
+  
+  <br><br>
+  
+  Amateur translation project of Grothendieck's <a href="https://ega.fppf.site/">[EGA]</a>	
+     </center>
+  <!-- </div>
+  </div>
+</font> -->
+	 
+	 
+<br><br><br><br><br><br>
+
+<h2><p align="center">FGA <br> Fondements de la Géométrie Algébrique</p></h2>
+
+<br><br>
+
+<p align="center"><span class="quotation">
+Quote
+</span>&#151;&nbsp;<a href="" target="_blank" rel="noopener noreferrer"><em>Quote</em></a>, Quote</p>&nbsp;
+
+<br><br>
+	
+<p><img class=" wp-image-4130 aligncenter" src="https://raw.githubusercontent.com/carmonamateo/carmonamateo.github.io/master/img/breakpage.png" alt="pagebreak dark green" width="392" height="56" srcset="https://raw.githubusercontent.com/carmonamateo/carmonamateo.github.io/master/img/breakpage.png 300w, https://raw.githubusercontent.com/carmonamateo/carmonamateo.github.io/master/img/breakpage.png 768w, https://raw.githubusercontent.com/carmonamateo/carmonamateo.github.io/master/img/breakpage.png 1024w, https://raw.githubusercontent.com/carmonamateo/carmonamateo.github.io/master/img/breakpage.png 1189w" sizes="(max-width: 192px) 100vw, 192px" /></p>
+
+<br><br>	 
+
+      <p align="center">
+       <a href="https://webusers.imj-prg.fr/~leila.schneps/grothendieckcircle/FGA.pdf">[pdf]</a> <br><br>
+       Extraits du Séminaire BOURBAKI 1957 - 1962	      
+      </p>  
+  </p>
+</div>  
+
  <br><br>
  
-    <div class="content">
-      <h3><p align="center"><a href="/writing.html"><font color="ffffff">Writing</font></a></p></h3>
-     <p>
-     </p>
-    </div>	
+<button class="accordion"><h3><font color="ffffff">Writing</font></h3></button>
+<div class="panel">
+  <p id="divers">
+<p align="center"><span class="quotation">
+Il y a un sens, ou des sens à des niveaux de profondeur différents, ils préexistent à mon travail et sont ce qui'ils sont, <br>
+	et mon travail consiste à les “découvrir", à les dégager patiemment, obstinémen, avec un soin infini...
+</span>&#151;&nbsp;<a href="" target="_blank" rel="noopener noreferrer"><em>La Clef des Songes</em></a></p>&nbsp;
+
+<br><br>
+	
+<p><img class=" wp-image-4130 aligncenter" src="https://raw.githubusercontent.com/carmonamateo/carmonamateo.github.io/master/img/breakpage.png" alt="pagebreak dark green" width="392" height="56" srcset="https://raw.githubusercontent.com/carmonamateo/carmonamateo.github.io/master/img/breakpage.png 300w, https://raw.githubusercontent.com/carmonamateo/carmonamateo.github.io/master/img/breakpage.png 768w, https://raw.githubusercontent.com/carmonamateo/carmonamateo.github.io/master/img/breakpage.png 1024w, https://raw.githubusercontent.com/carmonamateo/carmonamateo.github.io/master/img/breakpage.png 1189w" sizes="(max-width: 192px) 100vw, 192px" /></p>
+
+
+
+<br><br>
+
+<!-- <font color="white">
+   <div class="content">
+      <h3><p align="center"><font color="ffffff"></font></p></h3>
+     <p><span class="quotation">
+<table>
+</table>
+     </span></p>
+  </div> -->
+ 
+     <!-- <div class="content"> -->
+      <h3><p align="center" id="letters"><a href="/corr.html"><font color="ffffff">Some Letters</font></a></p></h3>
+     <p><span class="quotation">
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Transcription</th>
+    <th>Translation</th>
+    <th>pdf</th>
+  </tr>
+  <tr>
+    <td>Lieben an Dagmar Heydorn 15.12.1948</td>
+    <td><img src="https://img.shields.io/badge/100%25-brightgreen" alt="status"></td>
+    <td></td>
+    <td><a href="/divers/LGD151248.pdf"><font color="ffffff">[pdf]</font></a></td>
+  </tr>
+  <tr>
+    <td>Lettre à N Bourbaki 9.10.1960</td>
+    <td><img src="https://img.shields.io/badge/100%25-brightgreen" alt="status"></td>
+    <td><img src="https://img.shields.io/badge/100%25-brightgreen" alt="status"></td>
+    <td><a href="/divers/LGB91060.pdf"><font color="ffffff">[pdf]</font></a></td>
+  </tr>
+  <tr>
+    <td>Letter to J Coates 6.1.1966</td>
+    <td><img src="https://img.shields.io/badge/100%25-brightgreen" alt="status"></td>
+    <td></td>
+    <td><a href="/divers/LGC66.pdf"><font color="ffffff">[pdf]</font></a></td>
+  </tr>	
+  <tr>
+    <td>Letter to J Coates 4.1.1967</td>
+    <td><img src="https://img.shields.io/badge/100%25-brightgreen" alt="status"></td>
+    <td></td>
+    <td><a href="/divers/LGC4167.pdf"><font color="ffffff">[pdf]</font></a></td>
+  </tr>	
+  <tr>
+    <td>Letter to H Blass 9.6.1970</td>
+    <td><img src="https://img.shields.io/badge/100%25-brightgreen" alt="status"></td>
+    <td></td>
+    <td><a href="/divers/LGB887.pdf"><font color="ffffff">[pdf]</font></a></td>
+  </tr>
+  <tr>
+    <td>Lettre à La CIR 6.3.1947</td>
+    <td><img src="https://img.shields.io/badge/100%25-brightgreen" alt="status"></td>
+    <td><img src="https://img.shields.io/badge/100%25-brightgreen" alt="status"></td>
+    <td><a href="/divers/LG6347.pdf"><font color="ffffff">[pdf]</font></a></td>
+  </tr>
+   <tr>
+    <td>Lettre à J Tate 1966</td>
+    <td><img src="https://img.shields.io/badge/100%25-brightgreen" alt="status"></td>
+    <td></td>
+    <td><a href="/divers/LGT66.pdf"><font color="ffffff">[pdf]</font></a></td>
+  </tr>
+  <tr>
+    <td>Lettre à L Breen 5.2.1975</td>
+    <td><img src="https://img.shields.io/badge/50%25-yellow" alt="status"></td>
+    <td></td>
+    <td><a href="/divers/LGB5275.pdf"><font color="ffffff">[pdf]</font></a></td>
+  </tr>
+    <tr>
+    <td>Lettre à L Breen 17.2.1975</td>
+    <td><img src="https://img.shields.io/badge/100%25-brightgreen" alt="status"></td>
+    <td><img src="https://img.shields.io/badge/100%25-brightgreen" alt="status"></td>
+    <td><a href="/divers/LGB17275.pdf"><font color="ffffff">[pdf]</font></a></td>
+  </tr>
+</table>
+     </span></p>
+    <!-- </div> -->
+    
+     <br><br>
+ 
+      <h3><p align="center" id="galois"><a href="/galoispoincaregrothendieck.html"><font color="ffffff">La Longue Marche à Travers la Théorie de Galois</font></a></p></h3>
+      <h4 style="text-align:center"><a href="/galoispoincaregrothendieck/galois/galois.pdf"><font color="ffffff">[pdf]</font></a></h4>
+     <p><span class="quotation">
+<table>
+  <tr>
+    <th>Section</th>
+    <th>Transcription</th>
+    <th>Review</th>
+    <th>Comments</th>
+    <th>Source</th>
+  </tr>
+    <tr>
+    <td>Première partie <br> &sect; 1 à 37 </td>
+    <td><img src="https://img.shields.io/badge/50%25-yellow" alt="status"></td>
+    <td><img src="https://img.shields.io/badge/20%25-orange" alt="status"></td>
+    <td>
+    </td>
+    <td><a href="https://github.com/agrothendieck/agrothendieck.github.io/blob/master/galoispoincaregrothendieck/galois/partI.tex"><font color="ffffff">[TeX]</font></a></td>
+  </tr>
+    <tr>
+    <td>Deuxième partie <br> &sect; 38 à 53 </td>
+    <td><img src="https://img.shields.io/badge/1%25-red" alt="status"></td>
+    <td><img src="https://img.shields.io/badge/1%25-red" alt="status"></td>
+    <td>
+    <ul>
+  	<li></li>
+    </ul>
+    </td>
+    <td><a href="https://github.com/agrothendieck/agrothendieck.github.io/blob/master/galoispoincaregrothendieck/galois/partII.tex"><font color="ffffff">[TeX]</font></a></td>
+  </tr>
+    <tr>
+    <td>Notes </td>
+    <td><img src="https://img.shields.io/badge/20%25-orange" alt="status"></td>
+    <td><img src="https://img.shields.io/badge/20%25-orange" alt="status"></td>
+    <td>
+    <ul>
+  	<li></li>
+    </ul>
+    </td>
+    <td><a href="https://github.com/agrothendieck/agrothendieck.github.io/blob/master/galoispoincaregrothendieck/galois/notes.tex"><font color="ffffff">[TeX]</font></a></td>
+  </tr>
+</table>
+     </span></p>
+    
+     <br><br>
+     
+     
+     <!-- Red - just started
+          Orange - less than 50%
+          Yellow - more than 50% 
+          Brightgreen - finished -->
+  
+      <h3><p align="center" id="leroy"><a href="https://agrothendieck.github.io/galoispoincaregrothendieck.html#leroy"><font color="ffffff">Groupoïde Fondamental et Théorème de Van Kampen en Théorie des Topos, O. Leroy</font></a></p></h3>
+      <h4 style="text-align:center"><a href="/galoispoincaregrothendieck/leroy/leroy.pdf"><font color="ffffff">[pdf]</font></a>,
+      <a href="/galoispoincaregrothendieck/leroy/leroyscan.pdf"><font color="ffffff">[scan]</font></a></h4>
+     <p><span class="quotation">
+<table>
+  <tr>
+    <th>Section</th>
+    <th>Transcription</th>
+    <th>Comments</th>
+    <th>Source</th>
+  </tr>
+    <tr>
+    <td>&sect; I <br> Objets connexes dans un topos</td>
+    <td><img src="https://img.shields.io/badge/100%25-brightgreen" alt="status"></td>
+    <td></td>
+    <td><a href="https://github.com/agrothendieck/agrothendieck.github.io/blob/master/galoispoincaregrothendieck/leroy/secI.tex"><font color="ffffff">[TeX]</font></a></td>
+  </tr>
+    <tr>
+    <td>&sect; II <br> Objets localement constants et objets galoisiens</td>
+    <td><img src="https://img.shields.io/badge/100%25-brightgreen" alt="status"></td>
+    <td>
+    </td>
+    <td><a href="https://github.com/agrothendieck/agrothendieck.github.io/blob/master/galoispoincaregrothendieck/leroy/secII.tex"><font color="ffffff">[TeX]</font></a></td>
+  </tr>
+    <tr>
+    <td>&sect; III <br> Topos localement galoisiens et groupoïde fondamental</td>
+    <td><img src="https://img.shields.io/badge/100%25-brightgreen" alt="status"></td>
+    <td>
+    </td>
+    <td><a href="https://github.com/agrothendieck/agrothendieck.github.io/blob/master/galoispoincaregrothendieck/leroy/secIII.tex"><font color="ffffff">[TeX]</font></a></td>
+  </tr>
+    <tr>
+    <td>&sect; IV <br> Limites inductives de topos et théorème de Van Kampen</td>
+    <td><img src="https://img.shields.io/badge/100%25-brightgreen" alt="status"></td>
+    <td>	    
+    </td>
+    <td><a href="https://github.com/agrothendieck/agrothendieck.github.io/blob/master/galoispoincaregrothendieck/leroy/secIV.tex"><font color="ffffff">[TeX]</font></a></td>
+  </tr>
+      <tr>
+    <td>Appendice <br> Catégories fibrées en topos</td>
+    <td><img src="https://img.shields.io/badge/100%25-brightgreen" alt="status"></td>
+    <td></td>
+    <td><a href="https://github.com/agrothendieck/agrothendieck.github.io/blob/master/galoispoincaregrothendieck/leroy/app.tex"><font color="ffffff">[TeX]</font></a></td>
+  </tr>
+      <tr>
+    <td>&sect; V <br> Compléments</td>
+    <td><img src="https://img.shields.io/badge/100%25-brightgreen" alt="status"></td>
+    <td></td>
+    <td><a href="https://github.com/agrothendieck/agrothendieck.github.io/blob/master/galoispoincaregrothendieck/leroy/compV.tex"><font color="ffffff">[TeX]</font></a></td>
+  </tr>
+</table>
+     </span></p>     
+    
+     <br><br>
+     
+      <h3><p align="center" id="sinh"><a href="/algtop.html#sinh"><font color="ffffff">Gr-catégories, H X Sinh </font></a></p></h3>
+      <h4 style="text-align:center"><a href="/picardbrauer/grcat.pdf"><font color="ffffff">[pdf]</font></a></h4>
+     <p><span class="quotation">
+<table>
+  <tr>
+    <th>Section</th>
+    <th>Transcription</th>
+    <th>Review</th>
+    <th>Comments</th>
+  </tr>
+    <tr>
+    <td>Notes </td>
+    <td><img src="https://img.shields.io/badge/20%25-orange" alt="status"></td>
+    <td><img src="https://img.shields.io/badge/20%25-orange" alt="status"></td>
+    <td>
+    </td>
+  </tr>
+    <tr>
+    <td>Notes </td>
+    <td><img src="https://img.shields.io/badge/20%25-orange" alt="status"></td>
+    <td><img src="https://img.shields.io/badge/20%25-orange" alt="status"></td>
+    <td>
+    <ul>
+  	<li></li>
+    </ul>
+    </td>
+  </tr>
+    <tr>
+    <td>Notes </td>
+    <td><img src="https://img.shields.io/badge/20%25-orange" alt="status"></td>
+    <td><img src="https://img.shields.io/badge/20%25-orange" alt="status"></td>
+    <td>
+    <ul>
+  	<li></li>
+    </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>Notes </td>
+    <td><img src="https://img.shields.io/badge/20%25-orange" alt="status"></td>
+    <td><img src="https://img.shields.io/badge/20%25-orange" alt="status"></td>
+    <td>
+    <ul>
+  	<li></li>
+    </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>Notes </td>
+    <td><img src="https://img.shields.io/badge/20%25-orange" alt="status"></td>
+    <td><img src="https://img.shields.io/badge/20%25-orange" alt="status"></td>
+    <td>
+    <ul>
+  	<li></li>
+    </ul>
+    </td>
+  </tr>
+</table>
+     </span></p>
+    
+     <br><br>
+     
+ 
+      <h3><p align="center" id="sga5"><a href="/SGAEGAFGA.html"><font color="ffffff">SGA 5</font></a></p></h3>
+      <h4 style="text-align:center"><a href="/galoispoincaregrothendieck/SGA5.pdf"><font color="ffffff">[pdf]</font></a></h4>
+     <p><span class="quotation">
+<table>
+  <tr>
+    <th>Section</th>
+    <th>Transcription</th>
+    <th>Review</th>
+    <th>Comments</th>
+    <th>Source</th>
+  </tr>
+    <tr>
+    <td>&sect; I. <br> </td>
+    <td><img src="https://img.shields.io/badge/20%25-orange" alt="status"></td>
+    <td><img src="https://img.shields.io/badge/20%25-orange" alt="status"></td>
+    <td>
+    </td>
+    <td><a href=""><font color="ffffff">[TeX]</font></a></td>
+  </tr>
+    <tr>
+    <td>&sect; II. <br> </td>
+    <td><img src="https://img.shields.io/badge/20%25-orange" alt="status"></td>
+    <td><img src="https://img.shields.io/badge/20%25-orange" alt="status"></td>
+    <td>
+    <ul>
+  	<li></li>
+    </ul>
+    </td>
+    <td><a href=""><font color="ffffff">[TeX]</font></a></td>
+  </tr>
+    <tr>
+    <td>&sect; VI. <br> </td>
+    <td><img src="https://img.shields.io/badge/20%25-orange" alt="status"></td>
+    <td><img src="https://img.shields.io/badge/20%25-orange" alt="status"></td>
+    <td>
+    <ul>
+  	<li></li>
+    </ul>
+    </td>
+    <td><a href=""><font color="ffffff">[TeX]</font></a></td>
+  </tr>
+  <tr>
+    <td>&sect; VII. <br> </td>
+    <td><img src="https://img.shields.io/badge/20%25-orange" alt="status"></td>
+    <td><img src="https://img.shields.io/badge/20%25-orange" alt="status"></td>
+    <td>
+    <ul>
+  	<li></li>
+    </ul>
+    </td>
+    <td><a href=""><font color="ffffff">[TeX]</font></a></td>
+  </tr>
+  <tr>
+    <td>&sect; VIII. <br> </td>
+    <td><img src="https://img.shields.io/badge/20%25-orange" alt="status"></td>
+    <td><img src="https://img.shields.io/badge/20%25-orange" alt="status"></td>
+    <td>
+    <ul>
+  	<li></li>
+    </ul>
+    </td>
+    <td><a href=""><font color="ffffff">[TeX]</font></a></td>
+  </tr>
+    <tr>
+    <td>&sect; IX. <br> </td>
+    <td><img src="https://img.shields.io/badge/20%25-orange" alt="status"></td>
+    <td><img src="https://img.shields.io/badge/20%25-orange" alt="status"></td>
+    <td>
+    <ul>
+  	<li></li>
+    </ul>
+    </td>
+    <td><a href=""><font color="ffffff">[TeX]</font></a></td>
+  </tr>
+</table>
+     </span></p>
+    
+     <br><br>
+ 
+      <h3><p align="center" id="sga6"><a href="/SGAEGAFGA.html"><font color="ffffff">SGA 6</font></a></p></h3>
+      <h4 style="text-align:center"><a href="/intersections/SGA6.pdf"><font color="ffffff">[pdf]</font></a></h4>
+     <p><span class="quotation">
+<table>
+  <tr>
+    <th>Section</th>
+    <th>Transcription</th>
+    <th>Review</th>
+    <th>Comments</th>
+    <th>Source</th>
+  </tr>
+    <tr>
+    <td>&sect; I. <br> </td>
+    <td><img src="https://img.shields.io/badge/20%25-orange" alt="status"></td>
+    <td><img src="https://img.shields.io/badge/20%25-orange" alt="status"></td>
+    <td>
+    </td>
+    <td><a href=""><font color="ffffff">[TeX]</font></a></td>
+  </tr>
+    <tr>
+    <td>&sect; II. <br> </td>
+    <td><img src="https://img.shields.io/badge/20%25-orange" alt="status"></td>
+    <td><img src="https://img.shields.io/badge/20%25-orange" alt="status"></td>
+    <td>
+    <ul>
+  	<li></li>
+    </ul>
+    </td>
+    <td><a href=""><font color="ffffff">[TeX]</font></a></td>
+  </tr>
+    <tr>
+    <td>&sect; VI. <br> </td>
+    <td><img src="https://img.shields.io/badge/20%25-orange" alt="status"></td>
+    <td><img src="https://img.shields.io/badge/20%25-orange" alt="status"></td>
+    <td>
+    <ul>
+  	<li></li>
+    </ul>
+    </td>
+    <td><a href=""><font color="ffffff">[TeX]</font></a></td>
+  </tr>
+  <tr>
+    <td>&sect; VII. <br> </td>
+    <td><img src="https://img.shields.io/badge/20%25-orange" alt="status"></td>
+    <td><img src="https://img.shields.io/badge/20%25-orange" alt="status"></td>
+    <td>
+    <ul>
+  	<li></li>
+    </ul>
+    </td>
+    <td><a href=""><font color="ffffff">[TeX]</font></a></td>
+  </tr>
+  <tr>
+    <td>&sect; VIII. <br> </td>
+    <td><img src="https://img.shields.io/badge/20%25-orange" alt="status"></td>
+    <td><img src="https://img.shields.io/badge/20%25-orange" alt="status"></td>
+    <td>
+    <ul>
+  	<li></li>
+    </ul>
+    </td>
+    <td><a href=""><font color="ffffff">[TeX]</font></a></td>
+  </tr>
+    <tr>
+    <td>&sect; IX. <br> </td>
+    <td><img src="https://img.shields.io/badge/20%25-orange" alt="status"></td>
+    <td><img src="https://img.shields.io/badge/20%25-orange" alt="status"></td>
+    <td>
+    <ul>
+  	<li></li>
+    </ul>
+    </td>
+    <td><a href=""><font color="ffffff">[TeX]</font></a></td>
+  </tr>
+</table>
+     </span></p> 
+    
+     <br><br>
+  
+      <h3><p align="center" id="sga7I"><a href="/SGAEGAFGA.html"><font color="ffffff">SGA 7 I</font></a></p></h3>
+      <h4 style="text-align:center"><a href="/galoispoincaregrothendieck/SGA7I.pdf"><font color="ffffff">[pdf]</font></a></h4>
+     <p><span class="quotation">
+<table>
+  <tr>
+    <th>Section</th>
+    <th>Transcription</th>
+    <th>Review</th>
+    <th>Comments</th>
+    <th>Source</th>
+  </tr>
+    <tr>
+    <td>&sect; I. <br> </td>
+    <td><img src="https://img.shields.io/badge/20%25-orange" alt="status"></td>
+    <td><img src="https://img.shields.io/badge/20%25-orange" alt="status"></td>
+    <td>
+    </td>
+    <td><a href=""><font color="ffffff">[TeX]</font></a></td>
+  </tr>
+    <tr>
+    <td>&sect; II. <br> </td>
+    <td><img src="https://img.shields.io/badge/20%25-orange" alt="status"></td>
+    <td><img src="https://img.shields.io/badge/20%25-orange" alt="status"></td>
+    <td>
+    <ul>
+  	<li></li>
+    </ul>
+    </td>
+    <td><a href=""><font color="ffffff">[TeX]</font></a></td>
+  </tr>
+    <tr>
+    <td>&sect; VI. <br> </td>
+    <td><img src="https://img.shields.io/badge/20%25-orange" alt="status"></td>
+    <td><img src="https://img.shields.io/badge/20%25-orange" alt="status"></td>
+    <td>
+    <ul>
+  	<li></li>
+    </ul>
+    </td>
+    <td><a href=""><font color="ffffff">[TeX]</font></a></td>
+  </tr>
+  <tr>
+    <td>&sect; VII. <br> </td>
+    <td><img src="https://img.shields.io/badge/20%25-orange" alt="status"></td>
+    <td><img src="https://img.shields.io/badge/20%25-orange" alt="status"></td>
+    <td>
+    <ul>
+  	<li></li>
+    </ul>
+    </td>
+    <td><a href=""><font color="ffffff">[TeX]</font></a></td>
+  </tr>
+  <tr>
+    <td>&sect; VIII. <br> </td>
+    <td><img src="https://img.shields.io/badge/20%25-orange" alt="status"></td>
+    <td><img src="https://img.shields.io/badge/20%25-orange" alt="status"></td>
+    <td>
+    <ul>
+  	<li></li>
+    </ul>
+    </td>
+    <td><a href=""><font color="ffffff">[TeX]</font></a></td>
+  </tr>
+    <tr>
+    <td>&sect; IX. <br> </td>
+    <td><img src="https://img.shields.io/badge/20%25-orange" alt="status"></td>
+    <td><img src="https://img.shields.io/badge/20%25-orange" alt="status"></td>
+    <td>
+    <ul>
+  	<li></li>
+    </ul>
+    </td>
+    <td><a href=""><font color="ffffff">[TeX]</font></a></td>
+  </tr>
+</table>
+     </span></p>  
+ 
+      <br><br>
+   
+    <!-- <div class="content">
+      <h3><p align="center" id="stacks"><a href=""><font color="ffffff">Pursuing stacks</font></a></p></h3>
+            <h4 style="text-align:center"><a href=""><font color="ffffff">[pdf]</font></a></h4>      
+     <p><span class="quotation">
+<table>
+</table>
+     </span></p>
+    </div> 
+    
+     <br><br>	 -->
+	
+      <h3><p align="center" id="formes"><a href="https://github.com/agrothendieck/agrothendieck.github.io/tree/master/divers/espaces"><font color="ffffff">Vers une Géométrie des Formes</font></a></p></h3>
+            <h4 style="text-align:center"><a href="/divers/espaces/Formes.pdf"><font color="ffffff">[pdf]</font></a></h4>      
+     <p><span class="quotation">
+<table>
+  <tr>
+    <th>Section</th>
+    <th>Transcription</th>
+    <th>Review</th>
+    <th>Comments</th>
+    <th>Source</th>
+  </tr>
+    <tr>
+    <td>&sect; I. <br> Vers une géométrie des formes (topologiques) </td>
+    <td><img src="https://img.shields.io/badge/20%25-orange" alt="status"></td>
+    <td><img src="https://img.shields.io/badge/1%25-red" alt="status"></td>
+    <td>
+    </td>
+    <td><a href="https://github.com/agrothendieck/agrothendieck.github.io/blob/master/divers/espaces/chI.tex"><font color="ffffff">[TeX]</font></a></td>
+  </tr>
+    <tr>
+    <td>&sect; II. <br> Réalisations topologiques des réseaux </td>
+    <td><img src="https://img.shields.io/badge/20%25-orange" alt="status"></td>
+    <td><img src="https://img.shields.io/badge/1%25-red" alt="status"></td>
+    <td>
+    </td>
+    <td><a href="https://github.com/agrothendieck/agrothendieck.github.io/blob/master/divers/espaces/chII.tex"><font color="ffffff">[TeX]</font></a></td>
+  </tr>
+    <tr>
+    <td>&sect; III. <br> Réseaux via découpages </td>
+    <td><img src="https://img.shields.io/badge/20%25-orange" alt="status"></td>
+    <td><img src="https://img.shields.io/badge/1%25-red" alt="status"></td>
+    <td>
+    </td>
+    <td><a href="https://github.com/agrothendieck/agrothendieck.github.io/blob/master/divers/espaces/chIII.tex"><font color="ffffff">[TeX]</font></a></td>
+  </tr>
+  <tr>
+    <td>&sect; IV. <br> Analysis situs (primière mouture) </td>
+    <td><img src="https://img.shields.io/badge/20%25-orange" alt="status"></td>
+    <td><img src="https://img.shields.io/badge/1%25-red" alt="status"></td>
+    <td>
+    </td>
+    <td><a href="https://github.com/agrothendieck/agrothendieck.github.io/blob/master/divers/espaces/chIV.tex"><font color="ffffff">[TeX]</font></a></td>
+  </tr>
+  <tr>
+    <td>&sect; V. <br> Algèbre des figures </td>
+    <td><img src="https://img.shields.io/badge/20%25-orange" alt="status"></td>
+    <td><img src="https://img.shields.io/badge/1%25-red" alt="status"></td>
+    <td>
+    </td>
+    <td><a href="https://github.com/agrothendieck/agrothendieck.github.io/blob/master/divers/espaces/chV.tex"><font color="ffffff">[TeX]</font></a></td>
+  </tr>
+    <tr>
+    <td>&sect; VI. <br> Analysis situs (deuxième mouture) </td>
+    <td><img src="https://img.shields.io/badge/20%25-orange" alt="status"></td>
+    <td><img src="https://img.shields.io/badge/1%25-red" alt="status"></td>
+    <td>
+    </td>
+    <td><a href="https://github.com/agrothendieck/agrothendieck.github.io/blob/master/divers/espaces/chVI.tex"><font color="ffffff">[TeX]</font></a></td>
+  </tr>
+    <tr>
+    <td>&sect; VII. <br> Analysis situs (troisième mouture) </td>
+    <td><img src="https://img.shields.io/badge/20%25-orange" alt="status"></td>
+    <td><img src="https://img.shields.io/badge/1%25-red" alt="status"></td>
+    <td>
+    </td>
+    <td><a href="https://github.com/agrothendieck/agrothendieck.github.io/blob/master/divers/espaces/chVII.tex"><font color="ffffff">[TeX]</font></a></td>
+  </tr>
+    <tr>
+    <td>&sect; VIII. <br> Analysis situs (quatrième mouture) </td>
+    <td><img src="https://img.shields.io/badge/20%25-orange" alt="status"></td>
+    <td><img src="https://img.shields.io/badge/1%25-red" alt="status"></td>
+    <td>
+    </td>
+    <td><a href="https://github.com/agrothendieck/agrothendieck.github.io/blob/master/divers/espaces/chVIII.tex"><font color="ffffff">[TeX]</font></a></td>
+  </tr>
+</table>
+     </span></p>
+    
+     <br><br>
+      
+  
+    <!-- <div class="content">
+      <h3><p align="center" id="llave"><a href="/"><font color="ffffff">La Llave de los Sueños o Diálogo con el Buen Dios</font></a></p></h3>
+            <h4 style="text-align:center"><a href="/divers/llave.pdf"><font color="ffffff">[pdf]</font></a></h4>
+     <p><span class="quotation">
+<table>
+  <tr>
+    <th>Section</th>
+    <th>Reedition</th>
+    <th>Review</th>
+    <th>Comments</th>
+    <th>Source</th>
+  </tr>
+    <tr>
+    <td>&sect; I. <br> Todos los sueños son creación del soñador</td>
+    <td><img src="https://img.shields.io/badge/100%25-brightgreen" alt="status"></td>
+    <td><img src="https://img.shields.io/badge/95%25-yellow" alt="status"></td>
+    <td>
+    </td>
+    <td><a href=""><font color="ffffff">[TeX]</font></a></td>
+  </tr>
+    <tr>
+    <td>&sect; II. <br> Dios es el soñador </td>
+    <td><img src="https://img.shields.io/badge/100%25-brightgreen" alt="status"></td>
+    <td><img src="https://img.shields.io/badge/95%25-yellow" alt="status"></td>
+    <td>
+    </td>
+    <td><a href=""><font color="ffffff">[TeX]</font></a></td>
+  </tr>
+    <tr>
+    <td>&sect; III. <br> El viaje a Memphis (1): errante </td>
+    <td><img src="https://img.shields.io/badge/100%25-brightgreen" alt="status"></td>
+    <td><img src="https://img.shields.io/badge/95%25-yellow" alt="status"></td>
+    <td>
+    </td>
+    <td><a href=""><font color="ffffff">[TeX]</font></a></td>
+  </tr>
+  <tr>
+    <td>&sect; IV. <br> Aspectos de una misión (1): un canto de libertad </td>
+    <td><img src="https://img.shields.io/badge/100%25-brightgreen" alt="status"></td>
+    <td><img src="https://img.shields.io/badge/95%25-yellow" alt="status"></td>
+    <td>
+    </td>
+    <td><a href=""><font color="ffffff">[TeX]</font></a></td>
+  </tr>
+  <tr>
+    <td>&sect; V. <br> Aspectos de una misión (2): el conocimiento espiritual</td>
+    <td><img src="https://img.shields.io/badge/100%25-brightgreen" alt="status"></td>
+    <td><img src="https://img.shields.io/badge/95%25-yellow" alt="status"></td>
+    <td>
+    </td>
+    <td><a href=""><font color="ffffff">[TeX]</font></a></td>
+  </tr>
+    <tr>
+    <td>&sect; VI. <br> El viaje a Memphis (2): siembras para una misión</td>
+    <td><img src="https://img.shields.io/badge/100%25-brightgreen" alt="status"></td>
+    <td><img src="https://img.shields.io/badge/95%25-yellow" alt="status"></td>
+    <td>
+    </td>
+    <td><a href=""><font color="ffffff">[TeX]</font></a></td>
+  </tr>
+    <tr>
+    <td>Notas </td>
+    <td></td>
+    <td></td>
+    <td>
+    </td>
+    <td></td>
+  </tr>
+    <tr>
+    <td>&sect; I. <br> El conocimiento de uno mismo </td>
+    <td><img src="https://img.shields.io/badge/100%25-brightgreen" alt="status"></td>
+    <td><img src="https://img.shields.io/badge/95%25-yellow" alt="status"></td>
+    <td>
+    </td>
+    <td><a href=""><font color="ffffff">[TeX]</font></a></td>
+  </tr>
+    <tr>
+    <td>&sect; II. <br> El conocimiento espiritual </td>
+    <td><img src="https://img.shields.io/badge/100%25-brightgreen" alt="status"></td>
+    <td><img src="https://img.shields.io/badge/95%25-yellow" alt="status"></td>
+    <td>
+    </td>
+    <td><a href=""><font color="ffffff">[TeX]</font></a></td>
+  </tr>
+    <tr>
+    <td>&sect; III. <br> El conocimiento religioso </td>
+    <td><img src="https://img.shields.io/badge/100%25-brightgreen" alt="status"></td>
+    <td><img src="https://img.shields.io/badge/95%25-yellow" alt="status"></td>
+    <td>
+    </td>
+    <td><a href=""><font color="ffffff">[TeX]</font></a></td>
+  </tr>
+    <tr>
+    <td>&sect; IV. <br> Creación y represión </td>
+    <td><img src="https://img.shields.io/badge/100%25-brightgreen" alt="status"></td>
+    <td><img src="https://img.shields.io/badge/95%25-yellow" alt="status"></td>
+    <td>
+    </td>
+    <td><a href=""><font color="ffffff">[TeX]</font></a></td>
+  </tr>
+    <tr>
+    <td>&sect; V. <br> Clichés y espiritualidad </td>
+    <td><img src="https://img.shields.io/badge/100%25-brightgreen" alt="status"></td>
+    <td><img src="https://img.shields.io/badge/95%25-yellow" alt="status"></td>
+    <td>
+    </td>
+    <td><a href=""><font color="ffffff">[TeX]</font></a></td>
+  </tr>
+      <tr>
+    <td>&sect; VI. <br> Los mutantes </td>
+    <td><img src="https://img.shields.io/badge/100%25-brightgreen" alt="status"></td>
+    <td><img src="https://img.shields.io/badge/95%25-yellow" alt="status"></td>
+    <td>
+    </td>
+    <td><a href=""><font color="ffffff">[TeX]</font></a></td>
+  </tr>
+</table> 
+     </span></p>
+    </div>
+    
+     <br><br> -->
+	
+      <h3><p align="center" id="misc"><a href="/corr.html"><font color="ffffff">Miscellany</font></a></p></h3>
+     <p><span class="quotation">
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Transcription</th>
+    <th>Translation</th>
+    <th>pdf</th>
+  </tr>
+  <tr>
+    <td>En Guise de Programme, 1978-79</td>
+    <td><img src="https://img.shields.io/badge/100%25-brightgreen" alt="status"></td>
+    <td></td>
+    <td><a href="/divers/enguise.pdf"><font color="ffffff">[pdf]</font></a></td>
+  </tr>
+  <tr>
+    <td>La Llave de los Sueños o Dialógo con el buen Dios</td>
+    <td></td>
+    <td><img src="https://img.shields.io/badge/90%25-yellow" alt="status"></td>
+    <td><a href="/divers/llave.pdf"><font color="ffffff">[pdf]</font></a></td>
+  </tr>
+  <tr>
+    <td>Cosechas y Siembras</td>
+    <td></td>
+    <td><img src="https://img.shields.io/badge/90%25-yellow" alt="status"></td>
+    <td><a href="/divers/cys.pdf"><font color="ffffff">[pdf]</font></a></td>
+  </tr>	
+</table>
+     </span></p> 	
+  </p>
+</div> 
 
 </font>
 </center>
@@ -4150,6 +5717,84 @@ Il y a un sens, ou des sens à des niveaux de profondeur différents, ils préex
 <!-- <p><img class="wp-image-3999 aligncenter" src="https://raw.githubusercontent.com/agrothendieck/agrothendieck.github.io/master/img/signature.png" alt="Thoreau signature" width="500" height="147" srcset="https://raw.githubusercontent.com/agrothendieck/agrothendieck.github.io/master/img/signature.png 1024w, https://raw.githubusercontent.com/agrothendieck/agrothendieck.github.io/master/img/signature.png 300w, https://raw.githubusercontent.com/agrothendieck/agrothendieck.github.io/master/img/signature.png 768w, https://raw.githubusercontent.com/agrothendieck/agrothendieck.github.io/master/img/signature.png 1689w" sizes="(max-width: 500px) 100vw, 500px" /></p>
 
 <br><br><br> -->
+
+
+
+
+
+<!-- <div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="https://raw.githubusercontent.com/agrothendieck/agrothendieck.github.io/master/img/grotha.jpg" width="100%">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="https://raw.githubusercontent.com/agrothendieck/agrothendieck.github.io/master/img/groth7.JPG" width="100%">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="https://raw.githubusercontent.com/agrothendieck/agrothendieck.github.io/master/img/groth4.jpeg" width="100%">
+  <div class="text"></div>
+</div>
+	
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="https://raw.githubusercontent.com/agrothendieck/agrothendieck.github.io/master/img/groth5.png" width="100%">
+  <div class="text"></div>
+</div>
+
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+  <span class="dot" onclick="currentSlide(4)"></span>  
+</div>
+
+ <script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script> 
+
+
+<br><br><br><br><br><br> -->
+ 
 
 <a href="https://fontmeme.com/cursive-fonts/"><img class="wp-image-3999 aligncenter" src="https://fontmeme.com/permalink/191217/b772961365f60792159aa4f23f6c0bb9.png" alt="cursive-fonts" border="0" width="500" height="147"></a>
 
