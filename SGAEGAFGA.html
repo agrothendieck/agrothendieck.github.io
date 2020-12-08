@@ -6,18 +6,18 @@
 	<title>SGA, EGA, FGA</title>
     
 <!-- The SEO Framework by Sybre Waaijer -->
-<meta name="description" content="Research homepage of M Carmona to&#8230;" />
+<meta name="description" content="Grothendieck" />
 <meta property="og:image" content="" />
 <meta property="og:locale" content="en_US" />
 <meta property="og:type" content="website" />
-<meta property="og:title" content="Research homepage of M Carmona" />
-<meta property="og:description" content="Research homepage of M Carmona" />
+<meta property="og:title" content="Grothendieck" />
+<meta property="og:description" content="Grothendieck" />
 <meta property="og:url" content="https://www.walden.org/thoreau/the-writings-of-henry-david-thoreau-the-digital-collection/" />
-<meta property="og:site_name" content="Research homepage of M Carmona" />
+<meta property="og:site_name" content="Grothendieck" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@TheWaldenWoods" />
-<meta name="twitter:title" content="Research homepage of M Carmona" />
-<meta name="twitter:description" content="Research homepage of M Carmona" />
+<meta name="twitter:title" content="Grothendieck" />
+<meta name="twitter:description" content="Grothendieck" />
 <meta name="twitter:image" content="" />
 <link rel="canonical" href="" />    
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -25,8 +25,6 @@
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <meta name="keywords" content="Grothendieck">
  <meta name="viewport" content="width=device-width, initial-scale=1">
-   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1"> 
  <style type="text/css">
  
 * {
@@ -367,6 +365,105 @@ img {vertical-align: middle;}
 @media only screen and (max-width: 300px) {
   .text {font-size: 11px}
 }
+div.ex {
+  background-color: white;
+  width: 750px;
+  height: 250px;
+  overflow: scroll;
+}
+.accordion {
+  background-color: #3d523e;
+  color: #3d523e;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc; 
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
+
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
 #slides{
   background-color: white;
 }
@@ -404,74 +501,19 @@ img {vertical-align: middle;}
   border-radius: 3px 0 0 3px;
 }
 
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
 
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
 
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
 
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
 
-.active, .dot:hover {
-  background-color: #717171;
-}
 
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
 
-@-webkit-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
 
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
 
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .prev, .next,.text {font-size: 11px}
-}
+
  </style>
 </head> 
 
 <!-- 
-
 a:link {
   color: white;
 }  
@@ -479,8 +521,6 @@ a:link {
 a:visited {
   color: white;
 }
-
-
   div {
   background-color: #eee;
   width: 700px;
@@ -587,7 +627,7 @@ img.emoji {
 <link rel='stylesheet' id='generate-style-css'  href='https://www.walden.org/wp-content/themes/generatepress/css/all.min.css?ver=2.4.1' type='text/css' media='all' />
 <style id='generate-style-inline-css' type='text/css'>
 .post-navigation {display:none;}
-body{background-color:#3d523e;color:#000000;}a, a:visited{color:#3d523e;}a:visited{color:#3d523e;}a:hover, a:focus, a:active{color:#3d523e;}body .grid-container{max-width:1200px;}.wp-block-group__inner-container{max-width:1200px;margin-left:auto;margin-right:auto;}.site-header .header-image{width:70px;}body, button, input, select, textarea{font-family:-apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";}.entry-content > [class*="wp-block-"]:not(:last-child){margin-bottom:1.5em;}.main-navigation .main-nav ul ul li a{font-size:14px;}h1{font-weight:600;font-size:42px;}h2{font-weight:600;font-size:36px;line-height:1.3em;}h3{font-weight:600;font-size:28px;line-height:1.3em;}h4{font-weight:600;font-size:22px;}@media (max-width:768px){.main-title{font-size:30px;}h1{font-size:30px;}h2{font-size:25px;}}.top-bar{background-color:#636363;color:#ffffff;}.top-bar a,.top-bar a:visited{color:#ffffff;}.top-bar a:hover{color:#303030;}.site-header{background-color:#445231;color:#ffffff;}.site-header a,.site-header a:visited{color:#ffffff;}.main-title a,.main-title a:hover,.main-title a:visited{color:#ffffff;}.site-description{color:#fefefe;}.main-navigation,.main-navigation ul ul{background-color:#445331;}.main-navigation .main-nav ul li a,.menu-toggle{color:#ffffff;}.main-navigation .main-nav ul li:hover > a,.main-navigation .main-nav ul li:focus > a, .main-navigation .main-nav ul li.sfHover > a{color:#ffffff;background-color:#445331;}button.menu-toggle:hover,button.menu-toggle:focus,.main-navigation .mobile-bar-items a,.main-navigation .mobile-bar-items a:hover,.main-navigation .mobile-bar-items a:focus{color:#ffffff;}.main-navigation .main-nav ul li[class*="current-menu-"] > a{color:#ffffff;background-color:#445331;}.main-navigation .main-nav ul li[class*="current-menu-"] > a:hover,.main-navigation .main-nav ul li[class*="current-menu-"].sfHover > a{color:#ffffff;background-color:#445331;}.navigation-search input[type="search"],.navigation-search input[type="search"]:active, .navigation-search input[type="search"]:focus, .main-navigation .main-nav ul li.search-item.active > a{color:#ffffff;background-color:#445331;}.main-navigation ul ul{background-color:#445231;}.main-navigation .main-nav ul ul li a{color:#ffffff;}.main-navigation .main-nav ul ul li:hover > a,.main-navigation .main-nav ul ul li:focus > a,.main-navigation .main-nav ul ul li.sfHover > a{color:#ffffff;background-color:#8ba06d;}.main-navigation .main-nav ul ul li[class*="current-menu-"] > a{color:#ffffff;background-color:#8ba06d;}.main-navigation .main-nav ul ul li[class*="current-menu-"] > a:hover,.main-navigation .main-nav ul ul li[class*="current-menu-"].sfHover > a{color:#ffffff;background-color:#8ba06d;}.separate-containers .inside-article, .separate-containers .comments-area, .separate-containers .page-header, .one-container .container, .separate-containers .paging-navigation, .inside-page-header{background-color:#fefefe;}.entry-meta{color:#595959;}.entry-meta a,.entry-meta a:visited{color:#595959;}.entry-meta a:hover{color:#1e73be;}.sidebar .widget{background-color:#ffffff;}.sidebar .widget .widget-title{color:#000000;}.footer-widgets{color:#fefefe;background-color:#445231;}.footer-widgets a,.footer-widgets a:visited{color:#ffffff;}.footer-widgets a:hover{color:#8ba06d;}.footer-widgets .widget-title{color:#fefefe;}.site-info{color:#ffffff;background-color:#445231;}.site-info a,.site-info a:visited{color:#ffffff;}.site-info a:hover{color:#8ba06d;}.footer-bar .widget_nav_menu .current-menu-item a{color:#8ba06d;}input[type="text"],input[type="email"],input[type="url"],input[type="password"],input[type="search"],input[type="tel"],input[type="number"],textarea,select{color:#666666;background-color:#fafafa;border-color:#cccccc;}input[type="text"]:focus,input[type="email"]:focus,input[type="url"]:focus,input[type="password"]:focus,input[type="search"]:focus,input[type="tel"]:focus,input[type="number"]:focus,textarea:focus,select:focus{color:#666666;background-color:#ffffff;border-color:#bfbfbf;}button,html input[type="button"],input[type="reset"],input[type="submit"],a.button,a.button:visited,a.wp-block-button__link:not(.has-background){color:#ffffff;background-color:#445231;}button:hover,html input[type="button"]:hover,input[type="reset"]:hover,input[type="submit"]:hover,a.button:hover,button:focus,html input[type="button"]:focus,input[type="reset"]:focus,input[type="submit"]:focus,a.button:focus,a.wp-block-button__link:not(.has-background):active,a.wp-block-button__link:not(.has-background):focus,a.wp-block-button__link:not(.has-background):hover{color:#ffffff;background-color:#567038;}.generate-back-to-top,.generate-back-to-top:visited{background-color:rgba( 0,0,0,0.4 );color:#ffffff;}.generate-back-to-top:hover,.generate-back-to-top:focus{background-color:rgba( 0,0,0,0.6 );color:#ffffff;}.inside-header{padding:0px;}.separate-containers .inside-article, .separate-containers .comments-area, .separate-containers .page-header, .separate-containers .paging-navigation, .one-container .site-content, .inside-page-header, .wp-block-group__inner-container{padding:15px;}.entry-content .alignwide, body:not(.no-sidebar) .entry-content .alignfull{margin-left:-15px;width:calc(100% + 30px);max-width:calc(100% + 30px);}.one-container.right-sidebar .site-main,.one-container.both-right .site-main{margin-right:15px;}.one-container.left-sidebar .site-main,.one-container.both-left .site-main{margin-left:15px;}.one-container.both-sidebars .site-main{margin:0px 15px 0px 15px;}.main-navigation .main-nav ul li a,.menu-toggle,.main-navigation .mobile-bar-items a{padding-left:15px;padding-right:15px;line-height:40px;}.main-navigation .main-nav ul ul li a{padding:10px 15px 10px 15px;}.main-navigation ul ul{width:300px;}.navigation-search input{height:40px;}.rtl .menu-item-has-children .dropdown-menu-toggle{padding-left:15px;}.menu-item-has-children .dropdown-menu-toggle{padding-right:15px;}.rtl .main-navigation .main-nav ul li.menu-item-has-children > a{padding-right:15px;}.widget-area .widget{padding:15px;}@media (max-width:768px){.separate-containers .inside-article, .separate-containers .comments-area, .separate-containers .page-header, .separate-containers .paging-navigation, .one-container .site-content, .inside-page-header, .wp-block-group__inner-container{padding:15px;}.entry-content .alignwide, body:not(.no-sidebar) .entry-content .alignfull{margin-left:-15px;width:calc(100% + 30px);max-width:calc(100% + 30px);}}/* End cached CSS */@media (max-width: 768px){.main-navigation .menu-toggle,.main-navigation .mobile-bar-items,.sidebar-nav-mobile:not(#sticky-placeholder){display:block;}.main-navigation ul,.gen-sidebar-nav{display:none;}[class*="nav-float-"] .site-header .inside-header > *{float:none;clear:both;}}button.menu-toggle:before,.search-item a:before,.dropdown-menu-toggle:before,.cat-links:before,.tags-links:before,.comments-link:before,.nav-previous .prev:before,.nav-next .next:before,.generate-back-to-top:before {display: none;}
+body{background-color:#3d523e;color:#000000;}a, a:visited{color:#3d523e;}a:visited{color:#3d523e;}a:hover, a:focus, a:active{color:#3d523e;}body .grid-container{max-width:1200px;}.wp-block-group__inner-container{max-width:1200px;margin-left:auto;margin-right:auto;}.site-header .header-image{width:70px;}body, button, input, select, textarea{font-family:-apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";}.entry-content > [class*="wp-block-"]:not(:last-child){margin-bottom:1.5em;}.main-navigation .main-nav ul ul li a{font-size:14px;}h1{font-weight:600;font-size:42px;}h2{font-weight:600;font-size:36px;line-height:1.3em;}h3{font-weight:600;font-size:28px;line-height:1.3em;}h4{font-weight:600;font-size:22px;}@media (max-width:768px){.main-title{font-size:30px;}h1{font-size:30px;}h2{font-size:25px;}}.top-bar{background-color:#636363;color:#ffffff;}.top-bar a,.top-bar a:visited{color:#ffffff;}.top-bar a:hover{color:#303030;}.site-header{background-color:#445231;color:#ffffff;}.site-header a,.site-header a:visited{color:#ffffff;}.main-title a,.main-title a:hover,.main-title a:visited{color:#ffffff;}.site-description{color:#fefefe;}.main-navigation,.main-navigation ul ul{background-color:#445331;}.main-navigation .main-nav ul li a,.menu-toggle{color:#ffffff;}.main-navigation .main-nav ul li:hover > a,.main-navigation .main-nav ul li:focus > a, .main-navigation .main-nav ul li.sfHover > a{color:#ffffff;background-color:#445331;}button.menu-toggle:hover,button.menu-toggle:focus,.main-navigation .mobile-bar-items a,.main-navigation .mobile-bar-items a:hover,.main-navigation .mobile-bar-items a:focus{color:#ffffff;}.main-navigation .main-nav ul li[class*="current-menu-"] > a{color:#ffffff;background-color:#445331;}.main-navigation .main-nav ul li[class*="current-menu-"] > a:hover,.main-navigation .main-nav ul li[class*="current-menu-"].sfHover > a{color:#ffffff;background-color:#445331;}.navigation-search input[type="search"],.navigation-search input[type="search"]:active, .navigation-search input[type="search"]:focus, .main-navigation .main-nav ul li.search-item.active > a{color:#ffffff;background-color:#445331;}.main-navigation ul ul{background-color:#445231;}.main-navigation .main-nav ul ul li a{color:#ffffff;}.main-navigation .main-nav ul ul li:hover > a,.main-navigation .main-nav ul ul li:focus > a,.main-navigation .main-nav ul ul li.sfHover > a{color:#ffffff;background-color:#8ba06d;}.main-navigation .main-nav ul ul li[class*="current-menu-"] > a{color:#ffffff;background-color:#8ba06d;}.main-navigation .main-nav ul ul li[class*="current-menu-"] > a:hover,.main-navigation .main-nav ul ul li[class*="current-menu-"].sfHover > a{color:#ffffff;background-color:#8ba06d;}.separate-containers .inside-article, .separate-containers .comments-area, .separate-containers .page-header, .one-container .container, .separate-containers .paging-navigation, .inside-page-header{background-color:#fefefe;}.entry-meta{color:#595959;}.entry-meta a,.entry-meta a:visited{color:#595959;}.entry-meta a:hover{color:#1e73be;}.sidebar .widget{background-color:#ffffff;}.sidebar .widget .widget-title{color:#000000;}.footer-widgets{color:#fefefe;background-color:#445231;}.footer-widgets a,.footer-widgets a:visited{color:#ffffff;}.footer-widgets a:hover{color:#8ba06d;}.footer-widgets .widget-title{color:#fefefe;}.site-info{color:#ffffff;background-color:#445231;}.site-info a,.site-info a:visited{color:#ffffff;}.site-info a:hover{color:#8ba06d;}.footer-bar .widget_nav_menu .current-menu-item a{color:#8ba06d;}input[type="text"],input[type="email"],input[type="url"],input[type="password"],input[type="search"],input[type="tel"],input[type="number"],textarea,select{color:#666666;background-color:#fafafa;border-color:#cccccc;}input[type="text"]:focus,input[type="email"]:focus,input[type="url"]:focus,input[type="password"]:focus,input[type="search"]:focus,input[type="tel"]:focus,input[type="number"]:focus,textarea:focus,select:focus{color:#666666;background-color:#ffffff;border-color:#bfbfbf;}button,html input[type="button"],input[type="reset"],input[type="submit"],a.button,a.button:visited,a.wp-block-button__link:not(.has-background){color:#ffffff;background-color:#445231;}button:hover,html input[type="button"]:hover,input[type="reset"]:hover,input[type="submit"]:hover,a.button:hover,button:focus,html input[type="button"]:focus,input[type="reset"]:focus,input[type="submit"]:focus,a.button:focus,a.wp-block-button__link:not(.has-background):active,a.wp-block-button__link:not(.has-background):focus,a.wp-block-button__link:not(.has-background):hover{color:#ffffff;background-color:#3d523e;}.generate-back-to-top,.generate-back-to-top:visited{background-color:rgba( 0,0,0,0.4 );color:#ffffff;}.generate-back-to-top:hover,.generate-back-to-top:focus{background-color:rgba( 0,0,0,0.6 );color:#ffffff;}.inside-header{padding:0px;}.separate-containers .inside-article, .separate-containers .comments-area, .separate-containers .page-header, .separate-containers .paging-navigation, .one-container .site-content, .inside-page-header, .wp-block-group__inner-container{padding:15px;}.entry-content .alignwide, body:not(.no-sidebar) .entry-content .alignfull{margin-left:-15px;width:calc(100% + 30px);max-width:calc(100% + 30px);}.one-container.right-sidebar .site-main,.one-container.both-right .site-main{margin-right:15px;}.one-container.left-sidebar .site-main,.one-container.both-left .site-main{margin-left:15px;}.one-container.both-sidebars .site-main{margin:0px 15px 0px 15px;}.main-navigation .main-nav ul li a,.menu-toggle,.main-navigation .mobile-bar-items a{padding-left:15px;padding-right:15px;line-height:40px;}.main-navigation .main-nav ul ul li a{padding:10px 15px 10px 15px;}.main-navigation ul ul{width:300px;}.navigation-search input{height:40px;}.rtl .menu-item-has-children .dropdown-menu-toggle{padding-left:15px;}.menu-item-has-children .dropdown-menu-toggle{padding-right:15px;}.rtl .main-navigation .main-nav ul li.menu-item-has-children > a{padding-right:15px;}.widget-area .widget{padding:15px;}@media (max-width:768px){.separate-containers .inside-article, .separate-containers .comments-area, .separate-containers .page-header, .separate-containers .paging-navigation, .one-container .site-content, .inside-page-header, .wp-block-group__inner-container{padding:15px;}.entry-content .alignwide, body:not(.no-sidebar) .entry-content .alignfull{margin-left:-15px;width:calc(100% + 30px);max-width:calc(100% + 30px);}}/* End cached CSS */@media (max-width: 768px){.main-navigation .menu-toggle,.main-navigation .mobile-bar-items,.sidebar-nav-mobile:not(#sticky-placeholder){display:block;}.main-navigation ul,.gen-sidebar-nav{display:none;}[class*="nav-float-"] .site-header .inside-header > *{float:none;clear:both;}}button.menu-toggle:before,.search-item a:before,.dropdown-menu-toggle:before,.cat-links:before,.tags-links:before,.comments-link:before,.nav-previous .prev:before,.nav-next .next:before,.generate-back-to-top:before {display: none;}
 .navigation-branding .main-title{font-weight:bold;text-transform:none;font-size:45px;}@media (max-width: 768px){.navigation-branding .main-title{font-size:30px;}}
 .main-navigation .main-nav ul li a,.menu-toggle,.main-navigation .mobile-bar-items a{transition: line-height 300ms ease}
 </style>
@@ -823,14 +863,14 @@ var EM = {"ajaxurl":"https:\/\/www.walden.org\/wp-admin\/admin-ajax.php","locati
         
         
         
+-->        
         
         
-  <br><br>      
         
         
-        
+         
 		
-	<div id="page" class="hfeed site grid-container container grid-parent">
+	<!-- <div id="page" class="hfeed site grid-container container grid-parent">
 				<div id="content" class="site-content">
 					<div data-elementor-type="single" data-elementor-id="19905" class="elementor elementor-19905 elementor-location-single post-2587 page type-page status-publish" data-elementor-settings="[]">
 			<div class="elementor-inner">
@@ -843,8 +883,8 @@ var EM = {"ajaxurl":"https:\/\/www.walden.org\/wp-admin\/admin-ajax.php","locati
 					<div class="elementor-widget-wrap">
 				<div class="elementor-element elementor-element-cded7b6 elementor-widget elementor-widget-shortcode" data-id="cded7b6" data-element_type="widget" data-widget_type="shortcode.default">
 				<div class="elementor-widget-container">
-					<div class="elementor-shortcode"><div style="width:100%;background-image:url();background-size:cover;padding-top:5px;padding-bottom:5px">
-<img src="" style="height:0px;" /> 
+					  <div class="elementor-shortcode"><div style="width:100%;background-image:url(https://raw.githubusercontent.com/agrothendieck/agrothendieck.github.io/master/img/conj.PNG);background-size:cover;padding-top:5px;padding-bottom:5px">
+<img src="" style="height:320px;" /> -->
 
 </div></div>
 				</div>
@@ -855,6 +895,7 @@ var EM = {"ajaxurl":"https:\/\/www.walden.org\/wp-admin\/admin-ajax.php","locati
 						</div>
 			</div>
 		</section>
+        <!--
 				<section class="elementor-element elementor-element-b3a9883 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="b3a9883" data-element_type="section">
 						<div class="elementor-container elementor-column-gap-default">
 				<div class="elementor-row">
@@ -863,19 +904,12 @@ var EM = {"ajaxurl":"https:\/\/www.walden.org\/wp-admin\/admin-ajax.php","locati
 					<div class="elementor-widget-wrap">
 				<div class="elementor-element elementor-element-97d33a4 elementor-widget elementor-widget-theme-post-title elementor-page-title elementor-widget-heading" data-id="97d33a4" data-element_type="widget" data-widget_type="theme-post-title.default">
 				<div class="elementor-widget-container">
-			<br><center><h2 class="elementor-heading-title elementor-size-default"></h2></center>		</div>
+			<br><center><h1 class="elementor-heading-title elementor-size-default">A. Grothendieck</h1></center>		</div>
 				</div>
 				<div class="elementor-element elementor-element-e10755a elementor-widget elementor-widget-theme-post-content" data-id="e10755a" data-element_type="widget" data-widget_type="theme-post-content.default">
 				<div class="elementor-widget-container">
-                <center>
-                 <img width="400" src="https://raw.githubusercontent.com/carmonamateo/carmonamateo.github.io/master/img/Diag.jpeg" alt="Carmona" border="0">
- </center>
-<p align="center"><span class="quotation">I am a Mathematician, working on foundational questions of <br> <i>Topological algebra</i> and <i>Anabelian topology</i>.</span>&#151;&nbsp;</p>&nbsp;
-
-
-<!--
-
-
+			<p>The Walden Woods Project maintains the preeminent collection of works by and about Henry David Thoreau. We continually digitize content from our collections to increase the material available on-line. On this page, you can access all of the works by Thoreau that are currently available in digital format.</p>
+<p>&nbsp;</p>
 <figure id="attachment_2282" aria-describedby="caption-attachment-2282" style="width: 490px" class="wp-caption aligncenter"><img src="https://www.walden.org/wp-content/uploads/2016/03/Walden-ms001-detail-1024x650.jpg" alt="Thoreau holograph manuscript leaf from Walden (The Thoreau Collection of Kevin MacDonnell)" width="500" height="317" class="size-large wp-image-2282" srcset="https://www.walden.org/wp-content/uploads/2016/03/Walden-ms001-detail-1024x650.jpg 1024w, https://www.walden.org/wp-content/uploads/2016/03/Walden-ms001-detail-300x190.jpg 300w, https://www.walden.org/wp-content/uploads/2016/03/Walden-ms001-detail-768x487.jpg 768w, https://www.walden.org/wp-content/uploads/2016/03/Walden-ms001-detail.jpg 2048w" sizes="(max-width: 500px) 100vw, 500px" /><figcaption id="caption-attachment-2282" class="wp-caption-text">Thoreau holograph manuscript leaf from <em>Walden</em> (<a href="https://www.walden.org/collection/the-thoreau-collection-of-kevin-macdeonnell/">The Thoreau Collection of Kevin MacDonnell</a>)</figcaption></figure>
 <h3 style="text-align: center;">Collected Works</h3>
 <ul>
@@ -932,7 +966,8 @@ var EM = {"ajaxurl":"https:\/\/www.walden.org\/wp-admin\/admin-ajax.php","locati
 </ul>
 <p><img class="wp-image-3999 aligncenter" src="https://www.walden.org/wp-content/uploads/2016/03/Thoreau-signature-1024x301.jpg" alt="Thoreau signature" width="500" height="147" srcset="https://www.walden.org/wp-content/uploads/2016/03/Thoreau-signature-1024x301.jpg 1024w, https://www.walden.org/wp-content/uploads/2016/03/Thoreau-signature-300x88.jpg 300w, https://www.walden.org/wp-content/uploads/2016/03/Thoreau-signature-768x226.jpg 768w, https://www.walden.org/wp-content/uploads/2016/03/Thoreau-signature.jpg 1689w" sizes="(max-width: 500px) 100vw, 500px" /></p> -->
 
-<!-- <p><img class="wp-image-3999 aligncenter" src="https://raw.githubusercontent.com/carmonamateo/carmonamateo.github.io/master/img/sign.png" alt="Thoreau signature" width="500" height="147" srcset="https://raw.githubusercontent.com/carmonamateo/carmonamateo.github.io/master/img/sign.png 1024w, https://raw.githubusercontent.com/carmonamateo/carmonamateo.github.io/master/img/sign.png 300w, https://raw.githubusercontent.com/carmonamateo/carmonamateo.github.io/master/img/sign.png 768w, https://raw.githubusercontent.com/carmonamateo/carmonamateo.github.io/master/img/sign.png 1689w" sizes="(max-width: 500px) 100vw, 500px" /></p>
+
+<!-- <p><img class="wp-image-3999 aligncenter" src="https://raw.githubusercontent.com/agrothendieck/agrothendieck.github.io/master/img/signature.png" alt="Thoreau signature" width="500" height="147" srcset="https://raw.githubusercontent.com/agrothendieck/agrothendieck.github.io/master/img/signature.png 1024w, https://raw.githubusercontent.com/agrothendieck/agrothendieck.github.io/master/img/signature.png 300w, https://raw.githubusercontent.com/agrothendieck/agrothendieck.github.io/master/img/signature.png 768w, https://raw.githubusercontent.com/agrothendieck/agrothendieck.github.io/master/img/signature.png 1689w" sizes="(max-width: 500px) 100vw, 500px" /></p>
 		</div>
 				</div>
 						</div>
@@ -953,8 +988,10 @@ var EM = {"ajaxurl":"https:\/\/www.walden.org\/wp-admin\/admin-ajax.php","locati
 	  					</script>
 	  					
 	  			
-	</div><!-- #content 
-</div><!-- #page
+	</div><!-- #content
+</div><!-- #page 
+
+<a href="https://fontmeme.com/cursive-fonts/"><img class="wp-image-3999 aligncenter" src="https://fontmeme.com/permalink/191217/b772961365f60792159aa4f23f6c0bb9.png" alt="cursive-fonts" border="0" width="500" height="147"></a>
 
 <br><br> -->
 
@@ -1198,8 +1235,28 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
 <!-- </body>
 </html> -->
 
+
+<br><br>
+
+<center>
+<h3><p>SGA, EGA, FGA</p> </h3> 
+
+<!-- <img width="400" src="https://raw.githubusercontent.com/agrothendieck/agrothendieck.github.io/master/img/arrow.jpg" alt="arrow" border="0"> 
+
+<br><br> -->
+	
+<p><img class=" wp-image-4130 aligncenter" src="https://raw.githubusercontent.com/carmonamateo/carmonamateo.github.io/master/img/breakpage.png" alt="pagebreak dark green" width="392" height="56" srcset="https://raw.githubusercontent.com/carmonamateo/carmonamateo.github.io/master/img/breakpage.png 300w, https://raw.githubusercontent.com/carmonamateo/carmonamateo.github.io/master/img/breakpage.png 768w, https://raw.githubusercontent.com/carmonamateo/carmonamateo.github.io/master/img/breakpage.png 1024w, https://raw.githubusercontent.com/carmonamateo/carmonamateo.github.io/master/img/breakpage.png 1189w" sizes="(max-width: 192px) 100vw, 192px" /></p>
+
+<br><br>
+	
+</center>
+<br><br>
+
+<p align="center"><span class="quotation"><i>Quote</></span>&#151;&nbsp;<a href="" target="_blank" rel="noopener noreferrer"><em>Quote</em></a></p>&nbsp;
+
+
 <!-- <center>
- 
+
 <div class="slideshow-container">
  
 <div class="mySlides fade">
@@ -1276,96 +1333,57 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
 
 </center> -->
 
-<script>
-var slideIndex = 0;
-showSlides();
-
-function showSlides() {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}    
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-  setTimeout(showSlides, 13000); // Change image every 13 seconds
-}
-</script>
-  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
-	
-	<center>
-
-<br><br>
-
-<a href="https://fontmeme.com/cursive-fonts/"><img class="wp-image-3999 aligncenter" src="https://fontmeme.com/permalink/191217/b772961365f60792159aa4f23f6c0bb9.png" alt="cursive-fonts" border="0" width="500" height="147"></a>
-
-<br><br><br><br><br>
-
-
-<h2><p align="center">SGA, EGA, FGA</p></h2>
-
-
-<br><br>
-
 <div class="slideshow-container">
 
 <div class="mySlides fade">
   <div class="numbertext"></div>
-  <img src="https://raw.githubusercontent.com/agrothendieck/agrothendieck.github.io/master/img/sga7.jpg" width="100%">
+  <img src="https://raw.githubusercontent.com/agrothendieck/agrothendieck.github.io/master/img/g1.png" width="100%">
   <div class="text"></div>
 </div>
 
 <div class="mySlides fade">
   <div class="numbertext"></div>
-  <img src="https://raw.githubusercontent.com/agrothendieck/agrothendieck.github.io/master/img/groth8.jpeg" width="100%">
+  <img src="https://raw.githubusercontent.com/agrothendieck/agrothendieck.github.io/master/img/g2.png" width="100%">
   <div class="text"></div>
 </div>
 
 <div class="mySlides fade">
   <div class="numbertext"></div>
-  <img src="https://raw.githubusercontent.com/agrothendieck/agrothendieck.github.io/master/img/sga1.jpeg" width="100%">
+  <img src="https://raw.githubusercontent.com/agrothendieck/agrothendieck.github.io/master/img/g3.jpg" width="100%">
   <div class="text"></div>
 </div>
 
 <div class="mySlides fade">
   <div class="numbertext"></div>
-  <img src="https://raw.githubusercontent.com/agrothendieck/agrothendieck.github.io/master/img/sga2.JPG" width="100%">
+  <img src="https://raw.githubusercontent.com/agrothendieck/agrothendieck.github.io/master/img/g4.png" width="100%">
   <div class="text"></div>
 </div>
 
 <div class="mySlides fade">
   <div class="numbertext"></div>
-  <img src="https://raw.githubusercontent.com/agrothendieck/agrothendieck.github.io/master/img/sga5.JPG" width="100%">
+  <img src="https://raw.githubusercontent.com/agrothendieck/agrothendieck.github.io/master/img/g5.png" width="100%">
   <div class="text"></div>
 </div>
 
 <div class="mySlides fade">
   <div class="numbertext"></div>
-  <img src="https://raw.githubusercontent.com/agrothendieck/agrothendieck.github.io/master/img/sga6.JPG" width="100%">
+  <img src="https://raw.githubusercontent.com/agrothendieck/agrothendieck.github.io/master/img/g6.jpg" width="100%">
   <div class="text"></div>
 </div>
 
 <div class="mySlides fade">
   <div class="numbertext"></div>
-  <img src="https://raw.githubusercontent.com/agrothendieck/agrothendieck.github.io/master/img/sga4.jpg" width="100%">
+  <img src="https://raw.githubusercontent.com/agrothendieck/agrothendieck.github.io/master/img/g7.jpg" width="100%">
   <div class="text"></div>
 </div>
 
 <div class="mySlides fade">
   <div class="numbertext"></div>
-  <img src="https://raw.githubusercontent.com/agrothendieck/agrothendieck.github.io/master/img/groth2.jpeg" width="100%">
+  <img src="https://raw.githubusercontent.com/agrothendieck/agrothendieck.github.io/master/img/g8.png" width="100%">
   <div class="text"></div>
 </div>
 
-<div class="mySlides fade">
+<!-- <div class="mySlides fade">
   <div class="numbertext"></div>
   <img src="https://raw.githubusercontent.com/agrothendieck/agrothendieck.github.io/master/img/groth1.jpg" width="100%">
   <div class="text"></div>
@@ -1381,7 +1399,7 @@ function showSlides() {
   <div class="numbertext"></div>
   <img src="https://raw.githubusercontent.com/agrothendieck/agrothendieck.github.io/master/img/groth3.PNG" width="100%">
   <div class="text"></div>
-</div>
+</div> -->
 
 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
 <a class="next" onclick="plusSlides(1)">&#10095;</a>
@@ -1398,9 +1416,9 @@ function showSlides() {
   <span class="dot" onclick="currentSlide(6)"></span>
   <span class="dot" onclick="currentSlide(7)"></span> 
   <span class="dot" onclick="currentSlide(8)"></span> 
-  <span class="dot" onclick="currentSlide(9)"></span> 
+  <!-- <span class="dot" onclick="currentSlide(9)"></span> 
   <span class="dot" onclick="currentSlide(10)"></span> 
-  <span class="dot" onclick="currentSlide(11)"></span>  
+  <span class="dot" onclick="currentSlide(11)"></span>  -->
 </div>
 
 <script>
@@ -1432,30 +1450,38 @@ function showSlides(n) {
 }
 </script>
 
+<!-- <script>
+var slideIndex = 0;
+showSlides();
 
-<br><br><br><br>
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 13000); // Change image every 13 seconds
+}
+</script> -->
 
-<p><img class=" wp-image-4130 aligncenter" src="https://raw.githubusercontent.com/carmonamateo/carmonamateo.github.io/master/img/breakpage.png" alt="pagebreak dark green" width="392" height="56" srcset="https://raw.githubusercontent.com/carmonamateo/carmonamateo.github.io/master/img/breakpage.png 300w, https://raw.githubusercontent.com/carmonamateo/carmonamateo.github.io/master/img/breakpage.png 768w, https://raw.githubusercontent.com/carmonamateo/carmonamateo.github.io/master/img/breakpage.png 1024w, https://raw.githubusercontent.com/carmonamateo/carmonamateo.github.io/master/img/breakpage.png 1189w" sizes="(max-width: 192px) 100vw, 192px" /></p>
+<br><br><br><br><br><br>
 
-<br><br>
-
-
-<h2><p align="center">SGA <br> Séminaire de Géométrie Algébrique du Bois Marie</p></h2>
-
-<br><br>
-
-<p align="center"><span class="quotation">
-Quote
-</span>&#151;&nbsp;<a href="" target="_blank" rel="noopener noreferrer"><em>Quote</em></a>, Quote</p>&nbsp;
-
-<br><br>
-	
-<p><img class=" wp-image-4130 aligncenter" src="https://raw.githubusercontent.com/carmonamateo/carmonamateo.github.io/master/img/breakpage.png" alt="pagebreak dark green" width="392" height="56" srcset="https://raw.githubusercontent.com/carmonamateo/carmonamateo.github.io/master/img/breakpage.png 300w, https://raw.githubusercontent.com/carmonamateo/carmonamateo.github.io/master/img/breakpage.png 768w, https://raw.githubusercontent.com/carmonamateo/carmonamateo.github.io/master/img/breakpage.png 1024w, https://raw.githubusercontent.com/carmonamateo/carmonamateo.github.io/master/img/breakpage.png 1189w" sizes="(max-width: 192px) 100vw, 192px" /></p>
-
-<br><br>
-
+<!-- <font color="white"> -->
 <center>
 
+<button class="accordion"><h3><font color="ffffff">Séminaire de Géométrie Algébrique</font></h3> <span class="quotation"><font color="ffffff">
+<br><br></font></span></button>
+<div class="panel">
+  <p>
+  
       <h3>SGA 1. Revêtements Étales et Groupe Fondamental <br>
       1960-1961</h3>
       <p>
@@ -1676,9 +1702,8 @@ Quote
       SGA 7 <a href="https://grothendieck.umontpellier.fr/archives-grothendieck/">[Cote n° 36]</a><br><br>
       
       Note, Groupe fondamental <a href="https://agrothendieck.github.io/galoispoincaregrothendieck/NoteSGA7.pdf">[scan]</a>   
-      </p>
-
-</center>
+     
+     </p>
   
 <br><br><br>
   
@@ -1701,7 +1726,6 @@ Quote
 
 <br><br><br><br>
 
-<center>
     
     SGA Note <a href="https://agrothendieck.github.io/divers/SGAsumm.pdf">[pdf]</a>
     
@@ -1736,31 +1760,19 @@ Quote
 
 	<br><br>
 	
-	<a href="https://youtu.be/CT76bpRQRrk">[Remembering the SGA’s]</a>, L Illusie
-	
-     </center>
+	<a href="https://youtu.be/CT76bpRQRrk">[Remembering the SGA’s]</a>, L Illusie 
+  
+  </p>
+</div>
 
-
-
-
-<br><br><br><br><br><br>
-
-<h2><p align="center">EGA <br> Éléments de Géométrie Algébrique</p></h2>
 
 <br><br>
 
-<p align="center"><span class="quotation">
-Unless there are unexpected difficulties or I get bogged down, the multiplodocus should be ready in 3 years time, <br>
-or 4 at the outside. We will then be able to start doing algebraic geometry!
-</span>&#151;&nbsp;<a href="" target="_blank" rel="noopener noreferrer"><em>Letter to J.-P Serre</em></a>, August 18, 1959</p>&nbsp;
-
-<br><br>
-	
-<p><img class=" wp-image-4130 aligncenter" src="https://raw.githubusercontent.com/carmonamateo/carmonamateo.github.io/master/img/breakpage.png" alt="pagebreak dark green" width="392" height="56" srcset="https://raw.githubusercontent.com/carmonamateo/carmonamateo.github.io/master/img/breakpage.png 300w, https://raw.githubusercontent.com/carmonamateo/carmonamateo.github.io/master/img/breakpage.png 768w, https://raw.githubusercontent.com/carmonamateo/carmonamateo.github.io/master/img/breakpage.png 1024w, https://raw.githubusercontent.com/carmonamateo/carmonamateo.github.io/master/img/breakpage.png 1189w" sizes="(max-width: 192px) 100vw, 192px" /></p>
-
-<br><br>
-
-<center>
+<button class="accordion"><h3><font color="ffffff">Éléments de Géométrie Algébrique</font></h3> <span class="quotation"><font color="ffffff">
+<br><br></font></span></button>
+<div class="panel">
+  <p>
+  
       <h3>EGA I <br> 
       <a href="http://www.numdam.org/item/PMIHES_1960__4__5_0/">[Le langage des schémas]</a></h3>
       <p> 
@@ -1839,8 +1851,6 @@ or 4 at the outside. We will then be able to start doing algebraic geometry!
        
        Lettre à A. Grothendieck, P. Deligne 1966 <a href="/divers/LDG1766scan.pdf">[scan]</a>
       </p>
-  
-  </center>
   
 <br><br><br>
   
@@ -2015,158 +2025,205 @@ or 4 at the outside. We will then be able to start doing algebraic geometry!
   
   <br><br>
   
-  Amateur translation project of Grothendieck's <a href="https://ega.fppf.site/">[EGA]</a>	
-     </center>
-  <!-- </div>
-  </div>
-</font> -->
-	 
-	 
-<br><br><br><br><br><br>
-
-<h2><p align="center">FGA <br> Fondements de la Géométrie Algébrique</p></h2>
+  Amateur translation project of Grothendieck's <a href="https://ega.fppf.site/">[EGA]</a>  
+  
+  </p>
+</div>
 
 <br><br>
 
-<p align="center"><span class="quotation">
-Quote
-</span>&#151;&nbsp;<a href="" target="_blank" rel="noopener noreferrer"><em>Quote</em></a>, Quote</p>&nbsp;
+<button class="accordion"><h3><font color="ffffff">Fondements de la Géométrie Algébrique</font></h3> <span class="quotation"><font color="ffffff">
+<br><br></font></span></button>
+<div class="panel">
+  <p>
+       <a href="https://webusers.imj-prg.fr/~leila.schneps/grothendieckcircle/FGA.pdf">[pdf]</a> <br><br>
+       Extraits du Séminaire BOURBAKI 1957 - 1962	      
 
-<br><br>
+  </p>
+</div>
+
+
+<br><br><br><br> 
+						 
+  
+<center>
+	
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+</center>
+					
+<br><br> 
 	
 <p><img class=" wp-image-4130 aligncenter" src="https://raw.githubusercontent.com/carmonamateo/carmonamateo.github.io/master/img/breakpage.png" alt="pagebreak dark green" width="392" height="56" srcset="https://raw.githubusercontent.com/carmonamateo/carmonamateo.github.io/master/img/breakpage.png 300w, https://raw.githubusercontent.com/carmonamateo/carmonamateo.github.io/master/img/breakpage.png 768w, https://raw.githubusercontent.com/carmonamateo/carmonamateo.github.io/master/img/breakpage.png 1024w, https://raw.githubusercontent.com/carmonamateo/carmonamateo.github.io/master/img/breakpage.png 1189w" sizes="(max-width: 192px) 100vw, 192px" /></p>
 
-<br><br>	 
-
-      <p align="center">
-       <a href="https://webusers.imj-prg.fr/~leila.schneps/grothendieckcircle/FGA.pdf">[pdf]</a> <br><br>
-       Extraits du Séminaire BOURBAKI 1957 - 1962	      
-      </p>
-
-<br><br><br><br><br><br><br>
+<br><br><br>
 	
-<!-- <p><img class=" wp-image-4130 aligncenter" src="https://raw.githubusercontent.com/carmonamateo/carmonamateo.github.io/master/img/breakpage.png" alt="pagebreak dark green" width="392" height="56" srcset="https://raw.githubusercontent.com/carmonamateo/carmonamateo.github.io/master/img/breakpage.png 300w, https://raw.githubusercontent.com/carmonamateo/carmonamateo.github.io/master/img/breakpage.png 768w, https://raw.githubusercontent.com/carmonamateo/carmonamateo.github.io/master/img/breakpage.png 1024w, https://raw.githubusercontent.com/carmonamateo/carmonamateo.github.io/master/img/breakpage.png 1189w" sizes="(max-width: 192px) 100vw, 192px" /></p>
+<p align="center"><span class="quotation"><i>
+For at least 10 years I have had the hope that at some point the right occasion <br>
+would arise to propose the publication, in a suitably edited form, of a large number <br>
+of your mathematical letters to your friends. For me, the letters that you wrote <br>
+me are by far the most important things which explained your ideas and insights. <br>
+The letters are vivid and clear and unencumbered by the customary style of formal <br>
+French publications. I assume that the letters you wrote to others are similar. <br>
+They express succinctly the essential ideas and motivations and often give quite <br>
+complete ideas about how to overcome the main technical problems. I have been <br>
+very conscious of the difficulties that the younger generation has in getting a <br>
+clear idea of your theories. This maybe blunt and insensitive, but I should <br>
+say that I find the style of the finished works, esp. EGA, to be difficult and <br>
+sometimes unreadable because of its attempt to reach a superhuman level of <br>
+completeness. But, for myself, I never liked Bourbaki either! This is a personal <br>
+thing, but the point is that your letters would offer a clear alternative for <br>
+students who wished to gain access rapidly to the core of your ideas. </i><br>
+</span>&#151;&nbsp;<a href="" target="_blank" rel="noopener noreferrer"><em>Letter to A Grothendieck, D Mumford</em></a>, Dec. 26 1985</p>&nbsp;
 
-<br><br><br><br> -->
-
-
-  
-
-<br><br><br><br><br><br><br><br> 
-
-<a href="https://fontmeme.com/cursive-fonts/"><img class="wp-image-3999 aligncenter" src="https://fontmeme.com/permalink/191217/b772961365f60792159aa4f23f6c0bb9.png" alt="cursive-fonts" border="0" width="500" height="147"></a>
-
-<br><br>
 	
+<br><br><br><br>	
 	
-	</center>
+<!-- <p><img class=" wp-image-4130 aligncenter" src="https://raw.githubusercontent.com/carmonamateo/carmonamateo.github.io/master/img/breakpage.png" alt="pagebreak dark green" width="392" height="56" srcset="https://raw.githubusercontent.com/carmonamateo/carmonamateo.github.io/master/img/breakpage.png 300w, https://raw.githubusercontent.com/carmonamateo/carmonamateo.github.io/master/img/breakpage.png 768w, https://raw.githubusercontent.com/carmonamateo/carmonamateo.github.io/master/img/breakpage.png 1024w, https://raw.githubusercontent.com/carmonamateo/carmonamateo.github.io/master/img/breakpage.png 1189w" sizes="(max-width: 192px) 100vw, 192px" /></p> -->
 
+<!-- <br><br><br>
 
-<!-- <div class="timeline"> -->
+<center>
+<a class="twitter-timeline" data-width="500" data-height="700" data-chrome="nofooter noborders noheader" href="https://twitter.com/agrothendiecks?ref_src=twsrc%5Etfw">Tweets by A. Grothendieck</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+</center>
 
-  <!-- <div class="container left">
-    <div class="content">
-      <h3><p align="center"><a href="/algtop.html"><font color="ffffff">Algèbre topologique</font></a></p></h3>
-     <p>
-&infin;-champs, dérivateurs; formalisme cohomologique des topos, comme inspiration pour une nouvelle algèbre homotopique <br>
-Dualité "continue" et "discrète" (catégories dérivées, "six opérations") <br>
-Champs de topos, Gerbes     
-     </p>
-    <!-- </div>
-  </div>
+<br><br><br><br> 
+	
+	<center>
+<a class="twitter-timeline" data-width="500" data-height="700" data-chrome="nofooter noborders noheader" href="https://twitter.com/agrothendiecks?ref_src=twsrc%5Etfw">Tweets by A. Grothendieck</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+</center>
+	
+	<br><br><br><br> -->
  
- <br><br>
- 
-    <div class="content">
-      <h3><p align="center"><a href="/galoispoincaregrothendieck.html"><font color="ffffff">Galois-Poincaré-Grothendieck</font></a></p></h3>
-     <p>
-Yoga de géométrie algébrique anabélienne <br>
-Théorie de Galois-Teichmüller <br>
-Motifs et gerbes de Grothendieck <br>
-Monodromie <br>
-Galoisian topoi <br>
-Cohomologie étale et l-adique 
-     </p>
-    </div>
-    
-     <br><br>
-  
-    <div class="content">
-      <h3><p align="center"><a href="/analyse.html"><font color="ffffff">Analyse</font></a></p></h3>
-     <p>
-      Cristaux <br>
-      Yoga cohomologie cristalline, "coefficients de De Rham", "coefficient de Hodge"... 
-     </p>     
-    </div>
+ <!-- <center>
+ <h3><p>Actualités/News</p> </h3>
+<span class="quotation"><div class="ex"> 
+30.4.2020 <br>
+<ul>
+<li> Transcripción de “En Guise de Programme, 1978-79” <a href="https://agrothendieck.github.io/divers/enguise.pdf">[pdf]</a> </li>
+</ul>	
+29.4.2020 <br>
+<ul>
+<li> Reedición preliminar de “La Llave de los Sueños o Diálogo con el buen Dios con Notas” 
+	<a href="https://agrothendieck.github.io/divers/llave.pdf">[pdf]</a> </li>
+</ul>	
+28.4.2020 <br>
+<ul>
+<li>(<a href="/corr.html">Some Letters</a>)  </li>
+<li>(<a href="/corr.html">Some Letters</a>)  </li>
+<li>(<a href="/corr.html">Some Letters</a>)  </li>
+<li>(<a href="/corr.html">Some Letters</a>) </li>
+</ul>	
+<br>	
+27.4.2020 <br>
+<ul>
+<li>(<a href="/corr.html">Some Letters</a>)  </li>
+<li>(<a href="/corr.html">Some Letters</a>)  </li>
+<li>News section </li>
+</ul>
+</div></span>
+</center>
 
- <br><br>
-
-    <div class="content">
-      <h3><p align="center"><a href="/intersections.html"><font color="ffffff">Théorie des intersections et K-théorie</font></a></p></h3>
-     <p>
-      Yoga Riemann-Roch-Grothendieck
-     </p> 
-    </div>
-    
-     <br><br>
- 
-    <div class="content">
-      <h3><p align="center"><a href="/picardbrauer.html"><font color="ffffff">Picard-Brauer</font></a></p></h3>
-     <p>
-      Picard, Brauer stacks and gerbes <br>
-      Picard groupoids
-     </p>
-    </div> 
-    
-     <br><br>
- 
-    <div class="content">
-      <h3><p align="center"><a href="/lefschetz.html"><font color="ffffff">Lefschetz</font></a></p></h3>
-    </div> 
-    
-     <br><br>
-  
-    <div class="content">
-      <h3><p align="center"><a href="/chalg.html"><font color="ffffff">Champs algébriques</font></a></p></h3>
-     <p>
-     Groupoïdes algébriques <br><br>
-     
-      Schémas <br><br>
-      
-      Groupes algébriques <br>
-      Corps de Classes      
-     </p>
-    </div>   
-    
-     <br><br>
-  
-    <div class="content">
-      <h3><p align="center"><a href="/espaces.html"><font color="ffffff">Topologie des espaces</font></a></p></h3>
-     <p>
-      Géométrie des formes <br>
-      Topologie moderée <br>
-      Espaces stratifiés <br>
-      Point de vue "schématique" ou "arithmétique" pour les polyèdres réguliers et les configurations régulières en tous genres
-     </p>
-    </div> 
- 
-<!-- </div> -->
-	  					<!-- <script>
-	  						if ( undefined !== window.jQuery ) {
-	  							(function($) {
-	  								$("body").removeClass("woocommerce");
-	  							})(jQuery);
-	  						}
-
-  <!-- </div>
-  </div>
-</font> -->
+ <br><br><br><br><br><br> 
 
 <!-- <p><img class="wp-image-3999 aligncenter" src="https://raw.githubusercontent.com/agrothendieck/agrothendieck.github.io/master/img/signature.png" alt="Thoreau signature" width="500" height="147" srcset="https://raw.githubusercontent.com/agrothendieck/agrothendieck.github.io/master/img/signature.png 1024w, https://raw.githubusercontent.com/agrothendieck/agrothendieck.github.io/master/img/signature.png 300w, https://raw.githubusercontent.com/agrothendieck/agrothendieck.github.io/master/img/signature.png 768w, https://raw.githubusercontent.com/agrothendieck/agrothendieck.github.io/master/img/signature.png 1689w" sizes="(max-width: 500px) 100vw, 500px" /></p>
 
-<br><br><br> 
+<br><br><br> -->
 
-<a href="https://fontmeme.com/cursive-fonts/"><img class="wp-image-3999 aligncenter" src="https://fontmeme.com/permalink/191217/b772961365f60792159aa4f23f6c0bb9.png" alt="cursive-fonts" border="0" width="500" height="147"></a> -->
+
+
+
+
+<!-- <div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="https://raw.githubusercontent.com/agrothendieck/agrothendieck.github.io/master/img/grotha.jpg" width="100%">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="https://raw.githubusercontent.com/agrothendieck/agrothendieck.github.io/master/img/groth7.JPG" width="100%">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="https://raw.githubusercontent.com/agrothendieck/agrothendieck.github.io/master/img/groth4.jpeg" width="100%">
+  <div class="text"></div>
+</div>
+	
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="https://raw.githubusercontent.com/agrothendieck/agrothendieck.github.io/master/img/groth5.png" width="100%">
+  <div class="text"></div>
+</div>
+
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+  <span class="dot" onclick="currentSlide(4)"></span>  
+</div>
+
+ <script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script> 
+
+
+<br><br><br><br><br><br> -->
+ 
+
+<a href="https://fontmeme.com/cursive-fonts/"><img class="wp-image-3999 aligncenter" src="https://fontmeme.com/permalink/191217/b772961365f60792159aa4f23f6c0bb9.png" alt="cursive-fonts" border="0" width="500" height="147"></a>
 
 
 <!-- 
@@ -2197,27 +2254,21 @@ des choses encore à naître - que c’est bien elle qui a suscité tour à tour
 leur sens que par elle, et que c’est elle aussi qui déjà m’appelait à voix basse et pressante, en ces années de
 solitude ardente </i> <br> Récoltes et semailles</p>
     
-<br>    
+<br>    -->
   
-<br><br><br><br><br><br><br><br><br>
-<p align="center">&#9993; <a href="mailto:mcarmonamateom@gmail.com">mcarmonamateom@gmail.com</a></p>
-</center>
+<!-- <div style="text-align: center">
+&#9993; <a href="mailto:mateocarmonamat@gmail.com">mateocarmonamat@gmail.com</a>
+</div> -->   
     <!-- -------------------------------------------------------------------- 
     <hr>
-    <table width="100%" valign="middle" align="center" font="000000">
-     <tr>
+    <table width="100%" valign="middle" align="center">
+     <tr>    
       <td width="20%" align="center">
-      <a href="/index.html"><b>HOME</b></a>
-      </td>     
-      <td width="20%" align="center">
-       <a href="/paperspreprints.html"><b>PAPERS AND PREPRINTS</b></a>
-      </td>
-      <td width="20%" align="center">
-       <a href="/someletters.html"><b>SOME LETTERS</b></a>
-      </td>   
+       <a href="/index.html"><b><font color="#3d523e">HOME</font></b></a>
+      </td>                  
      </tr>
     </table>
-<hr>
+    <hr> -->
     <!-- -------------------------------------------------------------------- -->
    </td>
   </tr>
