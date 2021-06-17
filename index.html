@@ -400,6 +400,13 @@ img {vertical-align: middle;}
   margin: auto;
 }
 
+/* Slides */
+.mySlides {
+  display: none;
+  padding: 80px;
+  text-align: center;
+}
+
 /* Caption text */
 .text {
   color: #f2f2f2;
@@ -418,6 +425,13 @@ img {vertical-align: middle;}
   padding: 8px 12px;
   position: absolute;
   top: 0;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+    text-align: center;
+    padding: 20px;
+    background: #f2f2f2;
 }
 
 /* The dots/bullets/indicators */
@@ -465,13 +479,6 @@ body {font-family: Verdana, sans-serif; margin:0}
 .mySlides {display: none}
 img {vertical-align: middle;}
 
-/* Slideshow container */
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-}
-
 /* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
@@ -490,9 +497,11 @@ img {vertical-align: middle;}
 
 /* Position the "next button" to the right */
 .next {
+  position: absolute;
   right: 0;
   border-radius: 3px 0 0 3px;
 }
+
  </style>
 </head>
 
@@ -6305,7 +6314,7 @@ for (i = 0; i < acc.length; i++) {
 
 <br><br><br><br>
 
-<p align="center"><span class="quotation"><i>
+<!-- <p align="center"><span class="quotation"><i>
 Ces grands thèmes de mon oeuvre ne sont nullement isolés les uns des autres. Ils font partie à mes <br>
 yeux d’une <b>unité</b> d’esprit et de propos, présente, telle une note de fond commune et <br>
 persistante, à travers toute mon oeuvre “écrite" et “non écrite". Cette unité n’est pas le <br>
@@ -6327,9 +6336,9 @@ rel="noopener noreferrer"><em>Récoltes et semailles</em></a></p>&nbsp;
 
 <br><br><br><br>
 
-<p><img class=" wp-image-4130 aligncenter" src="https://raw.githubusercontent.com/carmonamateo/carmonamateo.github.io/master/img/breakpage.png" alt="pagebreak dark green" width="392" height="56" srcset="https://raw.githubusercontent.com/carmonamateo/carmonamateo.github.io/master/img/breakpage.png 300w, https://raw.githubusercontent.com/carmonamateo/carmonamateo.github.io/master/img/breakpage.png 768w, https://raw.githubusercontent.com/carmonamateo/carmonamateo.github.io/master/img/breakpage.png 1024w, https://raw.githubusercontent.com/carmonamateo/carmonamateo.github.io/master/img/breakpage.png 1189w" sizes="(max-width: 192px) 100vw, 192px" /></p>
+<p><img class=" wp-image-4130 aligncenter" src="https://raw.githubusercontent.com/carmonamateo/carmonamateo.github.io/master/img/breakpage.png" alt="pagebreak dark green" width="392" height="56" srcset="https://raw.githubusercontent.com/carmonamateo/carmonamateo.github.io/master/img/breakpage.png 300w, https://raw.githubusercontent.com/carmonamateo/carmonamateo.github.io/master/img/breakpage.png 768w, https://raw.githubusercontent.com/carmonamateo/carmonamateo.github.io/master/img/breakpage.png 1024w, https://raw.githubusercontent.com/carmonamateo/carmonamateo.github.io/master/img/breakpage.png 1189w" sizes="(max-width: 192px) 100vw, 192px" /></p> 
 
-<br><br><br>
+<br><br><br> -->
 
 <!-- <font color="white"> -->
 <!-- <button class="accordion"><h3><font color="ffffff">Writing</font></h3></button>
@@ -6445,16 +6454,65 @@ Transcription of “Groupoïde fondamental et théorème de Van Kampen en théor
 
 <p><img class=" wp-image-4130 aligncenter" src="https://raw.githubusercontent.com/carmonamateo/carmonamateo.github.io/master/img/breakpage.png" alt="pagebreak dark green" width="392" height="56" srcset="https://raw.githubusercontent.com/carmonamateo/carmonamateo.github.io/master/img/breakpage.png 300w, https://raw.githubusercontent.com/carmonamateo/carmonamateo.github.io/master/img/breakpage.png 768w, https://raw.githubusercontent.com/carmonamateo/carmonamateo.github.io/master/img/breakpage.png 1024w, https://raw.githubusercontent.com/carmonamateo/carmonamateo.github.io/master/img/breakpage.png 1189w" sizes="(max-width: 192px) 100vw, 192px" /></p>
 
-<br><br><br><br> -->
+<br><br><br><br> 
 
 
 <p align="center"><span class="quotation"><i>
 Il y a un sens, ou des sens à des niveaux de profondeur différents, ils préexistent <br>
 à mon travail et sont ce qui'ils sont, et mon travail consiste à les “découvrir", <br>
 à les dégager patiemment, obstinémen, avec un soin infini... </i><br>
+</span>&#151;&nbsp;<a href="" target="_blank" rel="noopener noreferrer"><em>La Clef des Songes</em></a></p>&nbsp; -->
+
+<div class="slideshow-container">
+
+<div class="mySlides">
+  <p><span class="quotation"><i>
+Il y a un sens, ou des sens à des niveaux de profondeur différents, ils préexistent <br>
+à mon travail et sont ce qui'ils sont, et mon travail consiste à les “découvrir", <br>
+à les dégager patiemment, obstinémen, avec un soin infini... </i><br>
 </span>&#151;&nbsp;<a href="" target="_blank" rel="noopener noreferrer"><em>La Clef des Songes</em></a></p>&nbsp;
+</div>
 
+<div class="mySlides">
+  <p><span class="quotation"><i>
+Ces grands thèmes de mon oeuvre ne sont nullement isolés les uns des autres. Ils font partie à mes <br>
+yeux d’une <b>unité</b> d’esprit et de propos, présente, telle une note de fond commune et <br>
+persistante, à travers toute mon oeuvre “écrite" et “non écrite". Cette unité n’est pas le <br>
+fait seulement de la marque du même ouvrier, sur les oeuvres qui sortent de ses mains. Ces <br>
+thèmes sont liés entre eux par d’innombrables liens, à la fois  délicats et évidents, comme <br>
+sont reliés entre eux les différents thèmes, clairement reconnaissables chacun, qui se déployent <br>
+et s’enlacent dans un même et vaste contrepoint - dans une harmonie qui les assemble, les porte <br>
+en avant et donne à chacun un sens, un mouvement et une plénitude auxquels participent tous <br>
+les autres. Chacun des thèmes partiels semble, naître de cette harmonie plus vaste et en renaître <br>
+à nouveau au fil des instants, bien plus que celle-ci n’apparaît comme une “somme" ou comme <br>
+un “résultat", de thèmes constituants qui préexisteraient à elle. Et à dire vrai, je ne <br>
+peux me défendre de ce sentiment (sans doute saugrenu...) que d’une certaine façon c’est <br>
+bien cette harmonie, non encore apparue mais qui sûrement “existait" déjà bel et bien, quelque <br>
+part dans le giron obscur des choses encore à naître - que c’est bien elle qui a suscité tour <br>
+à tour ces thèmes qui n’allaient prendre tout leur sens que par elle, et que c’est elle <br>
+aussi qui déjà m’appelait à voix basse et pressante, en ces années de solitude ardente. </i><br>
+</span>&nbsp;&#151;&nbsp;<a href="" target="_blank"
+rel="noopener noreferrer"><em>Récoltes et semailles</em></a></p>&nbsp;
+</div>
 
+<div class="mySlides">
+<p><span class="quotation"><i>
+  Ce qui fait la qualité de l’inventivité et de l’imagination du chercheur, c’est la qualité de son attention, à l’écoute de la voix des choses.
+</i><br>
+</span>&nbsp;&#151;&nbsp;<a href="" target="_blank"
+rel="noopener noreferrer"><em>Récoltes et semailles</em></a></p>&nbsp;
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+
+<div class="dot-container">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
 
 <br><br><br><br>
 
@@ -6589,7 +6647,7 @@ function showSlides(n) {
 <br><br><br><br><br><br> -->
 
 
-<a href="https://fontmeme.com/cursive-fonts/"><img class="wp-image-3999 aligncenter" src="https://fontmeme.com/permalink/191217/b772961365f60792159aa4f23f6c0bb9.png" alt="cursive-fonts" border="0" width="500" height="147"></a>
+<img class="wp-image-3999 aligncenter" src="https://fontmeme.com/permalink/191217/b772961365f60792159aa4f23f6c0bb9.png" alt="cursive-fonts" border="0" width="500" height="147">
 
 
 <!--
