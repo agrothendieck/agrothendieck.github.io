@@ -4,3 +4,5 @@
 * You can join the Newsletter in the Webapge
 
 * [Patreon](https://www.patreon.com/grothendieck)
+
+* carmonamateogm@gmail.com
