@@ -3,7 +3,7 @@
 
 ***
 
-* You can join the Newsletter in the [Webapge](agrothendieck.github.io)
+* You can join the Newsletter in the [Webpage](agrothendieck.github.io)
 
     <i>Support us:</i>
     <br><br>
